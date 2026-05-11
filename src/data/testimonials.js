@@ -10,26 +10,6 @@ export const testimonialsData = {
   students: [
     {
       id: 1,
-      name: "Sneha Patel",
-      course: "UGC-NET (Commerce) Achiever",
-      location: "Ahmedabad, Gujarat",
-      image: "", // Placeholder
-      text: "Cracking the UGC-NET was a dream, but Dr. Raghavi's specialized batches made it a reality. Her focus on research methodology and paper-1 strategies is unmatched.",
-      stars: 5,
-      category: "student"
-    },
-    {
-      id: 2,
-      name: "Rohan Shah",
-      course: "CA Intermediate Student",
-      location: "Rajkot, Gujarat",
-      image: "", // Placeholder
-      text: "The way Dr. Raghavi explains complex Costing and Accounting standards is phenomenal. Her Ph.D. background brings a level of depth that you just don't get in standard coaching.",
-      stars: 5,
-      category: "student"
-    },
-    {
-      id: 3,
       name: "Dr. Pankaj Sharma",
       topic: "Assistant Professor (Commerce)",
       college: "Shri K K Shastri Government Commerce College",
@@ -41,14 +21,62 @@ export const testimonialsData = {
       category: "student"
     },
     {
-      id: 4,
+      id: 2,
       name: "Bhanwari Kumari",
       topic: "Assistant Manager",
       college: "The New India Assurance Company Limited",
       location: "Vadodara, Gujarat",
       institution: "Alumni - School of Commerce, Gujarat University",
-      image: "", 
+      image: "/images/testimonials/bhawari.png", 
       text: "Dr Raghavi's teaching has played a very significant role in building my conceptual clarity and confidence. The way she explained Financial markets especially money market and capital markets made a strong and lasting impact on my learning. Her in-depth knowledge of the subject and your dedication to ensuring that her students truly understand and learn have always been inspiring. The lessons and guidance I received from her have greatly supported me in shaping my career, and I remain truly grateful for your wonderful sessions.",
+      stars: 5,
+      category: "student"
+    },
+    {
+      id: 3,
+      name: "Urvi Raval",
+      topic: "CEO, MAVERICK HOLDINGS",
+      college: "Wealth Management Company",
+      location: "Ahmedabad, Gujarat",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/urvi.png",
+      text: "Dr. Raghavi's calm presence and measured guidance have always stood out, yet it was during our most overwhelming moments that she truly saved us. Her quiet strength and unwavering support meant more than she knows. Thank you for being our anchor when we needed it the most.",
+      stars: 5,
+      category: "student"
+    },
+    {
+      id: 4,
+      name: "Dr. Vishakha Modi",
+      topic: "Assistant Professor",
+      college: "Govt. Arts, Commerce & Science College, Kachhal",
+      location: "Surat, Gujarat",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/vishakha.png",
+      text: "I still recall our sessions at the School of Commerce, Gujarat University with great respect and gratitude. Dr. Raghavi's teaching played a significant role in building my conceptual clarity and confidence in the field of Commerce. She not only taught us the subject but also encouraged us to think critically and apply concepts to real-life situations. The practical insights and engaging classroom discussions truly helped shape my professional approach. I am grateful for the strong foundation she provided during my academic journey.",
+      stars: 5,
+      category: "student"
+    },
+    {
+      id: 5,
+      name: "Dr. Anuja Limbad",
+      topic: "Assistant Professor",
+      college: "Trainer & Financial Advisor",
+      location: "Gujarat, India",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/anujalimbad.jpeg",
+      text: "I’m deeply grateful to Raghavi mam for playing a pivotal role in shaping my career. Her ability to simplify complex concepts and build a strong foundational understanding has given me lasting confidence in my field. The clarity and discipline I developed under her guidance will always continue to influence my professional growth.",
+      stars: 5,
+      category: "student"
+    },
+    {
+      id: 6,
+      name: "Harshini Dudhani",
+      topic: "Owner, The Batter Bae",
+      college: "Gluten-free cakes & cookies",
+      location: "Gandhidham | Adipur",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/harshini.jpeg",
+      text: "Dr. Raghvi’s sessions at Sheth Damodardas School pf Commerce, Gujarat University gave me a strong foundation in Commerce that shaped how I think about running a business today. Her emphasis on practical application over rote learning pushed me to approach problems with clarity and confidence. That mindset has been central to building The Batter Bae, my gluten-free baking brand, from the ground up.",
       stars: 5,
       category: "student"
     }
@@ -85,8 +113,56 @@ export const testimonialsData = {
       college: "MSU Baroda (Faculty of Commerce)",
       location: "Vadodara, Gujarat",
       institution: "Alumni - School of Commerce, Gujarat University",
-      image: "", 
+      image: "/images/testimonials/sushil.png", 
       text: "I acknowledge and appreciate the valuable assistance of Dr. Raghavi during my PhD programme. She noteworthily contributed to the progress of my doctoral work in terms of consistent academic and research support. She demonstrated professionalism, analytical competence, and a sincere commitment to research helping me to achieve the milestone. Her timely assistance and constructive inputs were appreciable and supported the successful completion of my PhD.",
+      stars: 5,
+      category: "scholar"
+    },
+    {
+      id: 104,
+      name: "Dr. Sakina Merchant",
+      topic: "Assistant Professor",
+      college: "Som Lalit College of Commerce",
+      location: "Ahmedabad, Gujarat",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "", 
+      text: "Dr. Raghavi was a senior JRF during my Ph.D. under Dr. Bharti Pathak at the School of Commerce. (2017-2021). Her patient guidance, especially during my first research paper presentation and publication, helped me understand the nuances of academic research with clarity and confidence. I appreciate her deep commitment to research and academics. I sincerely wish her continued success in all her endeavours.",
+      stars: 5,
+      category: "scholar"
+    },
+    {
+      id: 105,
+      name: "Dr. Komal Raval",
+      topic: "Assistant Professor",
+      college: "Som-Lalit College of Commerce",
+      location: "Ahmedabad, Gujarat",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/komalraval.png",
+      text: "Dr. Raghavi's support during my Ph.D. truly made a big difference in my journey. Her guidance during my Ph.D. was instrumental in shaping my academic and professional journey. Her constant encouragement, insightful feedback, and unwavering support helped me develop confidence and clarity in my research work, which continues to influence my career today.",
+      stars: 5,
+      category: "scholar"
+    },
+    {
+      id: 106,
+      name: "Dr. Aamena Saiyed",
+      topic: "Research Colleague & Scholar",
+      college: "School of Commerce, Gujarat University",
+      location: "Ahmedabad, Gujarat",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/aamena.jpeg",
+      text: "Dr. Raghavi’s strong academic insight and research acumen made her a remarkable colleague during my PhD years. The resources and perspectives she shared contributed meaningfully to my scholarly development. I truly value the professional camaraderie we shared.",
+      stars: 5,
+      category: "scholar"
+    },
+    {
+      id: 107,
+      name: "Dr. Rupam Soni",
+      topic: "Assistant Professor",
+      college: "Government of Rajasthan (Vidhya Sambal Scheme)",
+      location: "Rajasthan, India",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/rupam.jpeg",
+      text: "Dr. Raghavi's mentorship throughout my doctoral studies was foundational to my growth. The clarity and confidence I gained through her insightful feedback and steady support remain the cornerstone of my professional practice today.",
       stars: 5,
       category: "scholar"
     }
