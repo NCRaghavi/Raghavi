@@ -65,6 +65,26 @@ export default function TestimonialsPage() {
                 boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
                 transition: 'transform 0.3s ease'
               }}>
+                {/* 0. Institutional Stamp */}
+                {testimonial.institution && (
+                  <div style={{ 
+                    position: 'absolute', 
+                    top: '1.5rem', 
+                    padding: '0.35rem 1rem', 
+                    border: '1px solid rgba(212, 175, 55, 0.4)', 
+                    borderRadius: '8px',
+                    fontSize: '0.65rem',
+                    fontWeight: 700,
+                    letterSpacing: '1.5px',
+                    color: 'var(--accent-color)',
+                    textTransform: 'uppercase',
+                    background: 'rgba(212, 175, 55, 0.05)',
+                    boxShadow: 'inset 0 0 10px rgba(212, 175, 55, 0.1)'
+                  }}>
+                    {testimonial.institution}
+                  </div>
+                )}
+
                 {/* 1. Circular Photo with Gold Border */}
                 <div style={{ 
                   width: '120px', 
@@ -105,21 +125,21 @@ export default function TestimonialsPage() {
                   "{testimonial.text}"
                 </p>
 
-                {/* 4. Name (White) & Two-Line Designation (Gold) */}
+                {/* 4. Name (Gold) & Two-Line Designation (White) */}
                 <div style={{ width: '100%' }}>
                   <h4 style={{ 
                     fontWeight: 800, 
-                    color: '#ffffff', 
-                    fontSize: '1.25rem', 
-                    marginBottom: '0.75rem',
+                    color: 'var(--accent-color)', // Name in Gold
+                    fontSize: '1.1rem', // Reduced Size
+                    marginBottom: '0.5rem',
                     letterSpacing: '-0.2px'
                   }}>
                     {testimonial.name}
                   </h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                     <p style={{ 
                       fontSize: '0.85rem', 
-                      color: 'var(--accent-color)', // Restored Gold Color
+                      color: '#ffffff', // Designation in White
                       fontWeight: 700, 
                       textTransform: 'uppercase',
                       letterSpacing: '1px'
@@ -129,7 +149,7 @@ export default function TestimonialsPage() {
                     {testimonial.location && (
                       <p style={{ 
                         fontSize: '0.8rem', 
-                        color: 'rgba(255, 255, 255, 0.5)', // Subtle white for location
+                        color: 'rgba(255, 255, 255, 0.8)', // Location in White (slight transparency for hierarchy)
                         fontWeight: 500,
                         letterSpacing: '0.5px'
                       }}>
