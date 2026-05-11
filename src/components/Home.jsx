@@ -294,18 +294,18 @@ export default function Home() {
 
         {/* Premier Institutions Track Record */}
         <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '3rem', paddingBottom: '1rem' }}>
-          <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '2rem', color: 'var(--text-primary)', textAlign: 'center' }}>
+          <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '2.5rem', color: 'var(--text-primary)', textAlign: 'center' }}>
             A Proven Track Record Across Premier Institutions
           </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', maxWidth: '900px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', maxWidth: '1300px', margin: '0 auto' }}>
             <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
               <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
               </div>
-              <h4 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>The School of Commerce</h4>
-              <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University</div>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.6, fontStyle: 'italic' }}>
-                "Shaping the next generation of Commerce Professors and Government Class-I/II Officers."
+              <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>The School of Commerce</h4>
+              <div style={{ color: 'var(--accent-color)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+                "Shaping the next generation of Commerce Professors and Class-I/II Officers."
               </p>
             </div>
             
@@ -313,10 +313,32 @@ export default function Home() {
               <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
               </div>
-              <h4 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>St. Xavier’s College</h4>
-              <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Autonomous</div>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+              <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>St. Xavier’s College</h4>
+              <div style={{ color: 'var(--accent-color)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Autonomous</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, fontStyle: 'italic' }}>
                 "Developing foundational excellence in undergraduate and postgraduate scholars."
+              </p>
+            </div>
+
+            <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+              <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
+              </div>
+              <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Govt. Commerce & Science College</h4>
+              <div style={{ color: 'var(--accent-color)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Dahej</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+                "Specialized academic leadership for government commerce and science education."
+              </p>
+            </div>
+
+            <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+              <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Globe size={24} style={{ color: 'var(--accent-color)' }} />
+              </div>
+              <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>JoVE</h4>
+              <div style={{ color: 'var(--accent-color)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>USA / Global</div>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+                "Academic content creation for the world's leading producer of scientific video protocols."
               </p>
             </div>
           </div>
