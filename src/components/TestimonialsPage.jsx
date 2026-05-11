@@ -102,7 +102,7 @@ export default function TestimonialsPage() {
                   borderRadius: '50%', 
                   border: '5px solid #D4AF37', 
                   overflow: 'hidden', 
-                  marginTop: testimonial.category === 'scholar' ? '1rem' : '0',
+                  marginTop: testimonial.institution ? '1rem' : '0',
                   marginBottom: '1.5rem',
                   background: 'var(--bg-secondary)',
                   boxShadow: '0 15px 40px rgba(212, 175, 55, 0.3)'

@@ -96,7 +96,7 @@ const TestimonialSlider = () => {
               borderRadius: '50%', 
               border: '4px solid #D4AF37', 
               overflow: 'hidden', 
-              marginTop: testimonial.category === 'scholar' ? '1rem' : '0',
+              marginTop: testimonial.institution ? '1.25rem' : '0',
               marginBottom: '1rem',
               background: 'var(--bg-secondary)',
               boxShadow: '0 12px 30px rgba(212, 175, 55, 0.2)'
