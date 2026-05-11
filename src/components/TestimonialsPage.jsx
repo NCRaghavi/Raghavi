@@ -92,39 +92,51 @@ export default function TestimonialsPage() {
                   ))}
                 </div>
 
-                {/* 3. Centered Italicized Quote */}
+                {/* 3. Centered Italicized Quote - Reduced Size */}
                 <p style={{ 
-                  color: '#e6f1ff', // Crisp White-Blue Text
-                  fontSize: '1.15rem', 
-                  lineHeight: 1.8, 
+                  color: '#e6f1ff', 
+                  fontSize: '1rem', // Reduced from 1.15rem
+                  lineHeight: 1.7, 
                   marginBottom: '2rem', 
                   fontStyle: 'italic', 
-                  fontFamily: 'Georgia, serif'
+                  fontFamily: 'Georgia, serif',
+                  maxWidth: '500px'
                 }}>
                   "{testimonial.text}"
                 </p>
 
-                {/* 4. Name (White) & Designation (High-Contrast Blue) */}
+                {/* 4. Name (White) & Two-Line Designation (Gold) */}
                 <div style={{ width: '100%' }}>
                   <h4 style={{ 
                     fontWeight: 800, 
-                    color: '#ffffff', // Pure White Name
-                    fontSize: '1.4rem', 
-                    marginBottom: '0.5rem',
+                    color: '#ffffff', 
+                    fontSize: '1.25rem', 
+                    marginBottom: '0.75rem',
                     letterSpacing: '-0.2px'
                   }}>
                     {testimonial.name}
                   </h4>
-                  <p style={{ 
-                    fontSize: '0.9rem', 
-                    color: '#64ffda', // High-Contrast Modern Blue/Teal
-                    fontWeight: 700, 
-                    lineHeight: 1.5,
-                    textTransform: 'uppercase',
-                    letterSpacing: '1px'
-                  }}>
-                    {testimonial.course || testimonial.topic}
-                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                    <p style={{ 
+                      fontSize: '0.85rem', 
+                      color: 'var(--accent-color)', // Restored Gold Color
+                      fontWeight: 700, 
+                      textTransform: 'uppercase',
+                      letterSpacing: '1px'
+                    }}>
+                      {testimonial.course || testimonial.topic}
+                    </p>
+                    {testimonial.location && (
+                      <p style={{ 
+                        fontSize: '0.8rem', 
+                        color: 'rgba(255, 255, 255, 0.5)', // Subtle white for location
+                        fontWeight: 500,
+                        letterSpacing: '0.5px'
+                      }}>
+                        {testimonial.location}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
