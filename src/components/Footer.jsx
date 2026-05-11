@@ -28,6 +28,7 @@ export default function Footer() {
             <Link to="/ca" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>CA</Link>
             <Link to="/acca" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>ACCA</Link>
             <Link to="/university" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>University</Link>
+            <Link to="/testimonials" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>Testimonials</Link>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             <h4 style={{ fontWeight: 600, marginBottom: '0.5rem', ...goldTextStyle }}>Legal & Support</h4>

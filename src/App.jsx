@@ -28,6 +28,7 @@ function App() {
             <Route path="/resources" element={<BookRecommendationsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
+            <Route path="/testimonials" element={<TestimonialsPage />} />
           </Routes>
         </main>
         <Footer />
