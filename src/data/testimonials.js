@@ -33,7 +33,8 @@ export const testimonialsData = {
     {
       id: 101,
       name: "Dr. Pragnesh Dalwadi",
-      topic: "Assistant Professor, Government Arts and Commerce College",
+      topic: "Assistant Professor",
+      college: "Government Arts and Commerce College",
       location: "Barwala, Botad, Gujarat, India",
       institution: "Alumni - School of Commerce, Gujarat University",
       image: "/images/testimonials/pragnesh.png",

@@ -146,6 +146,16 @@ const TestimonialSlider = () => {
               }}>
                 {testimonial.topic || testimonial.course}
               </p>
+              {testimonial.college && (
+                <p style={{ 
+                  color: 'var(--text-secondary)', 
+                  fontSize: '0.7rem', 
+                  fontWeight: 700,
+                  marginTop: '0.1rem'
+                }}>
+                  {testimonial.college}
+                </p>
+              )}
               {testimonial.location && (
                 <p style={{ 
                   color: 'var(--text-secondary)', 

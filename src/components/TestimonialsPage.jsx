@@ -152,13 +152,24 @@ export default function TestimonialsPage() {
                       textTransform: 'uppercase',
                       letterSpacing: '1px'
                     }}>
-                      {testimonial.course || testimonial.topic}
+                      {testimonial.topic || testimonial.course}
                     </p>
+                    {testimonial.college && (
+                      <p style={{ 
+                        fontSize: '0.9rem', 
+                        color: 'var(--text-secondary)', 
+                        fontWeight: 700,
+                        marginTop: '0.2rem'
+                      }}>
+                        {testimonial.college}
+                      </p>
+                    )}
                     {testimonial.location && (
                       <p style={{ 
                         fontSize: '0.85rem', 
                         color: 'var(--text-secondary)', 
-                        fontWeight: 600
+                        fontWeight: 600,
+                        marginTop: '0.2rem'
                       }}>
                         {testimonial.location}
                       </p>
