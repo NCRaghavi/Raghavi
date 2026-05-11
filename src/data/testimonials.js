@@ -104,40 +104,14 @@ export const testimonialsData = {
       priority: 10
     },
     {
-      id: 106,
-      name: "Dr. Aamena Saiyed",
-      topic: "Research Colleague & Scholar",
-      college: "School of Commerce, Gujarat University",
-      location: "Ahmedabad, Gujarat",
-      institution: "Alumni - School of Commerce, Gujarat University",
-      image: "/images/testimonials/aamena.jpeg",
-      text: "Dr. Raghavi’s strong academic insight and research acumen made her a remarkable colleague during my PhD years. The resources and perspectives she shared contributed meaningfully to my scholarly development. I truly value the professional camaraderie we shared.",
-      stars: 5,
-      category: "scholar",
-      priority: 9
-    },
-    {
-      id: 105,
-      name: "Dr. Komal Raval",
+      id: 104,
+      name: "Dr. Sakina Merchant",
       topic: "Assistant Professor",
-      college: "Som-Lalit College of Commerce",
+      college: "Som Lalit College of Commerce",
       location: "Ahmedabad, Gujarat",
       institution: "Alumni - School of Commerce, Gujarat University",
-      image: "/images/testimonials/komalraval.png",
-      text: "Dr. Raghavi's support during my Ph.D. truly made a big difference in my journey. Her guidance during my Ph.D. was instrumental in shaping my academic and professional journey. Her constant encouragement, insightful feedback, and unwavering support helped me develop confidence and clarity in my research work, which continues to influence my career today.",
-      stars: 5,
-      category: "scholar",
-      priority: 9
-    },
-    {
-      id: 102,
-      name: "Dr. Pankaj Sharma",
-      topic: "Assistant Professor (Commerce)",
-      college: "Shri K K Shastri Government Commerce College",
-      location: "Ahmedabad, Gujarat",
-      institution: "Alumni - School of Commerce, Gujarat University",
-      image: "/images/testimonials/pankaj.png",
-      text: "Dr. Raghavi's classes gave me more than just conceptual clarity. They shaped how I think, learn, and carry myself professionally. Her disciplined approach, professionalism, and engaging teaching style left a deep and lasting impact on me. Beyond the classroom, her guidance in research helped me take my very first meaningful steps into the academic world and understand what true inquiry means. Even today, those learnings continue to guide me in my journey as a teacher and researcher.",
+      image: "/images/testimonials/sakina.jpeg", 
+      text: "Dr. Raghavi was a senior JRF during my Ph.D. under Dr. Bharti Pathak at the School of Commerce. (2017-2021). Her patient guidance, especially during my first research paper presentation and publication, helped me understand the nuances of academic research with clarity and confidence. I appreciate her deep commitment to research and academics. I sincerely wish her continued success in all her endeavours.",
       stars: 5,
       category: "scholar",
       priority: 9
@@ -156,17 +130,43 @@ export const testimonialsData = {
       priority: 8
     },
     {
-      id: 104,
-      name: "Dr. Sakina Merchant",
-      topic: "Assistant Professor",
-      college: "Som Lalit College of Commerce",
+      id: 102,
+      name: "Dr. Pankaj Sharma",
+      topic: "Assistant Professor (Commerce)",
+      college: "Shri K K Shastri Government Commerce College",
       location: "Ahmedabad, Gujarat",
       institution: "Alumni - School of Commerce, Gujarat University",
-      image: "/images/testimonials/sakina.jpeg", 
-      text: "Dr. Raghavi was a senior JRF during my Ph.D. under Dr. Bharti Pathak at the School of Commerce. (2017-2021). Her patient guidance, especially during my first research paper presentation and publication, helped me understand the nuances of academic research with clarity and confidence. I appreciate her deep commitment to research and academics. I sincerely wish her continued success in all her endeavours.",
+      image: "/images/testimonials/pankaj.png",
+      text: "Dr. Raghavi's classes gave me more than just conceptual clarity. They shaped how I think, learn, and carry myself professionally. Her disciplined approach, professionalism, and engaging teaching style left a deep and lasting impact on me. Beyond the classroom, her guidance in research helped me take my very first meaningful steps into the academic world and understand what true inquiry means. Even today, those learnings continue to guide me in my journey as a teacher and researcher.",
       stars: 5,
       category: "scholar",
-      priority: 8
+      priority: 7
+    },
+    {
+      id: 106,
+      name: "Dr. Aamena Saiyed",
+      topic: "Research Colleague & Scholar",
+      college: "School of Commerce, Gujarat University",
+      location: "Ahmedabad, Gujarat",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/aamena.jpeg",
+      text: "Dr. Raghavi’s strong academic insight and research acumen made her a remarkable colleague during my PhD years. The resources and perspectives she shared contributed meaningfully to my scholarly development. I truly value the professional camaraderie we shared.",
+      stars: 5,
+      category: "scholar",
+      priority: 6
+    },
+    {
+      id: 105,
+      name: "Dr. Komal Raval",
+      topic: "Assistant Professor",
+      college: "Som-Lalit College of Commerce",
+      location: "Ahmedabad, Gujarat",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/komalraval.png",
+      text: "Dr. Raghavi's support during my Ph.D. truly made a big difference in my journey. Her guidance during my Ph.D. was instrumental in shaping my academic and professional journey. Her constant encouragement, insightful feedback, and unwavering support helped me develop confidence and clarity in my research work, which continues to influence my career today.",
+      stars: 5,
+      category: "scholar",
+      priority: 5
     },
     {
       id: 107,
@@ -179,7 +179,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's mentorship throughout my doctoral studies was foundational to my growth. The clarity and confidence I gained through her insightful feedback and steady support remain the cornerstone of my professional practice today.",
       stars: 5,
       category: "scholar",
-      priority: 8
+      priority: 4
     }
   ]
 };
