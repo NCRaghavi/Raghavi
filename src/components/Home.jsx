@@ -57,7 +57,7 @@ const TestimonialSlider = () => {
         {displayItems.map((testimonial, idx) => (
           <div key={`${testimonial.id}-${idx}`} className="testimonial-card" style={{ 
             background: 'var(--bg-card)', 
-            padding: '2rem 1.5rem', 
+            padding: '2.5rem 1.5rem', 
             borderRadius: '32px', 
             border: '1px solid var(--border-color)', 
             display: 'flex', 
@@ -65,8 +65,24 @@ const TestimonialSlider = () => {
             alignItems: 'center',
             textAlign: 'center',
             boxShadow: 'var(--shadow-bento)',
-            height: '100%'
+            height: '100%',
+            position: 'relative'
           }}>
+            {testimonial.category === 'scholar' && (
+              <div style={{ 
+                position: 'absolute',
+                top: '1rem',
+                width: '100%',
+                color: '#D4AF37',
+                opacity: 0.5,
+                fontSize: '0.6rem',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: '1px'
+              }}>
+                Alumni - School of Commerce, Gujarat University
+              </div>
+            )}
             {/* 1. Photo */}
             <div className="testimonial-portrait" style={{ 
               width: '140px', 
@@ -74,6 +90,7 @@ const TestimonialSlider = () => {
               borderRadius: '50%', 
               border: '4px solid #D4AF37', 
               overflow: 'hidden', 
+              marginTop: testimonial.category === 'scholar' ? '1rem' : '0',
               marginBottom: '1rem',
               background: 'var(--bg-secondary)',
               boxShadow: '0 12px 30px rgba(212, 175, 55, 0.2)'
@@ -109,23 +126,6 @@ const TestimonialSlider = () => {
 
             {/* 4. Signature - FIXED COLORS */}
             <div style={{ width: '100%', paddingTop: '1.25rem', borderTop: '1px solid var(--border-color)' }}>
-              {testimonial.category === 'scholar' && (
-                <div style={{ 
-                  display: 'inline-block',
-                  padding: '0.3rem 0.75rem',
-                  borderRadius: '4px',
-                  border: '1px solid #D4AF37',
-                  background: 'rgba(212, 175, 55, 0.08)',
-                  color: '#D4AF37',
-                  fontSize: '0.65rem',
-                  fontWeight: 800,
-                  textTransform: 'uppercase',
-                  letterSpacing: '1px',
-                  marginBottom: '0.75rem'
-                }}>
-                  Alumni - School of Commerce, Gujarat University
-                </div>
-              )}
               <h4 style={{ 
                 color: '#D4AF37', 
                 fontSize: '1.1rem', 

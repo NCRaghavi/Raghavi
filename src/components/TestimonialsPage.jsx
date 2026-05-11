@@ -62,7 +62,7 @@ export default function TestimonialsPage() {
             {currentTestimonials.map((testimonial) => (
               <div key={testimonial.id} className="testimonial-card" style={{ 
                 background: 'var(--bg-card)', 
-                padding: '3rem 2rem', 
+                padding: '2.5rem 2rem', 
                 borderRadius: '32px', 
                 border: '1px solid var(--border-color)', 
                 display: 'flex', 
@@ -70,8 +70,25 @@ export default function TestimonialsPage() {
                 alignItems: 'center',
                 textAlign: 'center',
                 boxShadow: 'var(--shadow-bento)',
-                transition: 'transform 0.3s ease'
+                transition: 'transform 0.3s ease',
+                position: 'relative'
               }}>
+                {testimonial.category === 'scholar' && (
+                  <div style={{ 
+                    position: 'absolute',
+                    top: '1.25rem',
+                    width: '100%',
+                    color: '#D4AF37',
+                    opacity: 0.6,
+                    fontSize: '0.75rem',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    letterSpacing: '1.5px'
+                  }}>
+                    Alumni - School of Commerce, Gujarat University
+                  </div>
+                )}
+                
                 {/* 1. Ultra-Large Photo (220px) - Responsive Scale */}
                 <div className="testimonial-portrait" style={{ 
                   width: '200px', 
@@ -79,6 +96,7 @@ export default function TestimonialsPage() {
                   borderRadius: '50%', 
                   border: '5px solid #D4AF37', 
                   overflow: 'hidden', 
+                  marginTop: testimonial.category === 'scholar' ? '1rem' : '0',
                   marginBottom: '1.5rem',
                   background: 'var(--bg-secondary)',
                   boxShadow: '0 15px 40px rgba(212, 175, 55, 0.3)'
@@ -115,24 +133,6 @@ export default function TestimonialsPage() {
 
                 {/* 4. Color Hierarchy: Gold Name, Vivid Blue Designation, Pure White Location */}
                 <div style={{ width: '100%', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)' }}>
-                  {testimonial.category === 'scholar' && (
-                    <div style={{ 
-                      display: 'inline-block',
-                      padding: '0.4rem 1rem',
-                      borderRadius: '6px',
-                      border: '1px solid #D4AF37',
-                      background: 'rgba(212, 175, 55, 0.1)',
-                      color: '#D4AF37',
-                      fontSize: '0.75rem',
-                      fontWeight: 800,
-                      textTransform: 'uppercase',
-                      letterSpacing: '1.2px',
-                      marginBottom: '1rem',
-                      boxShadow: '0 4px 10px rgba(212, 175, 55, 0.15)'
-                    }}>
-                      Alumni - School of Commerce, Gujarat University
-                    </div>
-                  )}
                   <h4 style={{ 
                     fontWeight: 900, 
                     color: '#D4AF37', 
