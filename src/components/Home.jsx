@@ -109,6 +109,23 @@ const TestimonialSlider = () => {
 
             {/* 4. Signature - FIXED COLORS */}
             <div style={{ width: '100%', paddingTop: '1.25rem', borderTop: '1px solid var(--border-color)' }}>
+              {testimonial.category === 'scholar' && (
+                <div style={{ 
+                  display: 'inline-block',
+                  padding: '0.3rem 0.75rem',
+                  borderRadius: '4px',
+                  border: '1px solid #D4AF37',
+                  background: 'rgba(212, 175, 55, 0.08)',
+                  color: '#D4AF37',
+                  fontSize: '0.65rem',
+                  fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: '1px',
+                  marginBottom: '0.75rem'
+                }}>
+                  Alumni - School of Commerce, Gujarat University
+                </div>
+              )}
               <h4 style={{ 
                 color: '#D4AF37', 
                 fontSize: '1.1rem', 

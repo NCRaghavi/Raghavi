@@ -115,19 +115,20 @@ export default function TestimonialsPage() {
 
                 {/* 4. Color Hierarchy: Gold Name, Vivid Blue Designation, Pure White Location */}
                 <div style={{ width: '100%', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)' }}>
-                  {activeTab === 'scholars' && (
+                  {testimonial.category === 'scholar' && (
                     <div style={{ 
                       display: 'inline-block',
-                      padding: '0.25rem 0.75rem',
-                      borderRadius: '4px',
-                      border: '1px solid rgba(212, 175, 55, 0.3)',
-                      background: 'rgba(212, 175, 55, 0.05)',
+                      padding: '0.4rem 1rem',
+                      borderRadius: '6px',
+                      border: '1px solid #D4AF37',
+                      background: 'rgba(212, 175, 55, 0.1)',
                       color: '#D4AF37',
-                      fontSize: '0.7rem',
-                      fontWeight: 700,
+                      fontSize: '0.75rem',
+                      fontWeight: 800,
                       textTransform: 'uppercase',
-                      letterSpacing: '1px',
-                      marginBottom: '0.75rem'
+                      letterSpacing: '1.2px',
+                      marginBottom: '1rem',
+                      boxShadow: '0 4px 10px rgba(212, 175, 55, 0.15)'
                     }}>
                       Alumni - School of Commerce, Gujarat University
                     </div>
@@ -135,7 +136,7 @@ export default function TestimonialsPage() {
                   <h4 style={{ 
                     fontWeight: 900, 
                     color: '#D4AF37', 
-                    fontSize: '1.4rem', 
+                    fontSize: '1.45rem', 
                     marginBottom: '0.5rem',
                     letterSpacing: '-0.3px'
                   }}>
