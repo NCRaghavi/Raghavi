@@ -478,6 +478,9 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* Testimonials Slider Section - NOW AT THE END */}
+      <TestimonialSlider />
     </div>
   );
 }
