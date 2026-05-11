@@ -4,95 +4,124 @@ import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, Trendin
 import { testimonialsData } from '../data/testimonials';
 
 const TestimonialSlider = () => {
-  const allTestimonials = [...testimonialsData.scholars, ...testimonialsData.students];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % allTestimonials.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [allTestimonials.length]);
+  const allTestimonials = [...testimonialsData.scholars, ...testimonialsData.students].slice(0, 2);
 
   if (allTestimonials.length === 0) return null;
 
-  const current = allTestimonials[currentIndex];
-
   return (
-    <section className="testimonials-slider bento-item" style={{ padding: '4rem 2rem', background: '#0a192f', position: 'relative', overflow: 'hidden' }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', position: 'relative' }}>
-        <Quote size={80} style={{ color: 'var(--accent-color)', opacity: 0.05, position: 'absolute', top: '-1rem', left: '50%', transform: 'translateX(-50%)' }} />
-        
-        {/* Profile Image */}
-        <div style={{ 
-          width: '120px', 
-          height: '120px', 
-          borderRadius: '50%', 
-          border: '3px solid var(--accent-color)', 
-          margin: '0 auto 2rem',
-          overflow: 'hidden',
-          boxShadow: '0 0 30px rgba(212, 175, 55, 0.2)'
-        }}>
-          {current.image ? (
-            <img src={current.image} alt={current.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-          ) : (
-            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-secondary)' }}>
-              <Users size={40} style={{ color: 'var(--accent-color)' }} />
-            </div>
-          )}
-        </div>
-
-        {/* Testimonial Text */}
-        <p style={{ 
-          fontSize: '1.25rem', 
-          fontStyle: 'italic', 
-          color: '#e6f1ff', 
-          lineHeight: 1.8, 
-          marginBottom: '2.5rem',
-          fontFamily: 'Georgia, serif',
-          minHeight: '120px'
-        }}>
-          "{current.text}"
-        </p>
-
-        {/* Identity Section */}
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem' }}>
-          <h4 style={{ 
-            color: 'var(--accent-color)', 
-            fontSize: '1.4rem', 
-            fontWeight: 800, 
-            marginBottom: '0.5rem' 
+    <section className="testimonials-featured bento-item" style={{ padding: '4rem 5%', background: '#0a192f' }}>
+      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        <span className="badge" style={{ marginBottom: '1rem' }}>Success Stories</span>
+        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#fff' }}>Ph.D. Led Mentorship in Action</h2>
+      </div>
+      
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+        gap: '2.5rem',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
+        {allTestimonials.map((testimonial) => (
+          <div key={testimonial.id} style={{ 
+            background: 'rgba(255,255,255,0.03)', 
+            padding: '3.5rem 2.5rem', 
+            borderRadius: '32px', 
+            border: '1px solid rgba(212, 175, 55, 0.2)', 
+            position: 'relative', 
+            display: 'flex', 
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
+            boxShadow: '0 20px 50px rgba(0,0,0,0.3)'
           }}>
-            {current.name}
-          </h4>
-          <p style={{ color: '#ffffff', fontSize: '0.95rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>
-            {current.topic || current.course}
-          </p>
-          {current.location && (
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginTop: '0.25rem' }}>
-              {current.location}
-            </p>
-          )}
-        </div>
+            {/* 0. Institutional Stamp with more breathing room */}
+            {testimonial.institution && (
+              <div style={{ 
+                position: 'absolute', 
+                top: '1.5rem', 
+                padding: '0.35rem 1rem', 
+                border: '1px solid rgba(212, 175, 55, 0.4)', 
+                borderRadius: '8px',
+                fontSize: '0.65rem',
+                fontWeight: 700,
+                letterSpacing: '1.5px',
+                color: 'var(--accent-color)',
+                textTransform: 'uppercase',
+                background: 'rgba(212, 175, 55, 0.05)',
+              }}>
+                {testimonial.institution}
+              </div>
+            )}
 
-        {/* Navigation Dots */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', marginTop: '3rem' }}>
-          {allTestimonials.map((_, idx) => (
-            <button 
-              key={idx} 
-              onClick={() => setCurrentIndex(idx)}
-              style={{ 
-                width: idx === currentIndex ? '24px' : '8px', 
-                height: '8px', 
-                borderRadius: '999px', 
-                background: idx === currentIndex ? 'var(--accent-color)' : 'rgba(255,255,255,0.2)',
-                border: 'none',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
-            />
-          ))}
-        </div>
+            {/* 1. Large Circular Photo (180px) */}
+            <div style={{ 
+              width: '180px', 
+              height: '180px', 
+              borderRadius: '50%', 
+              border: '4px solid #D4AF37', 
+              overflow: 'hidden', 
+              marginTop: '1.5rem',
+              marginBottom: '2rem',
+              background: '#112240',
+              boxShadow: '0 15px 35px rgba(212, 175, 55, 0.2)'
+            }}>
+              {testimonial.image ? (
+                <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              ) : (
+                <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37' }}>
+                  <Users size={60} />
+                </div>
+              )}
+            </div>
+
+            {/* 2. Star Rating (Restored) */}
+            <div style={{ display: 'flex', gap: '0.3rem', color: '#FFD700', marginBottom: '1.5rem' }}>
+              {[...Array(testimonial.stars || 5)].map((_, i) => (
+                <Star key={i} size={20} fill="currentColor" />
+              ))}
+            </div>
+
+            {/* 3. Testimonial Text */}
+            <p style={{ 
+              fontSize: '1.05rem', 
+              fontStyle: 'italic', 
+              color: '#e6f1ff', 
+              lineHeight: 1.8, 
+              marginBottom: '2.5rem',
+              fontFamily: 'Georgia, serif'
+            }}>
+              "{testimonial.text}"
+            </p>
+
+            {/* 4. Signature Section */}
+            <div style={{ width: '100%', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ 
+                color: 'var(--accent-color)', // Name in Gold
+                fontSize: '1.4rem', 
+                fontWeight: 800, 
+                marginBottom: '0.5rem' 
+              }}>
+                {testimonial.name}
+              </h4>
+              <p style={{ 
+                color: '#64ffda', // Designation in Blue
+                fontSize: '0.95rem', 
+                fontWeight: 700, 
+                textTransform: 'uppercase', 
+                letterSpacing: '1px',
+                marginBottom: '0.25rem'
+              }}>
+                {testimonial.topic || testimonial.course}
+              </p>
+              {testimonial.location && (
+                <p style={{ color: '#ffffff', fontSize: '0.85rem' }}>
+                  {testimonial.location}
+                </p>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
