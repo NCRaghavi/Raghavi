@@ -83,7 +83,7 @@ export const testimonialsData = {
       institution: "Alumni - School of Commerce, Gujarat University",
       image: "/images/testimonials/harshini.jpeg",
       photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.1)' },
-      text: "Dr. Raghvi’s sessions at Sheth Damodardas School pf Commerce, Gujarat University gave me a strong foundation in Commerce that shaped how I think about running a business today. Her emphasis on practical application over rote learning pushed me to approach problems with clarity and confidence. That mindset has been central to building The Batter Bae, my gluten-free baking brand, from the ground up.",
+      text: "Dr. Raghavi’s sessions at Sheth Damodardas School of Commerce, Gujarat University gave me a strong foundation in Commerce that shaped how I think about running a business today. Her emphasis on practical application over rote learning pushed me to approach problems with clarity and confidence. That mindset has been central to building The Batter Bae, my gluten-free baking brand, from the ground up.",
       stars: 5,
       category: "student",
       priority: 7
