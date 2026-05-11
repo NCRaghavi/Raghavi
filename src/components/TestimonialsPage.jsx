@@ -54,90 +54,90 @@ export default function TestimonialsPage() {
             {currentTestimonials.map((testimonial) => (
               <div key={testimonial.id} style={{ 
                 background: '#0a192f', 
-                padding: '3rem 2rem', 
-                borderRadius: '24px', 
+                padding: '4rem 2rem', 
+                borderRadius: '32px', 
                 border: '1px solid rgba(212, 175, 55, 0.3)', 
                 display: 'flex', 
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
                 transition: 'transform 0.3s ease'
               }}>
-                {/* 0. Institutional Stamp - Now in Flow for Breathing Space */}
+                {/* 0. Institutional Stamp - Ultra Spacing */}
                 {testimonial.institution && (
                   <div style={{ 
-                    padding: '0.4rem 1.2rem', 
-                    border: '1px solid rgba(212, 175, 55, 0.4)', 
-                    borderRadius: '8px',
-                    fontSize: '0.65rem',
-                    fontWeight: 700,
-                    letterSpacing: '1.5px',
+                    padding: '0.5rem 1.5rem', 
+                    border: '2px solid rgba(212, 175, 55, 0.5)', 
+                    borderRadius: '12px',
+                    fontSize: '0.75rem',
+                    fontWeight: 800,
+                    letterSpacing: '2px',
                     color: 'var(--accent-color)',
                     textTransform: 'uppercase',
-                    background: 'rgba(212, 175, 55, 0.05)',
-                    marginBottom: '2rem' // Forces space below the stamp
+                    background: 'rgba(212, 175, 55, 0.1)',
+                    marginBottom: '3.5rem' // MASSIVE breathing space
                   }}>
                     {testimonial.institution}
                   </div>
                 )}
 
-                {/* 1. Large Circular Photo (180px) */}
+                {/* 1. Ultra-Large Photo (220px) */}
                 <div style={{ 
-                  width: '180px', 
-                  height: '180px', 
+                  width: '220px', 
+                  height: '220px', 
                   borderRadius: '50%', 
-                  border: '4px solid #D4AF37', 
+                  border: '5px solid #D4AF37', 
                   overflow: 'hidden', 
-                  marginBottom: '1.5rem',
+                  marginBottom: '2rem',
                   background: '#112240',
-                  boxShadow: '0 12px 30px rgba(212, 175, 55, 0.2)'
+                  boxShadow: '0 15px 40px rgba(212, 175, 55, 0.3)'
                 }}>
                   {testimonial.image ? (
                     <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   ) : (
                     <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37' }}>
-                      <Users size={60} />
+                      <Users size={80} />
                     </div>
                   )}
                 </div>
 
                 {/* 2. Star Rating */}
-                <div style={{ display: 'flex', gap: '0.25rem', color: '#FFD700', marginBottom: '1rem' }}>
+                <div style={{ display: 'flex', gap: '0.4rem', color: '#FFD700', marginBottom: '1.5rem' }}>
                   {[...Array(testimonial.stars || 5)].map((_, i) => (
-                    <Star key={i} size={18} fill="currentColor" />
+                    <Star key(i) size={22} fill="currentColor" />
                   ))}
                 </div>
 
                 {/* 3. Testimonial Text */}
                 <p style={{ 
                   color: '#e6f1ff', 
-                  fontSize: '1rem', 
-                  lineHeight: 1.7, 
-                  marginBottom: '2rem', 
+                  fontSize: '1.1rem', 
+                  lineHeight: 1.8, 
+                  marginBottom: '2.5rem', 
                   fontStyle: 'italic', 
                   fontFamily: 'Georgia, serif',
-                  maxWidth: '100%'
+                  maxWidth: '600px'
                 }}>
                   "{testimonial.text}"
                 </p>
 
-                {/* 4. Signature Hierarchy: Gold Name, Blue Designation, White Location */}
-                <div style={{ width: '100%', paddingTop: '1.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                {/* 4. Color Hierarchy: Gold Name, Vivid Blue Designation, Pure White Location */}
+                <div style={{ width: '100%', paddingTop: '2rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
                   <h4 style={{ 
-                    fontWeight: 800, 
-                    color: 'var(--accent-color)', 
-                    fontSize: '1.2rem', 
-                    marginBottom: '0.5rem',
-                    letterSpacing: '-0.2px'
+                    fontWeight: 900, 
+                    color: '#D4AF37', // VIBRANT GOLD
+                    fontSize: '1.5rem', 
+                    marginBottom: '0.75rem',
+                    letterSpacing: '-0.3px'
                   }}>
                     {testimonial.name}
                   </h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                     <p style={{ 
-                      fontSize: '0.85rem', 
-                      color: '#64ffda', // High-Contrast Blue
-                      fontWeight: 700, 
+                      fontSize: '1rem', 
+                      color: '#4dabf7', // VIVID BLUE
+                      fontWeight: 800, 
                       textTransform: 'uppercase',
                       letterSpacing: '1px'
                     }}>
@@ -145,15 +145,16 @@ export default function TestimonialsPage() {
                     </p>
                     {testimonial.location && (
                       <p style={{ 
-                        fontSize: '0.8rem', 
-                        color: '#ffffff', // Pure White Location
-                        fontWeight: 500
+                        fontSize: '0.9rem', 
+                        color: '#ffffff', // PURE WHITE
+                        fontWeight: 600
                       }}>
                         {testimonial.location}
                       </p>
                     )}
                   </div>
                 </div>
+              </div>
               </div>
               </div>
               </div>
