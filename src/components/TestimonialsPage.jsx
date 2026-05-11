@@ -53,33 +53,61 @@ export default function TestimonialsPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', textAlign: 'left' }}>
             {currentTestimonials.map((testimonial) => (
               <div key={testimonial.id} style={{ background: 'var(--bg-primary)', padding: '2.5rem', borderRadius: '24px', border: '1px solid var(--border-color)', position: 'relative', boxShadow: 'var(--shadow-sm)', display: 'flex', flexDirection: 'column' }}>
-                <Quote size={40} style={{ color: 'var(--accent-color)', opacity: 0.1, position: 'absolute', top: '2rem', right: '2rem' }} />
-                
-                <div style={{ display: 'flex', gap: '0.25rem', color: '#FFD700', marginBottom: '1.5rem' }}>
-                  {[...Array(testimonial.stars || 5)].map((_, i) => (
-                    <Star key={i} size={16} fill="currentColor" />
-                  ))}
-                </div>
-
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '2rem', fontStyle: 'italic', flexGrow: 1 }}>
-                  "{testimonial.text}"
-                </p>
-
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)' }}>
-                  <div style={{ width: '56px', height: '56px', borderRadius: '16px', overflow: 'hidden', background: 'var(--border-color)', flexShrink: 0 }}>
-                    {testimonial.image ? (
-                      <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    ) : (
-                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)' }}>
-                        <Users size={24} />
-                      </div>
-                    )}
+                <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                  <Quote size={50} style={{ color: 'var(--accent-color)', opacity: 0.1, position: 'absolute', top: '2rem', right: '2rem' }} />
+                  
+                  <div style={{ display: 'flex', gap: '0.35rem', color: '#D4AF37', marginBottom: '2rem' }}>
+                    {[...Array(testimonial.stars || 5)].map((_, i) => (
+                      <Star key={i} size={18} fill="currentColor" />
+                    ))}
                   </div>
-                  <div>
-                    <h4 style={{ fontWeight: 800, color: 'var(--text-primary)', fontSize: '1.1rem' }}>{testimonial.name}</h4>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--accent-color)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                      {testimonial.course || testimonial.topic}
-                    </p>
+
+                  <p style={{ 
+                    color: 'var(--text-primary)', 
+                    fontSize: '1.2rem', 
+                    lineHeight: 1.8, 
+                    marginBottom: '3rem', 
+                    fontStyle: 'italic', 
+                    flexGrow: 1,
+                    fontFamily: 'Georgia, serif',
+                    letterSpacing: '0.2px'
+                  }}>
+                    "{testimonial.text}"
+                  </p>
+
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', paddingTop: '2rem', borderTop: '1px solid var(--border-color)' }}>
+                    <div style={{ 
+                      width: '72px', 
+                      height: '72px', 
+                      borderRadius: '20px', 
+                      overflow: 'hidden', 
+                      background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+                      padding: '2px', // Border effect
+                      flexShrink: 0,
+                      boxShadow: '0 8px 16px rgba(0,0,0,0.1)'
+                    }}>
+                      <div style={{ width: '100%', height: '100%', borderRadius: '18px', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+                        {testimonial.image ? (
+                          <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        ) : (
+                          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)' }}>
+                            <Users size={32} />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                      <h4 style={{ fontWeight: 800, color: 'var(--text-primary)', fontSize: '1.25rem', letterSpacing: '-0.3px' }}>{testimonial.name}</h4>
+                      <p style={{ 
+                        fontSize: '0.9rem', 
+                        color: 'var(--accent-color)', 
+                        fontWeight: 600, 
+                        lineHeight: 1.4,
+                        maxWidth: '400px'
+                      }}>
+                        {testimonial.course || testimonial.topic}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
