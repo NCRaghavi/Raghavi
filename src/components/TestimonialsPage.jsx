@@ -52,9 +52,7 @@ export default function TestimonialsPage() {
         {currentTestimonials.length > 0 ? (
           <div className="testimonial-grid" style={{ 
             display: 'grid', 
-            gridTemplateColumns: activeTab === 'scholars' 
-              ? 'repeat(auto-fit, minmax(350px, 420px))' 
-              : 'repeat(auto-fit, minmax(260px, 1fr))', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
             gap: '1.25rem', 
             textAlign: 'left',
             justifyContent: 'center',
@@ -64,7 +62,7 @@ export default function TestimonialsPage() {
             {currentTestimonials.map((testimonial) => (
               <div key={testimonial.id} className="testimonial-card" style={{ 
                 background: 'var(--bg-card)', 
-                padding: activeTab === 'scholars' ? '3rem 2rem' : '2rem 1.5rem', 
+                padding: '2rem 1.5rem', 
                 borderRadius: '24px', 
                 border: '1px solid var(--border-color)', 
                 display: 'flex', 
@@ -74,7 +72,7 @@ export default function TestimonialsPage() {
                 boxShadow: 'var(--shadow-bento)',
                 transition: 'transform 0.3s ease',
                 position: 'relative',
-                minHeight: activeTab === 'scholars' ? '600px' : '400px'
+                minHeight: '450px'
               }}>
                 {testimonial.institution && (
                   <div style={{ 
@@ -83,7 +81,7 @@ export default function TestimonialsPage() {
                     width: '100%',
                     color: '#D4AF37',
                     opacity: 0.6,
-                    fontSize: activeTab === 'scholars' ? '0.7rem' : '0.6rem',
+                    fontSize: '0.65rem',
                     fontWeight: 700,
                     textTransform: 'uppercase',
                     letterSpacing: '1px',
@@ -98,12 +96,12 @@ export default function TestimonialsPage() {
                   </div>
                 )}
                 
-                {/* Portrait - Varied Size */}
+                {/* Portrait */}
                 <div className="testimonial-portrait" style={{ 
-                  width: activeTab === 'scholars' ? '180px' : '100px', 
-                  height: activeTab === 'scholars' ? '180px' : '100px', 
+                  width: '120px', 
+                  height: '120px', 
                   borderRadius: '50%', 
-                  border: activeTab === 'scholars' ? '5px solid #D4AF37' : '3px solid #D4AF37', 
+                  border: '3px solid #D4AF37', 
                   overflow: 'hidden', 
                   marginTop: testimonial.institution ? '1.5rem' : '0',
                   marginBottom: '1.25rem',
@@ -123,7 +121,7 @@ export default function TestimonialsPage() {
                     />
                   ) : (
                     <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37' }}>
-                      <Users size={activeTab === 'scholars' ? 60 : 40} />
+                      <Users size={50} />
                     </div>
                   )}
                 </div>
@@ -131,14 +129,14 @@ export default function TestimonialsPage() {
                 {/* Stars */}
                 <div style={{ display: 'flex', gap: '0.3rem', color: '#FFD700', marginBottom: '1rem' }}>
                   {[...Array(testimonial.stars || 5)].map((_, i) => (
-                    <Star key={i} size={activeTab === 'scholars' ? 18 : 14} fill="currentColor" />
+                    <Star key={i} size={14} fill="currentColor" />
                   ))}
                 </div>
 
                 {/* Text */}
                 <p style={{ 
                   color: 'var(--text-quote)', 
-                  fontSize: activeTab === 'scholars' ? '1.05rem' : '0.9rem', 
+                  fontSize: '0.95rem', 
                   lineHeight: 1.6, 
                   marginBottom: '1.5rem', 
                   fontStyle: 'italic', 
@@ -154,7 +152,7 @@ export default function TestimonialsPage() {
                   <h4 style={{ 
                     fontWeight: 800, 
                     color: '#D4AF37', 
-                    fontSize: activeTab === 'scholars' ? '1.4rem' : '1.15rem', 
+                    fontSize: '1.2rem', 
                     marginBottom: '0.4rem',
                     letterSpacing: '-0.3px'
                   }}>
@@ -162,7 +160,7 @@ export default function TestimonialsPage() {
                   </h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                     <p style={{ 
-                      fontSize: activeTab === 'scholars' ? '0.9rem' : '0.8rem', 
+                      fontSize: '0.8rem', 
                       color: '#4dabf7', 
                       fontWeight: 800, 
                       textTransform: 'uppercase',
@@ -172,7 +170,7 @@ export default function TestimonialsPage() {
                     </p>
                     {testimonial.college && (
                       <p style={{ 
-                        fontSize: activeTab === 'scholars' ? '0.85rem' : '0.75rem', 
+                        fontSize: '0.75rem', 
                         color: 'var(--text-secondary)', 
                         fontWeight: 700
                       }}>
@@ -181,7 +179,7 @@ export default function TestimonialsPage() {
                     )}
                     {testimonial.location && (
                       <p style={{ 
-                        fontSize: activeTab === 'scholars' ? '0.8rem' : '0.7rem', 
+                        fontSize: '0.7rem', 
                         color: 'var(--text-secondary)', 
                         fontWeight: 600
                       }}>
