@@ -28,7 +28,7 @@ export const testimonialsData = {
       location: "Vadodara, Gujarat",
       institution: "Alumni - School of Commerce, Gujarat University",
       image: "/images/testimonials/bhawari.png", 
-      text: "Dr Raghavi's teaching has played a very significant role in building my conceptual clarity and confidence. The way she explained Financial markets especially money market and capital markets made a strong and lasting impact on my learning. Her in-depth knowledge of the subject and your dedication to ensuring that her students truly understand and learn have always been inspiring. The lessons and guidance I received from her have greatly supported me in shaping my career, and I remain truly grateful for your wonderful sessions.",
+      text: "Dr. Raghavi's teaching has played a very significant role in building my conceptual clarity and confidence. The way she explained Financial markets especially money market and capital markets made a strong and lasting impact on my learning. Her in-depth knowledge of the subject and your dedication to ensuring that her students truly understand and learn have always been inspiring. The lessons and guidance I received from her have greatly supported me in shaping my career, and I remain truly grateful for your wonderful sessions.",
       stars: 5,
       category: "student"
     },
@@ -52,6 +52,7 @@ export const testimonialsData = {
       location: "Surat, Gujarat",
       institution: "Alumni - School of Commerce, Gujarat University",
       image: "/images/testimonials/vishakha.png",
+      photoStyle: { transform: 'scale(1.35)', objectPosition: 'center 20%' },
       text: "I still recall our sessions at the School of Commerce, Gujarat University with great respect and gratitude. Dr. Raghavi's teaching played a significant role in building my conceptual clarity and confidence in the field of Commerce. She not only taught us the subject but also encouraged us to think critically and apply concepts to real-life situations. The practical insights and engaging classroom discussions truly helped shape my professional approach. I am grateful for the strong foundation she provided during my academic journey.",
       stars: 5,
       category: "student"
@@ -76,6 +77,7 @@ export const testimonialsData = {
       location: "Gandhidham | Adipur",
       institution: "Alumni - School of Commerce, Gujarat University",
       image: "/images/testimonials/harshini.jpeg",
+      photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.1)' },
       text: "Dr. Raghvi’s sessions at Sheth Damodardas School pf Commerce, Gujarat University gave me a strong foundation in Commerce that shaped how I think about running a business today. Her emphasis on practical application over rote learning pushed me to approach problems with clarity and confidence. That mindset has been central to building The Batter Bae, my gluten-free baking brand, from the ground up.",
       stars: 5,
       category: "student"

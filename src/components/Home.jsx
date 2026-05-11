@@ -102,7 +102,16 @@ const TestimonialSlider = () => {
               boxShadow: '0 12px 30px rgba(212, 175, 55, 0.2)'
             }}>
               {testimonial.image ? (
-                <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.name} 
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    ...(testimonial.photoStyle || {})
+                  }} 
+                />
               ) : (
                 <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37' }}>
                   <Users size={50} />
