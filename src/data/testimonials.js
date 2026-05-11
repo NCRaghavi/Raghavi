@@ -162,7 +162,7 @@ export const testimonialsData = {
       college: "Som Lalit College of Commerce",
       location: "Ahmedabad, Gujarat",
       institution: "Alumni - School of Commerce, Gujarat University",
-      image: "", 
+      image: "/images/testimonials/sakina.jpeg", 
       text: "Dr. Raghavi was a senior JRF during my Ph.D. under Dr. Bharti Pathak at the School of Commerce. (2017-2021). Her patient guidance, especially during my first research paper presentation and publication, helped me understand the nuances of academic research with clarity and confidence. I appreciate her deep commitment to research and academics. I sincerely wish her continued success in all her endeavours.",
       stars: 5,
       category: "scholar",

@@ -4,7 +4,8 @@ import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, Trendin
 import { testimonialsData } from '../data/testimonials';
 
 const TestimonialSlider = () => {
-  const allTestimonials = [...testimonialsData.scholars, ...testimonialsData.students];
+  const allTestimonials = [...testimonialsData.scholars, ...testimonialsData.students]
+    .sort((a, b) => (b.priority || 0) - (a.priority || 0));
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
