@@ -10,7 +10,7 @@ export default function TestimonialsPage() {
     { id: 'scholars', label: 'Ph.D. & Research Mentorship', icon: <GraduationCap size={20} /> }
   ];
 
-  const currentTestimonials = testimonialsData[activeTab] || [];
+  const currentTestimonials = [...(testimonialsData[activeTab] || [])].sort((a, b) => (b.priority || 0) - (a.priority || 0));
 
   return (
     <div className="home-container" style={{ margin: '0 auto', flexGrow: 1, padding: '4rem 5%' }}>
