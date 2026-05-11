@@ -313,8 +313,8 @@ export default function Home() {
               <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
               </div>
-              <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem', whiteSpace: 'nowrap' }}>The School of Commerce</h4>
-              <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University</div>
+              <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>School of Commerce</h4>
+              <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University, Ahmedabad</div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
                 "Shaping the next generation of Commerce Professors and Class-I/II Officers."
               </p>
