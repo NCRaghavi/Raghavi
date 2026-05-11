@@ -1,6 +1,102 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, TrendingUp, Landmark, Star, Quote, Play } from 'lucide-react';
+import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, TrendingUp, Landmark, Star, Quote, Play, ChevronLeft, ChevronRight, Users } from 'lucide-react';
+import { testimonialsData } from '../data/testimonials';
+
+const TestimonialSlider = () => {
+  const allTestimonials = [...testimonialsData.scholars, ...testimonialsData.students];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % allTestimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [allTestimonials.length]);
+
+  if (allTestimonials.length === 0) return null;
+
+  const current = allTestimonials[currentIndex];
+
+  return (
+    <section className="testimonials-slider bento-item" style={{ padding: '4rem 2rem', background: '#0a192f', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', position: 'relative' }}>
+        <Quote size={80} style={{ color: 'var(--accent-color)', opacity: 0.05, position: 'absolute', top: '-1rem', left: '50%', transform: 'translateX(-50%)' }} />
+        
+        {/* Profile Image */}
+        <div style={{ 
+          width: '120px', 
+          height: '120px', 
+          borderRadius: '50%', 
+          border: '3px solid var(--accent-color)', 
+          margin: '0 auto 2rem',
+          overflow: 'hidden',
+          boxShadow: '0 0 30px rgba(212, 175, 55, 0.2)'
+        }}>
+          {current.image ? (
+            <img src={current.image} alt={current.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          ) : (
+            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-secondary)' }}>
+              <Users size={40} style={{ color: 'var(--accent-color)' }} />
+            </div>
+          )}
+        </div>
+
+        {/* Testimonial Text */}
+        <p style={{ 
+          fontSize: '1.25rem', 
+          fontStyle: 'italic', 
+          color: '#e6f1ff', 
+          lineHeight: 1.8, 
+          marginBottom: '2.5rem',
+          fontFamily: 'Georgia, serif',
+          minHeight: '120px'
+        }}>
+          "{current.text}"
+        </p>
+
+        {/* Identity Section */}
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem' }}>
+          <h4 style={{ 
+            color: 'var(--accent-color)', 
+            fontSize: '1.4rem', 
+            fontWeight: 800, 
+            marginBottom: '0.5rem' 
+          }}>
+            {current.name}
+          </h4>
+          <p style={{ color: '#ffffff', fontSize: '0.95rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}>
+            {current.topic || current.course}
+          </p>
+          {current.location && (
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginTop: '0.25rem' }}>
+              {current.location}
+            </p>
+          )}
+        </div>
+
+        {/* Navigation Dots */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', marginTop: '3rem' }}>
+          {allTestimonials.map((_, idx) => (
+            <button 
+              key={idx} 
+              onClick={() => setCurrentIndex(idx)}
+              style={{ 
+                width: idx === currentIndex ? '24px' : '8px', 
+                height: '8px', 
+                borderRadius: '999px', 
+                background: idx === currentIndex ? 'var(--accent-color)' : 'rgba(255,255,255,0.2)',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default function Home() {
   return (
@@ -124,6 +220,9 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* Testimonials Slider Section */}
+      <TestimonialSlider />
 
       {/* About the Founder Section */}
       <section className="founder-section bento-item" style={{ padding: '4rem 3rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>

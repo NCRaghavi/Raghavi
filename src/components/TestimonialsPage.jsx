@@ -53,8 +53,8 @@ export default function TestimonialsPage() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', textAlign: 'left' }}>
             {currentTestimonials.map((testimonial) => (
               <div key={testimonial.id} style={{ 
-                background: '#0a192f', // Deep High-Contrast Dark
-                padding: '3rem 2rem', 
+                background: '#0a192f', 
+                padding: '2.5rem 1.5rem', // Reduced side padding for a more compact feel
                 borderRadius: '24px', 
                 border: '1px solid rgba(212, 175, 55, 0.3)', 
                 position: 'relative', 
@@ -69,95 +69,95 @@ export default function TestimonialsPage() {
                 {testimonial.institution && (
                   <div style={{ 
                     position: 'absolute', 
-                    top: '1.5rem', 
-                    padding: '0.35rem 1rem', 
+                    top: '1rem', 
+                    padding: '0.25rem 0.75rem', 
                     border: '1px solid rgba(212, 175, 55, 0.4)', 
-                    borderRadius: '8px',
-                    fontSize: '0.65rem',
+                    borderRadius: '6px',
+                    fontSize: '0.6rem',
                     fontWeight: 700,
-                    letterSpacing: '1.5px',
+                    letterSpacing: '1px',
                     color: 'var(--accent-color)',
                     textTransform: 'uppercase',
                     background: 'rgba(212, 175, 55, 0.05)',
-                    boxShadow: 'inset 0 0 10px rgba(212, 175, 55, 0.1)'
                   }}>
                     {testimonial.institution}
                   </div>
                 )}
 
-                {/* 1. Circular Photo with Gold Border */}
+                {/* 1. Circular Photo (Increased by 25%) */}
                 <div style={{ 
-                  width: '120px', 
-                  height: '120px', 
+                  width: '150px', // Increased from 120px
+                  height: '150px', 
                   borderRadius: '50%', 
-                  border: '3px solid #D4AF37', // Solid Gold Border
+                  border: '4px solid #D4AF37', 
                   overflow: 'hidden', 
-                  marginBottom: '1.5rem',
+                  marginTop: '1.5rem', // Spacing from stamp
+                  marginBottom: '1rem', // Tightened spacing
                   background: '#112240',
-                  boxShadow: '0 0 20px rgba(212, 175, 55, 0.2)'
+                  boxShadow: '0 8px 30px rgba(212, 175, 55, 0.15)'
                 }}>
                   {testimonial.image ? (
                     <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   ) : (
                     <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37' }}>
-                      <Users size={40} />
+                      <Users size={50} />
                     </div>
                   )}
                 </div>
 
-                {/* 2. 5 Stars */}
-                <div style={{ display: 'flex', gap: '0.25rem', color: '#FFD700', marginBottom: '1.5rem' }}>
+                {/* 2. 5 Stars - Tightened */}
+                <div style={{ display: 'flex', gap: '0.2rem', color: '#FFD700', marginBottom: '1rem' }}>
                   {[...Array(testimonial.stars || 5)].map((_, i) => (
-                    <Star key={i} size={18} fill="currentColor" />
+                    <Star key={i} size={16} fill="currentColor" />
                   ))}
                 </div>
 
-                {/* 3. Centered Italicized Quote - Reduced Size */}
+                {/* 3. Centered Italicized Quote - Increased Font Size */}
                 <p style={{ 
                   color: '#e6f1ff', 
-                  fontSize: '1rem', // Reduced from 1.15rem
-                  lineHeight: 1.7, 
-                  marginBottom: '2rem', 
+                  fontSize: '1.1rem', // Increased slightly to fill space
+                  lineHeight: 1.6, 
+                  marginBottom: '1.5rem', // Tightened spacing
                   fontStyle: 'italic', 
                   fontFamily: 'Georgia, serif',
-                  maxWidth: '500px'
+                  maxWidth: '100%'
                 }}>
                   "{testimonial.text}"
                 </p>
 
-                {/* 4. Name (Gold) & Two-Line Designation (White) */}
-                <div style={{ width: '100%' }}>
+                {/* 4. Name & Two-Line Designation */}
+                <div style={{ width: '100%', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
                   <h4 style={{ 
                     fontWeight: 800, 
-                    color: 'var(--accent-color)', // Name in Gold
-                    fontSize: '1.1rem', // Reduced Size
-                    marginBottom: '0.5rem',
-                    letterSpacing: '-0.2px'
+                    color: 'var(--accent-color)', 
+                    fontSize: '1.15rem', 
+                    marginBottom: '0.35rem',
+                    letterSpacing: '-0.1px'
                   }}>
                     {testimonial.name}
                   </h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.15rem' }}>
                     <p style={{ 
-                      fontSize: '0.85rem', 
-                      color: '#ffffff', // Designation in White
+                      fontSize: '0.8rem', 
+                      color: '#ffffff', 
                       fontWeight: 700, 
                       textTransform: 'uppercase',
-                      letterSpacing: '1px'
+                      letterSpacing: '0.5px'
                     }}>
                       {testimonial.course || testimonial.topic}
                     </p>
                     {testimonial.location && (
                       <p style={{ 
-                        fontSize: '0.8rem', 
-                        color: 'rgba(255, 255, 255, 0.8)', // Location in White (slight transparency for hierarchy)
-                        fontWeight: 500,
-                        letterSpacing: '0.5px'
+                        fontSize: '0.75rem', 
+                        color: 'rgba(255, 255, 255, 0.7)', 
+                        fontWeight: 500
                       }}>
                         {testimonial.location}
                       </p>
                     )}
                   </div>
                 </div>
+              </div>
               </div>
             ))}
           </div>
