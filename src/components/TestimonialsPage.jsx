@@ -50,75 +50,84 @@ export default function TestimonialsPage() {
         </div>
 
         {currentTestimonials.length > 0 ? (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', textAlign: 'left' }}>
+          <div className="testimonial-grid" style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 420px))', 
+            gap: '1.5rem', 
+            textAlign: 'left',
+            justifyContent: 'center',
+            maxWidth: '1300px',
+            margin: '0 auto'
+          }}>
             {currentTestimonials.map((testimonial) => (
-              <div key={testimonial.id} style={{ 
-                background: '#0a192f', 
-                padding: '4rem 2rem', 
+              <div key={testimonial.id} className="testimonial-card" style={{ 
+                background: 'var(--bg-card)', 
+                padding: '3rem 2rem', 
                 borderRadius: '32px', 
-                border: '1px solid rgba(212, 175, 55, 0.3)', 
+                border: '1px solid var(--border-color)', 
                 display: 'flex', 
                 flexDirection: 'column',
                 alignItems: 'center',
                 textAlign: 'center',
-                boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
+                boxShadow: 'var(--shadow-bento)',
                 transition: 'transform 0.3s ease'
               }}>
-                {/* 1. Ultra-Large Photo (220px) */}
-                <div style={{ 
-                  width: '220px', 
-                  height: '220px', 
+                {/* 1. Ultra-Large Photo (220px) - Responsive Scale */}
+                <div className="testimonial-portrait" style={{ 
+                  width: '200px', 
+                  height: '200px', 
                   borderRadius: '50%', 
                   border: '5px solid #D4AF37', 
                   overflow: 'hidden', 
-                  marginBottom: '2rem',
-                  background: '#112240',
+                  marginBottom: '1.5rem',
+                  background: 'var(--bg-secondary)',
                   boxShadow: '0 15px 40px rgba(212, 175, 55, 0.3)'
                 }}>
                   {testimonial.image ? (
                     <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   ) : (
                     <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37' }}>
-                      <Users size={80} />
+                      <Users size={70} />
                     </div>
                   )}
                 </div>
 
                 {/* 2. Star Rating */}
-                <div style={{ display: 'flex', gap: '0.4rem', color: '#FFD700', marginBottom: '1.5rem' }}>
+                <div style={{ display: 'flex', gap: '0.4rem', color: '#FFD700', marginBottom: '1.25rem' }}>
                   {[...Array(testimonial.stars || 5)].map((_, i) => (
-                    <Star key={i} size={22} fill="currentColor" />
+                    <Star key={i} size={20} fill="currentColor" />
                   ))}
                 </div>
 
                 {/* 3. Testimonial Text */}
                 <p style={{ 
-                  color: '#e6f1ff', 
-                  fontSize: '1.1rem', 
-                  lineHeight: 1.8, 
-                  marginBottom: '2.5rem', 
+                  color: 'var(--text-quote)', 
+                  fontSize: '1.05rem', 
+                  lineHeight: 1.7, 
+                  marginBottom: '2rem', 
                   fontStyle: 'italic', 
                   fontFamily: 'Georgia, serif',
-                  maxWidth: '600px'
+                  maxWidth: '600px',
+                  flexGrow: 1
                 }}>
                   "{testimonial.text}"
                 </p>
 
                 {/* 4. Color Hierarchy: Gold Name, Vivid Blue Designation, Pure White Location */}
-                <div style={{ width: '100%', paddingTop: '2rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                <div style={{ width: '100%', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)' }}>
                   <h4 style={{ 
                     fontWeight: 900, 
-                    color: '#D4AF37', // VIBRANT GOLD
-                    fontSize: '1.5rem', 
-                    marginBottom: '0.75rem',
+                    color: '#D4AF37', 
+                    fontSize: '1.4rem', 
+                    marginBottom: '0.5rem',
                     letterSpacing: '-0.3px'
                   }}>
                     {testimonial.name}
                   </h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
                     <p style={{ 
-                      fontSize: '1rem', 
-                      color: '#4dabf7', // VIVID BLUE
+                      fontSize: '0.95rem', 
+                      color: '#4dabf7', 
                       fontWeight: 800, 
                       textTransform: 'uppercase',
                       letterSpacing: '1px'
@@ -127,8 +136,8 @@ export default function TestimonialsPage() {
                     </p>
                     {testimonial.location && (
                       <p style={{ 
-                        fontSize: '0.9rem', 
-                        color: '#ffffff', // PURE WHITE
+                        fontSize: '0.85rem', 
+                        color: 'var(--text-secondary)', 
                         fontWeight: 600
                       }}>
                         {testimonial.location}

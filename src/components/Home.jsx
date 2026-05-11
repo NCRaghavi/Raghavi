@@ -25,45 +25,46 @@ const TestimonialSlider = () => {
   return (
     <section className="testimonials-featured bento-item" style={{ 
       padding: '6rem 5%', 
-      background: '#0a192f', 
+      background: 'var(--bg-primary)', // Adapts to theme
       position: 'relative', 
       zIndex: 10,
       marginTop: '2rem'
     }}>
       <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
         <span className="badge" style={{ marginBottom: '1rem' }}>Success Stories</span>
-        <h2 style={{ fontSize: '2.8rem', fontWeight: 900, color: '#fff', letterSpacing: '-1px' }}>Ph.D. Led Mentorship in Action</h2>
+        <h2 style={{ fontSize: '2.8rem', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-1px' }}>Ph.D. Led Mentorship in Action</h2>
       </div>
       
-      <div style={{ 
+      <div className="testimonial-grid" style={{ 
         display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-        gap: '2.5rem',
-        maxWidth: '1200px',
-        margin: '0 auto'
+        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 400px))', 
+        gap: '1.5rem',
+        maxWidth: '1000px',
+        margin: '0 auto',
+        justifyContent: 'center'
       }}>
         {displayItems.map((testimonial, idx) => (
-          <div key={`${testimonial.id}-${idx}`} style={{ 
-            background: 'rgba(255,255,255,0.03)', 
-            padding: '3rem 2rem', 
+          <div key={`${testimonial.id}-${idx}`} className="testimonial-card" style={{ 
+            background: 'var(--bg-card)', 
+            padding: '2.5rem 1.75rem', 
             borderRadius: '32px', 
-            border: '1px solid rgba(212, 175, 55, 0.2)', 
+            border: '1px solid var(--border-color)', 
             display: 'flex', 
             flexDirection: 'column',
             alignItems: 'center',
             textAlign: 'center',
-            boxShadow: '0 20px 50px rgba(0,0,0,0.3)',
-            minHeight: '600px'
+            boxShadow: 'var(--shadow-bento)',
+            height: '100%'
           }}>
             {/* 1. Photo */}
-            <div style={{ 
-              width: '180px', 
-              height: '180px', 
+            <div className="testimonial-portrait" style={{ 
+              width: '160px', 
+              height: '160px', 
               borderRadius: '50%', 
               border: '4px solid #D4AF37', 
               overflow: 'hidden', 
-              marginBottom: '1.5rem',
-              background: '#112240',
+              marginBottom: '1.25rem',
+              background: 'var(--bg-secondary)',
               boxShadow: '0 12px 30px rgba(212, 175, 55, 0.2)'
             }}>
               {testimonial.image ? (
@@ -76,19 +77,19 @@ const TestimonialSlider = () => {
             </div>
 
             {/* 2. Stars */}
-            <div style={{ display: 'flex', gap: '0.3rem', color: '#FFD700', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', gap: '0.3rem', color: '#FFD700', marginBottom: '1rem' }}>
               {[...Array(testimonial.stars || 5)].map((_, i) => (
-                <Star key={i} size={18} fill="currentColor" />
+                <Star key={i} size={16} fill="currentColor" />
               ))}
             </div>
 
             {/* 3. Text */}
             <p style={{ 
-              fontSize: '1rem', 
+              fontSize: '0.95rem', 
               fontStyle: 'italic', 
-              color: '#e6f1ff', 
-              lineHeight: 1.7, 
-              marginBottom: '2.5rem',
+              color: 'var(--text-quote)', 
+              lineHeight: 1.6, 
+              marginBottom: '2rem',
               fontFamily: 'Georgia, serif',
               flexGrow: 1
             }}>
@@ -96,30 +97,30 @@ const TestimonialSlider = () => {
             </p>
 
             {/* 4. Signature - FIXED COLORS */}
-            <div style={{ width: '100%', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+            <div style={{ width: '100%', paddingTop: '1.25rem', borderTop: '1px solid var(--border-color)' }}>
               <h4 style={{ 
-                color: '#D4AF37', // HARD-CODED GOLD NAME
-                fontSize: '1.3rem', 
+                color: '#D4AF37', 
+                fontSize: '1.2rem', 
                 fontWeight: 800, 
-                marginBottom: '0.4rem' 
+                marginBottom: '0.3rem' 
               }}>
                 {testimonial.name}
               </h4>
               <p style={{ 
-                color: '#4dabf7', // HARD-CODED VIVID BLUE DESIGNATION
-                fontSize: '0.9rem', 
+                color: '#4dabf7', 
+                fontSize: '0.85rem', 
                 fontWeight: 700, 
                 textTransform: 'uppercase', 
                 letterSpacing: '1px',
-                marginBottom: '0.25rem'
+                marginBottom: '0.2rem'
               }}>
                 {testimonial.topic || testimonial.course}
               </p>
               {testimonial.location && (
                 <p style={{ 
-                  color: '#ffffff', // PURE WHITE LOCATION
-                  fontSize: '0.8rem', 
-                  marginTop: '0.2rem' 
+                  color: 'var(--text-secondary)', 
+                  fontSize: '0.75rem', 
+                  marginTop: '0.1rem' 
                 }}>
                   {testimonial.location}
                 </p>
@@ -324,7 +325,7 @@ export default function Home() {
         {/* Bottom Mastery Grid */}
         <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '2rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1rem', color: 'var(--text-primary)' }}>Her Domains of Absolute Mastery</h3>
+            <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1rem', color: 'var(--text-primary)' }}>Her Domains of Mastery</h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '800px', margin: '0 auto', lineHeight: 1.6 }}>
               While Dr. Raghavi&apos;s academic instruction spans the complete spectrum of Commerce and Management, the subjects below represent the core domains where she holds deep, specialized mastery.
             </p>

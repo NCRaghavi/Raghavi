@@ -6,28 +6,30 @@
   --bg-secondary: #FFFFFF;
   --bg-secondary-rgb: 255, 255, 255;
   --bg-bento: #FFFFFF;
+  --bg-card: #F1F5F9; /* New: Soft light background for cards */
   --text-primary: #0F172A;
   --text-secondary: #475569;
+  --text-quote: #1E293B; /* New: Dark text for quotes in light mode */
   --accent-color: #2563EB;
   --accent-hover: #1D4ED8;
   --border-color: #E2E8F0;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 10px 25px -3px rgba(0, 0, 0, 0.05);
   --shadow-bento: 0 20px 40px -10px rgba(0,0,0,0.05);
-  --whatsapp-bg: #25D366;
-  --whatsapp-hover: #1EBE5D;
 }
 
 [data-theme="dark"] {
-  /* Dark Theme - Deep Navy & Slate */
+  /* Dark Theme */
   --bg-primary: #070B14;
   --bg-secondary: #0F172A;
   --bg-secondary-rgb: 15, 23, 42;
   --bg-bento: #141E33;
+  --bg-card: #0a192f; /* New: Deep navy for cards */
   --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
-  --accent-color: #3B82F6;
-  --accent-hover: #60A5FA;
+  --text-quote: #e6f1ff; /* New: Light text for quotes in dark mode */
+  --accent-color: #D4AF37; /* Consistent Gold for Authority */
+  --accent-hover: #FBBF24;
   --border-color: #1E293B;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 10px 25px -3px rgba(0, 0, 0, 0.5);
@@ -610,5 +612,25 @@ a {
   
   .resource-hub-section {
     padding: 1.5rem;
+  }
+
+  /* Mobile-Specific Hero Scaling */
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Testimonial Mobile Scale */
+  .testimonial-portrait {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .testimonial-card {
+    padding: 2.5rem 1.5rem !important;
   }
 }
