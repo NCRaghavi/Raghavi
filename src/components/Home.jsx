@@ -249,9 +249,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Slider Section */}
-      <TestimonialSlider />
-
       {/* About the Founder Section */}
       <section className="founder-section bento-item" style={{ padding: '4rem 3rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
         
