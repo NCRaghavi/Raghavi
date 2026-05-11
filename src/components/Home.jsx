@@ -4,13 +4,27 @@ import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, Trendin
 import { testimonialsData } from '../data/testimonials';
 
 const TestimonialSlider = () => {
-  const allTestimonials = [...testimonialsData.scholars, ...testimonialsData.students].slice(0, 2);
+  const allTestimonials = [...testimonialsData.scholars, ...testimonialsData.students];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (allTestimonials.length <= 2) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 2) % allTestimonials.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [allTestimonials.length]);
 
   if (allTestimonials.length === 0) return null;
 
+  // Get two items for the current slide
+  const firstItem = allTestimonials[currentIndex];
+  const secondItem = allTestimonials[(currentIndex + 1) % allTestimonials.length];
+  const displayItems = allTestimonials.length === 1 ? [firstItem] : [firstItem, secondItem];
+
   return (
     <section className="testimonials-featured bento-item" style={{ padding: '4rem 5%', background: '#0a192f' }}>
-      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
         <span className="badge" style={{ marginBottom: '1rem' }}>Success Stories</span>
         <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#fff' }}>Ph.D. Led Mentorship in Action</h2>
       </div>
@@ -22,25 +36,23 @@ const TestimonialSlider = () => {
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
-        {allTestimonials.map((testimonial) => (
-          <div key={testimonial.id} style={{ 
+        {displayItems.map((testimonial, idx) => (
+          <div key={`${testimonial.id}-${idx}`} style={{ 
             background: 'rgba(255,255,255,0.03)', 
-            padding: '3.5rem 2.5rem', 
+            padding: '3rem 2rem', 
             borderRadius: '32px', 
             border: '1px solid rgba(212, 175, 55, 0.2)', 
-            position: 'relative', 
             display: 'flex', 
             flexDirection: 'column',
             alignItems: 'center',
             textAlign: 'center',
-            boxShadow: '0 20px 50px rgba(0,0,0,0.3)'
+            boxShadow: '0 20px 50px rgba(0,0,0,0.3)',
+            minHeight: '600px'
           }}>
-            {/* 0. Institutional Stamp with more breathing room */}
+            {/* 0. Institutional Stamp */}
             {testimonial.institution && (
               <div style={{ 
-                position: 'absolute', 
-                top: '1.5rem', 
-                padding: '0.35rem 1rem', 
+                padding: '0.4rem 1rem', 
                 border: '1px solid rgba(212, 175, 55, 0.4)', 
                 borderRadius: '8px',
                 fontSize: '0.65rem',
@@ -49,22 +61,22 @@ const TestimonialSlider = () => {
                 color: 'var(--accent-color)',
                 textTransform: 'uppercase',
                 background: 'rgba(212, 175, 55, 0.05)',
+                marginBottom: '2rem'
               }}>
                 {testimonial.institution}
               </div>
             )}
 
-            {/* 1. Large Circular Photo (180px) */}
+            {/* 1. Photo */}
             <div style={{ 
               width: '180px', 
               height: '180px', 
               borderRadius: '50%', 
               border: '4px solid #D4AF37', 
               overflow: 'hidden', 
-              marginTop: '1.5rem',
-              marginBottom: '2rem',
+              marginBottom: '1.5rem',
               background: '#112240',
-              boxShadow: '0 15px 35px rgba(212, 175, 55, 0.2)'
+              boxShadow: '0 12px 30px rgba(212, 175, 55, 0.2)'
             }}>
               {testimonial.image ? (
                 <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -75,47 +87,36 @@ const TestimonialSlider = () => {
               )}
             </div>
 
-            {/* 2. Star Rating (Restored) */}
-            <div style={{ display: 'flex', gap: '0.3rem', color: '#FFD700', marginBottom: '1.5rem' }}>
+            {/* 2. Stars */}
+            <div style={{ display: 'flex', gap: '0.3rem', color: '#FFD700', marginBottom: '1.25rem' }}>
               {[...Array(testimonial.stars || 5)].map((_, i) => (
-                <Star key={i} size={20} fill="currentColor" />
+                <Star key={i} size={18} fill="currentColor" />
               ))}
             </div>
 
-            {/* 3. Testimonial Text */}
+            {/* 3. Text */}
             <p style={{ 
-              fontSize: '1.05rem', 
+              fontSize: '1rem', 
               fontStyle: 'italic', 
               color: '#e6f1ff', 
-              lineHeight: 1.8, 
+              lineHeight: 1.7, 
               marginBottom: '2.5rem',
-              fontFamily: 'Georgia, serif'
+              fontFamily: 'Georgia, serif',
+              flexGrow: 1
             }}>
               "{testimonial.text}"
             </p>
 
-            {/* 4. Signature Section */}
+            {/* 4. Signature */}
             <div style={{ width: '100%', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-              <h4 style={{ 
-                color: 'var(--accent-color)', // Name in Gold
-                fontSize: '1.4rem', 
-                fontWeight: 800, 
-                marginBottom: '0.5rem' 
-              }}>
+              <h4 style={{ color: 'var(--accent-color)', fontSize: '1.3rem', fontWeight: 800, marginBottom: '0.4rem' }}>
                 {testimonial.name}
               </h4>
-              <p style={{ 
-                color: '#64ffda', // Designation in Blue
-                fontSize: '0.95rem', 
-                fontWeight: 700, 
-                textTransform: 'uppercase', 
-                letterSpacing: '1px',
-                marginBottom: '0.25rem'
-              }}>
+              <p style={{ color: '#64ffda', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>
                 {testimonial.topic || testimonial.course}
               </p>
               {testimonial.location && (
-                <p style={{ color: '#ffffff', fontSize: '0.85rem' }}>
+                <p style={{ color: '#ffffff', fontSize: '0.8rem', marginTop: '0.2rem' }}>
                   {testimonial.location}
                 </p>
               )}
