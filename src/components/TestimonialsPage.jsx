@@ -16,8 +16,8 @@ export default function TestimonialsPage() {
     <div className="home-container" style={{ margin: '0 auto', flexGrow: 1, padding: '4rem 5%' }}>
       <section className="bento-item" style={{ padding: '4rem', textAlign: 'center', background: 'var(--bg-secondary)', borderRadius: '32px', boxShadow: 'var(--shadow-md)' }}>
         <span className="badge" style={{ marginBottom: '1.5rem' }}>Social Proof</span>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1rem', letterSpacing: '-1px' }}>Student & Scholar Stories</h1>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', maxWidth: '800px', margin: '0 auto 3rem', lineHeight: 1.6 }}>
+        <h1 className="testimonials-header">Student & Scholar Stories</h1>
+        <p className="testimonials-description">
           Discover how Dr. Raghavi's Ph.D.-led mentorship has transformed the academic and professional trajectories of commerce students and research scholars across India.
         </p>
 
