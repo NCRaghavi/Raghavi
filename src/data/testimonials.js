@@ -27,6 +27,18 @@ export const testimonialsData = {
       text: "The way Dr. Raghavi explains complex Costing and Accounting standards is phenomenal. Her Ph.D. background brings a level of depth that you just don't get in standard coaching.",
       stars: 5,
       category: "student"
+    },
+    {
+      id: 3,
+      name: "Dr. Pankaj Sharma",
+      topic: "Assistant Professor (Commerce)",
+      college: "Shri K K Shastri Government Commerce College",
+      location: "Ahmedabad, Gujarat",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/pankaj.png",
+      text: "Dr. Raghavi's classes gave me more than just conceptual clarity. They shaped how I think, learn, and carry myself professionally. Her disciplined approach, professionalism, and engaging teaching style left a deep and lasting impact on me. Beyond the classroom, her guidance in research helped me take my very first meaningful steps into the academic world and understand what true inquiry means. Even today, those learnings continue to guide me in my journey as a teacher and researcher.",
+      stars: 5,
+      category: "student"
     }
   ],
   scholars: [
@@ -39,6 +51,18 @@ export const testimonialsData = {
       institution: "Alumni - School of Commerce, Gujarat University",
       image: "/images/testimonials/pragnesh.png",
       text: "Dr. Raghavi's mentorship during my Ph.D. was instrumental in shaping both my research perspective and academic discipline. Her constant encouragement and insightful guidance not only strengthened my work but also built the foundation of my professional journey.",
+      stars: 5,
+      category: "scholar"
+    },
+    {
+      id: 102,
+      name: "Dr. Pankaj Sharma",
+      topic: "Assistant Professor (Commerce)",
+      college: "Shri K K Shastri Government Commerce College",
+      location: "Ahmedabad, Gujarat",
+      institution: "Alumni - School of Commerce, Gujarat University",
+      image: "/images/testimonials/pankaj.png",
+      text: "Dr. Raghavi's classes gave me more than just conceptual clarity. They shaped how I think, learn, and carry myself professionally. Her disciplined approach, professionalism, and engaging teaching style left a deep and lasting impact on me. Beyond the classroom, her guidance in research helped me take my very first meaningful steps into the academic world and understand what true inquiry means. Even today, those learnings continue to guide me in my journey as a teacher and researcher.",
       stars: 5,
       category: "scholar"
     }

@@ -68,7 +68,7 @@ const TestimonialSlider = () => {
             height: '100%',
             position: 'relative'
           }}>
-            {testimonial.category === 'scholar' && (
+            {testimonial.institution && (
               <div style={{ 
                 position: 'absolute',
                 top: '0.75rem',
@@ -81,8 +81,12 @@ const TestimonialSlider = () => {
                 letterSpacing: '1px',
                 lineHeight: 1.3
               }}>
-                Alumni - School of Commerce<br />
-                Gujarat University
+                {testimonial.institution.includes(' - ') ? (
+                  <>
+                    {testimonial.institution.split(' - ')[0]} - {testimonial.institution.split(' - ')[1].split(',')[0]}<br />
+                    {testimonial.institution.split(',')[1]}
+                  </>
+                ) : testimonial.institution}
               </div>
             )}
             {/* 1. Photo */}

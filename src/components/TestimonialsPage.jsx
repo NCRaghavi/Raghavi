@@ -73,7 +73,7 @@ export default function TestimonialsPage() {
                 transition: 'transform 0.3s ease',
                 position: 'relative'
               }}>
-                {testimonial.category === 'scholar' && (
+                {testimonial.institution && (
                   <div style={{ 
                     position: 'absolute',
                     top: '0.75rem',
@@ -86,8 +86,12 @@ export default function TestimonialsPage() {
                     letterSpacing: '1.2px',
                     lineHeight: 1.4
                   }}>
-                    Alumni - School of Commerce<br />
-                    Gujarat University
+                    {testimonial.institution.includes(' - ') ? (
+                      <>
+                        {testimonial.institution.split(' - ')[0]} - {testimonial.institution.split(' - ')[1].split(',')[0]}<br />
+                        {testimonial.institution.split(',')[1]}
+                      </>
+                    ) : testimonial.institution}
                   </div>
                 )}
                 
