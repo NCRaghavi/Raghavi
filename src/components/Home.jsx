@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, TrendingUp, Landmark, Star, Quote, Play, ChevronLeft, ChevronRight, Users } from 'lucide-react';
+import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, TrendingUp, Landmark, Star, Quote, Play, ChevronLeft, ChevronRight, Users, Linkedin } from 'lucide-react';
 import { testimonialsData } from '../data/testimonials';
 
 const TestimonialSlider = () => {
@@ -143,12 +143,29 @@ const TestimonialSlider = () => {
             {/* 4. Signature - FIXED COLORS */}
             <div style={{ width: '100%', paddingTop: '1.25rem', borderTop: '1px solid var(--border-color)' }}>
               <h4 style={{ 
-                color: '#D4AF37', 
-                fontSize: '1.1rem', 
                 fontWeight: 800, 
-                marginBottom: '0.2rem' 
+                color: '#D4AF37', 
+                fontSize: '1.4rem', 
+                marginBottom: '0.4rem',
+                letterSpacing: '-0.3px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem'
               }}>
                 {testimonial.name}
+                {testimonial.linkedin && (
+                  <a 
+                    href={testimonial.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ color: '#0077B5', opacity: 0.8, display: 'flex', transition: 'opacity 0.2s' }}
+                    onMouseOver={(e) => e.currentTarget.style.opacity = '1'}
+                    onMouseOut={(e) => e.currentTarget.style.opacity = '0.8'}
+                  >
+                    <Linkedin size={18} fill="#0077B5" color="white" />
+                  </a>
+                )}
               </h4>
               <p style={{ 
                 color: '#4dabf7', 

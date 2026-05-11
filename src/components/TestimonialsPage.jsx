@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, GraduationCap, BookOpen, Users } from 'lucide-react';
+import { Star, GraduationCap, BookOpen, Users, Linkedin } from 'lucide-react';
 import { testimonialsData } from '../data/testimonials';
 
 export default function TestimonialsPage() {
@@ -154,9 +154,25 @@ export default function TestimonialsPage() {
                     color: '#D4AF37', 
                     fontSize: '1.2rem', 
                     marginBottom: '0.4rem',
-                    letterSpacing: '-0.3px'
+                    letterSpacing: '-0.3px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem'
                   }}>
                     {testimonial.name}
+                    {testimonial.linkedin && (
+                      <a 
+                        href={testimonial.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style={{ color: '#0077B5', opacity: 0.8, display: 'flex', transition: 'opacity 0.2s' }}
+                        onMouseOver={(e) => e.currentTarget.style.opacity = '1'}
+                        onMouseOut={(e) => e.currentTarget.style.opacity = '0.8'}
+                      >
+                        <Linkedin size={18} fill="#0077B5" color="white" />
+                      </a>
+                    )}
                   </h4>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                     <p style={{ 
