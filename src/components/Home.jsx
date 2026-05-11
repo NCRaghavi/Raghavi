@@ -49,24 +49,6 @@ const TestimonialSlider = () => {
             boxShadow: '0 20px 50px rgba(0,0,0,0.3)',
             minHeight: '600px'
           }}>
-            {/* 0. Institutional Stamp */}
-            {testimonial.institution && (
-              <div style={{ 
-                padding: '0.4rem 1rem', 
-                border: '1px solid rgba(212, 175, 55, 0.4)', 
-                borderRadius: '8px',
-                fontSize: '0.65rem',
-                fontWeight: 700,
-                letterSpacing: '1.5px',
-                color: 'var(--accent-color)',
-                textTransform: 'uppercase',
-                background: 'rgba(212, 175, 55, 0.05)',
-                marginBottom: '2rem'
-              }}>
-                {testimonial.institution}
-              </div>
-            )}
-
             {/* 1. Photo */}
             <div style={{ 
               width: '180px', 
@@ -107,16 +89,32 @@ const TestimonialSlider = () => {
               "{testimonial.text}"
             </p>
 
-            {/* 4. Signature */}
+            {/* 4. Signature - FIXED COLORS */}
             <div style={{ width: '100%', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-              <h4 style={{ color: 'var(--accent-color)', fontSize: '1.3rem', fontWeight: 800, marginBottom: '0.4rem' }}>
+              <h4 style={{ 
+                color: '#D4AF37', // HARD-CODED GOLD NAME
+                fontSize: '1.3rem', 
+                fontWeight: 800, 
+                marginBottom: '0.4rem' 
+              }}>
                 {testimonial.name}
               </h4>
-              <p style={{ color: '#64ffda', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>
+              <p style={{ 
+                color: '#4dabf7', // HARD-CODED VIVID BLUE DESIGNATION
+                fontSize: '0.9rem', 
+                fontWeight: 700, 
+                textTransform: 'uppercase', 
+                letterSpacing: '1px',
+                marginBottom: '0.25rem'
+              }}>
                 {testimonial.topic || testimonial.course}
               </p>
               {testimonial.location && (
-                <p style={{ color: '#ffffff', fontSize: '0.8rem', marginTop: '0.2rem' }}>
+                <p style={{ 
+                  color: '#ffffff', // PURE WHITE LOCATION
+                  fontSize: '0.8rem', 
+                  marginTop: '0.2rem' 
+                }}>
                   {testimonial.location}
                 </p>
               )}

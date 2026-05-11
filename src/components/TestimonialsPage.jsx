@@ -64,24 +64,6 @@ export default function TestimonialsPage() {
                 boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
                 transition: 'transform 0.3s ease'
               }}>
-                {/* 0. Institutional Stamp - Ultra Spacing */}
-                {testimonial.institution && (
-                  <div style={{ 
-                    padding: '0.5rem 1.5rem', 
-                    border: '2px solid rgba(212, 175, 55, 0.5)', 
-                    borderRadius: '12px',
-                    fontSize: '0.75rem',
-                    fontWeight: 800,
-                    letterSpacing: '2px',
-                    color: 'var(--accent-color)',
-                    textTransform: 'uppercase',
-                    background: 'rgba(212, 175, 55, 0.1)',
-                    marginBottom: '3.5rem' // MASSIVE breathing space
-                  }}>
-                    {testimonial.institution}
-                  </div>
-                )}
-
                 {/* 1. Ultra-Large Photo (220px) */}
                 <div style={{ 
                   width: '220px', 
@@ -155,9 +137,8 @@ export default function TestimonialsPage() {
                   </div>
                 </div>
               </div>
-              </div>
-              </div>
-              </div>
+            ))}
+          </div>
             ))}
           </div>
         ) : (
