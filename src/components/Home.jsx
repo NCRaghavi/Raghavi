@@ -478,15 +478,6 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="resource-card">
-            <div className="resource-meta">CA Intermediate | Notes</div>
-            <h3>Taxation Amendments 2026</h3>
-            <p>A complete breakdown of the latest taxation laws tailored for CA Inter students.</p>
-            <button className="btn btn-outline btn-sm">
-              <Download size={14} /> Download PDF
-            </button>
-          </div>
-
         </div>
       </section>
     </div>

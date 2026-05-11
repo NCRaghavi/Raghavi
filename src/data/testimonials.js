@@ -8,15 +8,15 @@
 
 export const testimonialsData = {
   students: [
-    // Example:
-    // {
-    //   id: 1,
-    //   name: "Rahul Sharma",
-    //   course: "CA Inter Achiever",
-    //   image: "/images/testimonials/rahul.jpg",
-    //   text: "Dr. Raghavi's approach to Financial Management is absolute mastery. I cleared my exams with flying colors thanks to her conceptual depth.",
-    //   stars: 5
-    // }
+    {
+      id: 1,
+      name: "Sneha Patel",
+      course: "UGC-NET (Commerce) Achiever",
+      location: "Ahmedabad, Gujarat",
+      image: "", // Placeholder
+      text: "Cracking the UGC-NET was a dream, but Dr. Raghavi's specialized batches made it a reality. Her focus on research methodology and paper-1 strategies is unmatched.",
+      stars: 5
+    }
   ],
   scholars: [
     {
