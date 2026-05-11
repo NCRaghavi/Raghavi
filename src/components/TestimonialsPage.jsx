@@ -52,63 +52,79 @@ export default function TestimonialsPage() {
         {currentTestimonials.length > 0 ? (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', textAlign: 'left' }}>
             {currentTestimonials.map((testimonial) => (
-              <div key={testimonial.id} style={{ background: 'var(--bg-primary)', padding: '2.5rem', borderRadius: '24px', border: '1px solid var(--border-color)', position: 'relative', boxShadow: 'var(--shadow-sm)', display: 'flex', flexDirection: 'column' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                  <Quote size={50} style={{ color: 'var(--accent-color)', opacity: 0.1, position: 'absolute', top: '2rem', right: '2rem' }} />
-                  
-                  <div style={{ display: 'flex', gap: '0.35rem', color: '#D4AF37', marginBottom: '2rem' }}>
-                    {[...Array(testimonial.stars || 5)].map((_, i) => (
-                      <Star key={i} size={18} fill="currentColor" />
-                    ))}
-                  </div>
-
-                  <p style={{ 
-                    color: 'var(--text-primary)', 
-                    fontSize: '1.2rem', 
-                    lineHeight: 1.8, 
-                    marginBottom: '3rem', 
-                    fontStyle: 'italic', 
-                    flexGrow: 1,
-                    fontFamily: 'Georgia, serif',
-                    letterSpacing: '0.2px'
-                  }}>
-                    "{testimonial.text}"
-                  </p>
-
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', paddingTop: '2rem', borderTop: '1px solid var(--border-color)' }}>
-                    <div style={{ 
-                      width: '72px', 
-                      height: '72px', 
-                      borderRadius: '20px', 
-                      overflow: 'hidden', 
-                      background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
-                      padding: '2px', // Border effect
-                      flexShrink: 0,
-                      boxShadow: '0 8px 16px rgba(0,0,0,0.1)'
-                    }}>
-                      <div style={{ width: '100%', height: '100%', borderRadius: '18px', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
-                        {testimonial.image ? (
-                          <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                        ) : (
-                          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)' }}>
-                            <Users size={32} />
-                          </div>
-                        )}
+              <div key={testimonial.id} style={{ 
+                background: 'var(--bg-primary)', 
+                padding: '3rem 2.5rem', 
+                borderRadius: '32px', 
+                border: '1px solid var(--border-color)', 
+                position: 'relative', 
+                boxShadow: 'var(--shadow-md)', 
+                display: 'flex', 
+                flexDirection: 'column',
+                alignItems: 'center',
+                textAlign: 'center' 
+              }}>
+                <Quote size={60} style={{ color: 'var(--accent-color)', opacity: 0.05, position: 'absolute', top: '2rem', right: '2rem' }} />
+                
+                {/* 1. Photo on Top */}
+                <div style={{ 
+                  width: '100px', 
+                  height: '100px', 
+                  borderRadius: '30px', 
+                  overflow: 'hidden', 
+                  background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
+                  padding: '3px',
+                  marginBottom: '2rem',
+                  boxShadow: '0 12px 24px rgba(212, 175, 55, 0.2)'
+                }}>
+                  <div style={{ width: '100%', height: '100%', borderRadius: '27px', overflow: 'hidden', background: 'var(--bg-secondary)' }}>
+                    {testimonial.image ? (
+                      <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    ) : (
+                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)' }}>
+                        <Users size={40} />
                       </div>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-                      <h4 style={{ fontWeight: 800, color: 'var(--text-primary)', fontSize: '1.25rem', letterSpacing: '-0.3px' }}>{testimonial.name}</h4>
-                      <p style={{ 
-                        fontSize: '0.9rem', 
-                        color: 'var(--accent-color)', 
-                        fontWeight: 600, 
-                        lineHeight: 1.4,
-                        maxWidth: '400px'
-                      }}>
-                        {testimonial.course || testimonial.topic}
-                      </p>
-                    </div>
+                    )}
                   </div>
+                </div>
+
+                {/* 2. Testimonial Text */}
+                <p style={{ 
+                  color: 'var(--text-primary)', 
+                  fontSize: '1.25rem', 
+                  lineHeight: 1.8, 
+                  marginBottom: '1.5rem', 
+                  fontStyle: 'italic', 
+                  fontFamily: 'Georgia, serif',
+                  letterSpacing: '0.2px'
+                }}>
+                  "{testimonial.text}"
+                </p>
+
+                {/* 3. Star Rating */}
+                <div style={{ display: 'flex', gap: '0.35rem', color: '#D4AF37', marginBottom: '2rem' }}>
+                  {[...Array(testimonial.stars || 5)].map((_, i) => (
+                    <Star key={i} size={20} fill="currentColor" />
+                  ))}
+                </div>
+
+                {/* 4. Name and Full Designation */}
+                <div style={{ paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)', width: '100%' }}>
+                  <h4 style={{ fontWeight: 800, color: 'var(--text-primary)', fontSize: '1.4rem', letterSpacing: '-0.5px', marginBottom: '0.5rem' }}>
+                    {testimonial.name}
+                  </h4>
+                  <p style={{ 
+                    fontSize: '0.95rem', 
+                    color: 'var(--accent-color)', 
+                    fontWeight: 700, 
+                    lineHeight: 1.5,
+                    maxWidth: '500px',
+                    margin: '0 auto',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px'
+                  }}>
+                    {testimonial.course || testimonial.topic}
+                  </p>
                 </div>
               </div>
             ))}
