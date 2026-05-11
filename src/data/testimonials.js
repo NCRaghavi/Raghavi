@@ -23,7 +23,7 @@ export const testimonialsData = {
       id: 101,
       name: "Dr. Pragnesh Dalwadi",
       topic: "Assistant Professor, Govt Arts and Commerce College, Gujarat",
-      image: "/images/testimonials/pragnesh.jpg",
+      image: "/images/testimonials/pragnesh.png",
       text: "Dr. Raghavi's mentorship during my Ph.D. was instrumental in shaping both my research perspective and academic discipline. Her constant encouragement and insightful guidance not only strengthened my work but also built the foundation of my professional journey.",
       stars: 5
     }
