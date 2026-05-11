@@ -71,16 +71,18 @@ const TestimonialSlider = () => {
             {testimonial.category === 'scholar' && (
               <div style={{ 
                 position: 'absolute',
-                top: '1rem',
+                top: '0.75rem',
                 width: '100%',
                 color: '#D4AF37',
                 opacity: 0.5,
                 fontSize: '0.6rem',
                 fontWeight: 700,
                 textTransform: 'uppercase',
-                letterSpacing: '1px'
+                letterSpacing: '1px',
+                lineHeight: 1.3
               }}>
-                Alumni - School of Commerce, Gujarat University
+                Alumni - School of Commerce<br />
+                Gujarat University
               </div>
             )}
             {/* 1. Photo */}

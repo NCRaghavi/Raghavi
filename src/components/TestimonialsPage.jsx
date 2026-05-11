@@ -76,16 +76,18 @@ export default function TestimonialsPage() {
                 {testimonial.category === 'scholar' && (
                   <div style={{ 
                     position: 'absolute',
-                    top: '1.25rem',
+                    top: '0.75rem',
                     width: '100%',
                     color: '#D4AF37',
                     opacity: 0.6,
-                    fontSize: '0.75rem',
+                    fontSize: '0.7rem',
                     fontWeight: 700,
                     textTransform: 'uppercase',
-                    letterSpacing: '1.5px'
+                    letterSpacing: '1.2px',
+                    lineHeight: 1.4
                   }}>
-                    Alumni - School of Commerce, Gujarat University
+                    Alumni - School of Commerce<br />
+                    Gujarat University
                   </div>
                 )}
                 
