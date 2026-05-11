@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, Quote, GraduationCap, BookOpen, Users } from 'lucide-react';
+import { Star, GraduationCap, BookOpen, Users } from 'lucide-react';
 import { testimonialsData } from '../data/testimonials';
 
 export default function TestimonialsPage() {
@@ -87,7 +87,7 @@ export default function TestimonialsPage() {
                 {/* 2. Star Rating */}
                 <div style={{ display: 'flex', gap: '0.4rem', color: '#FFD700', marginBottom: '1.5rem' }}>
                   {[...Array(testimonial.stars || 5)].map((_, i) => (
-                    <Star key(i) size={22} fill="currentColor" />
+                    <Star key={i} size={22} fill="currentColor" />
                   ))}
                 </div>
 
@@ -137,8 +137,6 @@ export default function TestimonialsPage() {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
             ))}
           </div>
         ) : (

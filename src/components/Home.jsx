@@ -23,10 +23,16 @@ const TestimonialSlider = () => {
   const displayItems = allTestimonials.length === 1 ? [firstItem] : [firstItem, secondItem];
 
   return (
-    <section className="testimonials-featured bento-item" style={{ padding: '4rem 5%', background: '#0a192f' }}>
+    <section className="testimonials-featured bento-item" style={{ 
+      padding: '6rem 5%', 
+      background: '#0a192f', 
+      position: 'relative', 
+      zIndex: 10,
+      marginTop: '2rem'
+    }}>
       <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
         <span className="badge" style={{ marginBottom: '1rem' }}>Success Stories</span>
-        <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: '#fff' }}>Ph.D. Led Mentorship in Action</h2>
+        <h2 style={{ fontSize: '2.8rem', fontWeight: 900, color: '#fff', letterSpacing: '-1px' }}>Ph.D. Led Mentorship in Action</h2>
       </div>
       
       <div style={{ 
@@ -476,8 +482,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Slider Section - NOW AT THE END */}
-      <TestimonialSlider />
+      {/* Testimonials Slider Section - FORCED VISIBILITY */}
+      <div id="home-testimonial-section" style={{ background: '#0a192f', borderTop: '1px solid rgba(255,255,255,0.05)', paddingBottom: '5rem' }}>
+        <TestimonialSlider />
+      </div>
     </div>
   );
 }
