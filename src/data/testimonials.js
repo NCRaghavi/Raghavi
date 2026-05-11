@@ -16,6 +16,15 @@ export const testimonialsData = {
       image: "", // Placeholder
       text: "Cracking the UGC-NET was a dream, but Dr. Raghavi's specialized batches made it a reality. Her focus on research methodology and paper-1 strategies is unmatched.",
       stars: 5
+    },
+    {
+      id: 2,
+      name: "Rohan Shah",
+      course: "CA Intermediate Student",
+      location: "Rajkot, Gujarat",
+      image: "", // Placeholder
+      text: "The way Dr. Raghavi explains complex Costing and Accounting standards is phenomenal. Her Ph.D. background brings a level of depth that you just don't get in standard coaching.",
+      stars: 5
     }
   ],
   scholars: [

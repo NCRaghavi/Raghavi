@@ -8,24 +8,35 @@ const TestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (allTestimonials.length <= 2) return;
+    if (allTestimonials.length <= 3) return;
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 2) % allTestimonials.length);
+      setCurrentIndex((prev) => (prev + 1) % allTestimonials.length);
     }, 6000);
     return () => clearInterval(timer);
   }, [allTestimonials.length]);
 
   if (allTestimonials.length === 0) return null;
 
-  // Get two items for the current slide
+  // Calculate indices for 3 cards
   const firstItem = allTestimonials[currentIndex];
-  const secondItem = allTestimonials[(currentIndex + 1) % allTestimonials.length];
-  const displayItems = allTestimonials.length === 1 ? [firstItem] : [firstItem, secondItem];
+  const secondIndex = (currentIndex + 1) % allTestimonials.length;
+  const secondItem = allTestimonials[secondIndex];
+  const thirdIndex = (currentIndex + 2) % allTestimonials.length;
+  const thirdItem = allTestimonials[thirdIndex];
+
+  let displayItems;
+  if (allTestimonials.length >= 3) {
+    displayItems = [firstItem, secondItem, thirdItem];
+  } else if (allTestimonials.length === 2) {
+    displayItems = [firstItem, secondItem];
+  } else {
+    displayItems = [firstItem];
+  }
 
   return (
     <section className="testimonials-featured bento-item" style={{ 
       padding: '6rem 5%', 
-      background: 'var(--bg-primary)', // Adapts to theme
+      background: 'var(--bg-primary)', 
       position: 'relative', 
       zIndex: 10,
       marginTop: '2rem'
@@ -37,16 +48,16 @@ const TestimonialSlider = () => {
       
       <div className="testimonial-grid" style={{ 
         display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 400px))', 
-        gap: '1.5rem',
-        maxWidth: '1000px',
+        gridTemplateColumns: `repeat(${displayItems.length}, minmax(300px, 420px))`, 
+        gap: '1.25rem',
+        maxWidth: '1350px',
         margin: '0 auto',
         justifyContent: 'center'
       }}>
         {displayItems.map((testimonial, idx) => (
           <div key={`${testimonial.id}-${idx}`} className="testimonial-card" style={{ 
             background: 'var(--bg-card)', 
-            padding: '2.5rem 1.75rem', 
+            padding: '2rem 1.5rem', 
             borderRadius: '32px', 
             border: '1px solid var(--border-color)', 
             display: 'flex', 
@@ -58,12 +69,12 @@ const TestimonialSlider = () => {
           }}>
             {/* 1. Photo */}
             <div className="testimonial-portrait" style={{ 
-              width: '160px', 
-              height: '160px', 
+              width: '140px', 
+              height: '140px', 
               borderRadius: '50%', 
               border: '4px solid #D4AF37', 
               overflow: 'hidden', 
-              marginBottom: '1.25rem',
+              marginBottom: '1rem',
               background: 'var(--bg-secondary)',
               boxShadow: '0 12px 30px rgba(212, 175, 55, 0.2)'
             }}>
@@ -71,25 +82,25 @@ const TestimonialSlider = () => {
                 <img src={testimonial.image} alt={testimonial.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               ) : (
                 <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37' }}>
-                  <Users size={60} />
+                  <Users size={50} />
                 </div>
               )}
             </div>
 
             {/* 2. Stars */}
-            <div style={{ display: 'flex', gap: '0.3rem', color: '#FFD700', marginBottom: '1rem' }}>
+            <div style={{ display: 'flex', gap: '0.3rem', color: '#FFD700', marginBottom: '0.75rem' }}>
               {[...Array(testimonial.stars || 5)].map((_, i) => (
-                <Star key={i} size={16} fill="currentColor" />
+                <Star key={i} size={14} fill="currentColor" />
               ))}
             </div>
 
             {/* 3. Text */}
             <p style={{ 
-              fontSize: '0.95rem', 
+              fontSize: '0.9rem', 
               fontStyle: 'italic', 
               color: 'var(--text-quote)', 
               lineHeight: 1.6, 
-              marginBottom: '2rem',
+              marginBottom: '1.5rem',
               fontFamily: 'Georgia, serif',
               flexGrow: 1
             }}>
@@ -100,26 +111,26 @@ const TestimonialSlider = () => {
             <div style={{ width: '100%', paddingTop: '1.25rem', borderTop: '1px solid var(--border-color)' }}>
               <h4 style={{ 
                 color: '#D4AF37', 
-                fontSize: '1.2rem', 
+                fontSize: '1.1rem', 
                 fontWeight: 800, 
-                marginBottom: '0.3rem' 
+                marginBottom: '0.2rem' 
               }}>
                 {testimonial.name}
               </h4>
               <p style={{ 
                 color: '#4dabf7', 
-                fontSize: '0.85rem', 
+                fontSize: '0.75rem', 
                 fontWeight: 700, 
                 textTransform: 'uppercase', 
                 letterSpacing: '1px',
-                marginBottom: '0.2rem'
+                marginBottom: '0.1rem'
               }}>
                 {testimonial.topic || testimonial.course}
               </p>
               {testimonial.location && (
                 <p style={{ 
                   color: 'var(--text-secondary)', 
-                  fontSize: '0.75rem', 
+                  fontSize: '0.7rem', 
                   marginTop: '0.1rem' 
                 }}>
                   {testimonial.location}
@@ -314,7 +325,7 @@ export default function Home() {
                 <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
               </div>
               <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>St. Xavier’s College</h4>
-              <div style={{ color: 'var(--accent-color)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Autonomous</div>
+              <div style={{ color: 'var(--accent-color)', fontSize: '0.85rem', fontWeight: 600, marginBottom: '1rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>(Autonomous), Ahmedabad</div>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, fontStyle: 'italic' }}>
                 "Developing foundational excellence in undergraduate and postgraduate scholars."
               </p>
