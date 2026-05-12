@@ -22,6 +22,20 @@ export const testimonialsData = {
       priority: 10
     },
     {
+      id: 7,
+      name: "Jenith Shukal",
+      topic: "Incoming Student, IMI Delhi",
+      college: "Banking & Financial Services",
+      location: "Ahmedabad, Gujarat",
+      institution: "St. Xavier's College (Autonomous), Ahmedabad",
+      image: "/images/testimonials/jenith.jpeg",
+      linkedin: "https://www.linkedin.com/in/jenith-shukal-6a9a54212/",
+      text: "Studying under the guidance of Dr. Raghavi ma’am has been an incredible experience. She has not only been an excellent teacher but also a remarkable mentor. From simplifying complex economic theories to helping me develop a deeper understanding of capital markets, she constantly encouraged me to push my limits and grow both academically and personally. At every step, Raghavi ma’am has played a significant role in shaping me into a better individual. Without her guidance and support, I would not have been able to publish my research paper, nor would I have discovered my passion for capital markets and chosen to pursue a career in this field.",
+      stars: 5,
+      category: "student",
+      priority: 8
+    },
+    {
       id: 1,
       name: "Dr. Pankaj Sharma",
       topic: "Assistant Professor (Commerce)",
@@ -49,6 +63,20 @@ export const testimonialsData = {
       stars: 5,
       category: "student",
       priority: 8
+    },
+    {
+      id: 8,
+      name: "Kavisha Patel",
+      topic: "B.Com Alumni",
+      college: "St. Xavier's College",
+      location: "Ahmedabad, Gujarat",
+      institution: "St. Xavier's College (Autonomous), Ahmedabad",
+      image: "/images/testimonials/kavisha.jpeg",
+      instagram: "https://www.instagram.com/kavishapatell?igsh=NTQ3MW55MWR6amRx&utm_source=qr",
+      text: "It was a great privilege to study under Dr. Raghavi Ma’am. Her depth of knowledge, academic rigor and subject matter expertise played a pivotal role in shaping my academic journey during my BCom. in BPS and in addition to this it helped me to build a strong conceptual foundation and develop analytical skills that were instrumental throughout my Master’s. The foundation she helped me build inspires my goal to pursue a career in academia. Truly grateful for her mentorship.",
+      stars: 5,
+      category: "student",
+      priority: 7
     },
     {
       id: 5,

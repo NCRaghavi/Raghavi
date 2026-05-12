@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, TrendingUp, Landmark, Star, Quote, Play, ChevronLeft, ChevronRight, Users, Linkedin } from 'lucide-react';
+import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, TrendingUp, Landmark, Star, Quote, Play, ChevronLeft, ChevronRight, Users, Linkedin, Instagram } from 'lucide-react';
 import { testimonialsData } from '../data/testimonials';
 
 const TestimonialSlider = () => {
@@ -164,6 +164,18 @@ const TestimonialSlider = () => {
                     onMouseOut={(e) => e.currentTarget.style.opacity = '0.8'}
                   >
                     <Linkedin size={18} fill="#0077B5" color="white" />
+                  </a>
+                )}
+                {testimonial.instagram && (
+                  <a 
+                    href={testimonial.instagram} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ color: '#E4405F', opacity: 0.8, display: 'flex', transition: 'opacity 0.2s' }}
+                    onMouseOver={(e) => e.currentTarget.style.opacity = '1'}
+                    onMouseOut={(e) => e.currentTarget.style.opacity = '0.8'}
+                  >
+                    <Instagram size={18} />
                   </a>
                 )}
               </h4>
