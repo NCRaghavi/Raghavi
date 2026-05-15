@@ -1,0 +1,226 @@
+:root {
+  --bg: #f8f9fa;
+  --text-main: #212529;
+  --text-muted: #495057;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 20px 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
+.header h2 {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.cv-container {
+  display: grid;
+  grid-template-columns: 1fr 460px 1fr;
+  gap: 30px;
+  max-width: 1600px;
+  width: 96%;
+  margin: 0 auto;
+  padding: 10px 20px 30px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .center-column {
+    grid-row: 1; /* Move graphic to top on smaller screens */
+  }
+}
+
+.cards-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* CARDS */
+.card {
+  background: #ffffff;
+  border-left: 5px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--accent-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.card.active {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.card.active::before {
+  opacity: 0.04;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card ul li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.card ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.1;
+}
+
+.card ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.card ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* CENTER GRAPHIC */
+.center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-graphic {
+  position: relative;
+  width: 460px;
+  height: 460px;
+}
+
+.pie-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+.pie-svg path {
+  transform-origin: 0 0;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+  cursor: pointer;
+}
+
+.pie-svg path:hover, .pie-svg path.active {
+  transform: scale(1.08);
+}
+
+body.dim-inactive .pie-svg path:not(.active) {
+  opacity: 0.6;
+  filter: grayscale(0.5);
+}
+
+body.dim-inactive .card:not(.active) {
+  opacity: 0.6;
+  filter: grayscale(0.3);
+  transform: scale(0.98);
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 6px solid #ffffff;
+  z-index: 10;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+
+.pie-label {
+  position: absolute;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-align: center;
+  z-index: 5;
+  width: 95px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  line-height: 1.25;
+  pointer-events: none;
+  transition: transform 0.4s, opacity 0.3s;
+  transform: translate(-50%, -50%);
+  word-break: break-word;
+}
+
+/* Base positions centered closer to the profile photo (R = 32%) */
+.label-teaching { left: calc(50% + 16%); top: calc(50% - 27.7%); }
+.label-digital  { left: calc(50% + 32%); top: 50%; }
+.label-cert     { left: calc(50% + 16%); top: calc(50% + 27.7%); }
+.label-comm     { left: calc(50% - 16%); top: calc(50% + 27.7%); }
+.label-exp      { left: calc(50% - 32%); top: 50%; }
+.label-research { left: calc(50% - 16%); top: calc(50% - 27.7%); }
+
+/* Active states for labels */
+.pie-label.active {
+  transform: translate(-50%, -50%) scale(1.15) !important;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.6);
+}
+
+body.dim-inactive .pie-label:not(.active) {
+  opacity: 0.6;
+}

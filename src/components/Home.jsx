@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, GraduationCap, Download, Globe, PieChart, TrendingUp, Landmark, Star, Quote, Play, ChevronLeft, ChevronRight, Users, Linkedin, Instagram } from 'lucide-react';
 import { testimonialsData } from '../data/testimonials';
+import InfographicCV from './InfographicCV';
 
 const TestimonialSlider = () => {
   const allTestimonials = [...testimonialsData.scholars, ...testimonialsData.students]
@@ -253,6 +254,11 @@ export default function Home() {
             ></iframe>
           </div>
         </div>
+      </section>
+
+      {/* Interactive CV Section */}
+      <section className="interactive-cv-section bento-item" style={{ marginTop: '2rem', marginBottom: '2rem', padding: '1rem' }}>
+        <InfographicCV />
       </section>
 
       {/* Silo Architecture: Pathfinder Cards (Bento Grid) */}
