@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Globe, Download, ShoppingBag, GraduationCap, Landmark, ChevronRight } from 'lucide-react';
+import { BookOpen, Globe, Download, ShoppingBag, GraduationCap, Landmark, ChevronRight, Play, FileText } from 'lucide-react';
 
 export default function BookRecommendationsPage() {
   const [activeCourse, setActiveCourse] = useState('CA Foundation & Inter');
@@ -164,19 +164,42 @@ export default function BookRecommendationsPage() {
               </div>
             </div>
 
-            {/* NPTEL & EMMRC */}
-            <div style={{ background: 'var(--bg-secondary)', padding: '2.5rem', borderRadius: '24px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-              <div style={{ padding: '1rem', background: 'rgba(212, 175, 55, 0.1)', borderRadius: '16px', color: 'var(--accent-color)' }}>
-                <Globe size={32} />
-              </div>
-              <div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.5rem' }}>National Initiatives (NPTEL & EMMRC)</h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                  Contributor to NPTEL (IIT/IISc initiative) as a Subject Matter Translator and EMMRC (Gujarat University) as an Academic Content Creator.
-                </p>
-                <button className="btn btn-outline btn-sm" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Globe size={14} /> Learn More
-                </button>
+            {/* National Initiatives Section */}
+            <div style={{ marginTop: '3rem' }}>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--text-primary)', borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem' }}>National Initiatives (NPTEL & EMMRC)</h3>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Lectures & Content creation for NPTEL (IIT Roorkee) & EMMRC (Gujarat University)</p>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+                
+                {/* NPTEL Card */}
+                <div style={{ background: 'var(--bg-secondary)', padding: '2rem', borderRadius: '24px', border: '1px solid #FF9933', display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ color: '#FF9933', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>NPTEL | IIT Roorkee</div>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.5rem' }}>MCDM Techniques Using R</h4>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', flexGrow: 1, marginBottom: '1.5rem' }}>National Programme on Technology Enhanced Learning.</p>
+                  <a href="https://drive.google.com/file/d/1fHXJYJ1eDIrakGVzY6kBZ3dDg-mGIzvI/view" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', borderColor: '#FF9933', color: '#FF9933', alignSelf: 'flex-start' }}>
+                    <Play size={14} /> Watch Lecture
+                  </a>
+                </div>
+
+                {/* EMMRC Cards */}
+                {[
+                  { title: "Information Technology Act, 2000 Part 1", url: "https://youtu.be/os2Jt4pE4qk?si=NCTy4HN70gbWvepT" },
+                  { title: "Information Technology Act, 2000 Part 2", url: "https://www.youtube.com/watch?v=WpsII1nYzD8" },
+                  { title: "Derivatives in International Finance Market", url: "https://www.youtube.com/watch?v=2O3J0bqyGCM&list=PLpXkA5equMngIc6vBZDXvMkI89OyGsT81&index=7" },
+                  { title: "Accounting for Non-Trading Concern : Part-1", url: "https://www.youtube.com/watch?v=WgcbW4xqrW4" },
+                  { title: "Accounting for Non-Trading Concerns : Part-2", url: "https://www.youtube.com/watch?v=A98SDuGM-LY" },
+                  { title: "Accounting for Non-Trading Concerns : Part-3", url: "https://www.youtube.com/watch?v=lN4N3hDJ-Nc" },
+                  { title: "Accounting for Non-Trading Concerns : Part-4", url: "https://www.youtube.com/watch?v=MN6Pr16PM1M&t=1s" },
+                  { title: "Accounting for Non Trading Concerns : Part-5", url: "https://www.youtube.com/watch?v=6hphZHIDLNw" }
+                ].map((item, idx) => (
+                  <div key={idx} style={{ background: 'var(--bg-secondary)', padding: '2rem', borderRadius: '24px', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ color: 'var(--text-secondary)', fontWeight: 600, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>EMMRC | Gujarat University</div>
+                    <h4 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.5rem' }}>{item.title}</h4>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', alignSelf: 'flex-start', marginTop: 'auto' }}>
+                      <Play size={14} /> Watch Video
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
 
