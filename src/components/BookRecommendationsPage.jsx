@@ -158,7 +158,7 @@ export default function BookRecommendationsPage() {
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
                   Full Ph.D. thesis in Accountancy from Gujarat University, officially archived on Shodhganga (INFLIBNET Center).
                 </p>
-                <a href="https://shodhganga.inflibnet.ac.in/" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                <a href="http://hdl.handle.net/10603/286495" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Globe size={14} /> View on Shodhganga
                 </a>
               </div>
