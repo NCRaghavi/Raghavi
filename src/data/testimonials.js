@@ -268,7 +268,7 @@ export const testimonialsData = {
       college: "Tax Consulting Firm",
       location: "Ahmedabad, Gujarat",
       institution: "School of Commerce, Gujarat University",
-      image: "",
+      image: "/images/testimonials/chetana.jpeg",
       text: "My experience with you was truly amazing, Ma'am. Thanks to your teaching style, Financial Management became my absolute favorite subject. The way you explained concepts made it possible for me to understand and retain everything instantly. It was for this very reason that I was able to score well in my exams. I wanted to continue learning from you, so I specifically chose International Business and Banking just to have the opportunity to study under your guidance once again. I am deeply grateful and happy to have had the opportunity to learn from such an inspiring teacher like you. From you, I gained not only subject-specific knowledge but also self-confidence. Thank you so much, Ma'am, for always guiding and motivating me. I will never forget your support and your unique teaching style. After studying under your guidance (following my M.Com), I worked at a tax consulting firm.",
       stars: 5,
       category: "student",
