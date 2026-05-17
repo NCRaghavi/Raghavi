@@ -86,6 +86,7 @@ export const testimonialsData = {
       location: "Ahmedabad, Gujarat",
       institution: "School of Commerce, Gujarat University",
       image: "/images/testimonials/pooja.jpeg",
+      photoStyle: { objectPosition: 'center 10%', transform: 'scale(1.2)' },
       text: "Dr. Raghavi's, immense knowledge, inspiring personality, and exceptional teaching abilities have left a lasting impact on me. Her dedication towards education and her passion for guiding students make her truly remarkable. Dr. Raghavi possesses not only extraordinary academic expertise but also the rare ability to motivate and inspire students to achieve excellence. Her teaching style is engaging, insightful, and deeply encouraging, which creates a positive learning environment for everyone around her. She has always encouraged us to think critically, work sincerely, and believe in our potential. I deeply appreciate and value the quality of guidance and mentorship provided by her. Her professionalism, humility, and commitment towards education are truly commendable. She is not only an excellent educator but also a wonderful human being whose inspirational personality continues to influence and motivate many students and professionals alike. I feel fortunate to have learned from such a distinguished mentor.",
       stars: 5,
       category: "student",
