@@ -148,68 +148,71 @@ export default function BookRecommendationsPage() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
             
-            {/* Ph.D. Thesis */}
-            <div style={{ background: 'var(--bg-secondary)', padding: '2.5rem', borderRadius: '24px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-              <div style={{ padding: '1rem', background: 'rgba(212, 175, 55, 0.1)', borderRadius: '16px', color: 'var(--accent-color)' }}>
-                <Landmark size={32} />
-              </div>
-              <div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ph.D. Thesis Repository</h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                  Full Ph.D. thesis in Accountancy from Gujarat University, officially archived on Shodhganga (INFLIBNET Center).
-                </p>
-                <a href="http://hdl.handle.net/10603/286495" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Globe size={14} /> View on Shodhganga
-                </a>
-              </div>
-            </div>
-
-            {/* National Initiatives Section */}
+            {/* Research & Video Lectures List */}
             <div style={{ marginTop: '3rem' }}>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--text-primary)', borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem' }}>National Initiatives (NPTEL & EMMRC)</h3>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Lectures & Content creation for NPTEL (IIT Roorkee) & EMMRC (Gujarat University)</p>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--text-primary)', borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem' }}>Academic & National Initiatives</h3>
               
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 
-                {/* NPTEL Card */}
-                <div style={{ background: 'var(--bg-secondary)', padding: '2rem', borderRadius: '24px', border: '1px solid #FF9933', display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ color: '#FF9933', fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>NPTEL | IIT Roorkee</div>
-                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.5rem' }}>MCDM Techniques Using R</h4>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', flexGrow: 1, marginBottom: '1.5rem' }}>National Programme on Technology Enhanced Learning.</p>
-                  <a href="https://drive.google.com/file/d/1fHXJYJ1eDIrakGVzY6kBZ3dDg-mGIzvI/view" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', borderColor: '#FF9933', color: '#FF9933', alignSelf: 'flex-start' }}>
+                {/* 1. Ph.D. Thesis */}
+                <div style={{ background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--accent-color)', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+                  <div style={{ width: '120px', height: '80px', flexShrink: 0, background: 'rgba(212, 175, 55, 0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-color)' }}>
+                    <Landmark size={32} />
+                  </div>
+                  <div style={{ flexGrow: 1 }}>
+                    <div style={{ color: 'var(--accent-color)', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.25rem' }}>Ph.D. Thesis Repository</div>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.25rem' }}>Full Ph.D. Thesis in Accountancy</h4>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '0' }}>Gujarat University. Officially archived on Shodhganga (INFLIBNET Center).</p>
+                  </div>
+                  <a href="http://hdl.handle.net/10603/286495" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ flexShrink: 0, borderColor: 'var(--accent-color)', color: 'var(--accent-color)', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <Globe size={14} /> View Thesis
+                  </a>
+                </div>
+
+                {/* 2. NPTEL */}
+                <div style={{ background: 'var(--bg-secondary)', padding: '1.5rem', borderRadius: '16px', border: '1px solid #FF9933', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+                  <div style={{ width: '120px', height: '80px', flexShrink: 0, background: 'linear-gradient(135deg, rgba(255, 153, 51, 0.1), transparent)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FF9933' }}>
+                    <FileText size={32} />
+                  </div>
+                  <div style={{ flexGrow: 1 }}>
+                    <div style={{ color: '#FF9933', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.25rem' }}>NPTEL | IIT Roorkee</div>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.25rem' }}>MCDM Techniques Using R</h4>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '0' }}>National Programme on Technology Enhanced Learning.</p>
+                  </div>
+                  <a href="https://drive.google.com/file/d/1fHXJYJ1eDIrakGVzY6kBZ3dDg-mGIzvI/view" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ flexShrink: 0, borderColor: '#FF9933', color: '#FF9933', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     <FileText size={14} /> View Material
                   </a>
                 </div>
 
-                {/* EMMRC Cards */}
+                {/* 3. EMMRC Cards (Descending Order) */}
                 {[
-                  { title: "Information Technology Act, 2000 Part 1", url: "https://youtu.be/os2Jt4pE4qk?si=NCTy4HN70gbWvepT", id: "os2Jt4pE4qk" },
-                  { title: "Information Technology Act, 2000 Part 2", url: "https://www.youtube.com/watch?v=WpsII1nYzD8", id: "WpsII1nYzD8" },
-                  { title: "Derivatives in International Finance Market", url: "https://www.youtube.com/watch?v=2O3J0bqyGCM&list=PLpXkA5equMngIc6vBZDXvMkI89OyGsT81&index=7", id: "2O3J0bqyGCM" },
-                  { title: "Accounting for Non-Trading Concern : Part-1", url: "https://www.youtube.com/watch?v=WgcbW4xqrW4", id: "WgcbW4xqrW4" },
-                  { title: "Accounting for Non-Trading Concerns : Part-2", url: "https://www.youtube.com/watch?v=A98SDuGM-LY", id: "A98SDuGM-LY" },
-                  { title: "Accounting for Non-Trading Concerns : Part-3", url: "https://www.youtube.com/watch?v=lN4N3hDJ-Nc", id: "lN4N3hDJ-Nc" },
+                  { title: "Accounting for Non Trading Concerns : Part-5", url: "https://www.youtube.com/watch?v=6hphZHIDLNw", id: "6hphZHIDLNw" },
                   { title: "Accounting for Non-Trading Concerns : Part-4", url: "https://www.youtube.com/watch?v=MN6Pr16PM1M&t=1s", id: "MN6Pr16PM1M" },
-                  { title: "Accounting for Non Trading Concerns : Part-5", url: "https://www.youtube.com/watch?v=6hphZHIDLNw", id: "6hphZHIDLNw" }
+                  { title: "Accounting for Non-Trading Concerns : Part-3", url: "https://www.youtube.com/watch?v=lN4N3hDJ-Nc", id: "lN4N3hDJ-Nc" },
+                  { title: "Accounting for Non-Trading Concerns : Part-2", url: "https://www.youtube.com/watch?v=A98SDuGM-LY", id: "A98SDuGM-LY" },
+                  { title: "Accounting for Non-Trading Concern : Part-1", url: "https://www.youtube.com/watch?v=WgcbW4xqrW4", id: "WgcbW4xqrW4" },
+                  { title: "Derivatives in International Finance Market", url: "https://www.youtube.com/watch?v=2O3J0bqyGCM&list=PLpXkA5equMngIc6vBZDXvMkI89OyGsT81&index=7", id: "2O3J0bqyGCM" },
+                  { title: "Information Technology Act, 2000 Part 2", url: "https://www.youtube.com/watch?v=WpsII1nYzD8", id: "WpsII1nYzD8" },
+                  { title: "Information Technology Act, 2000 Part 1", url: "https://youtu.be/os2Jt4pE4qk?si=NCTy4HN70gbWvepT", id: "os2Jt4pE4qk" }
                 ].map((item, idx) => (
-                  <div key={idx} style={{ background: 'var(--bg-secondary)', borderRadius: '24px', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-                    <div style={{ position: 'relative', width: '100%', paddingTop: '56.25%' }}>
+                  <div key={idx} style={{ background: 'var(--bg-secondary)', padding: '1rem', borderRadius: '16px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+                    <div style={{ position: 'relative', width: '120px', height: '68px', flexShrink: 0, borderRadius: '8px', overflow: 'hidden' }}>
                       <img 
                         src={`https://img.youtube.com/vi/${item.id}/hqdefault.jpg`} 
                         alt={item.title} 
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} 
                       />
-                      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background: 'rgba(0,0,0,0.6)', borderRadius: '50%', padding: '0.75rem', display: 'flex' }}>
-                        <Play fill="white" color="white" size={24} />
+                      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background: 'rgba(0,0,0,0.6)', borderRadius: '50%', padding: '0.25rem', display: 'flex' }}>
+                        <Play fill="white" color="white" size={16} />
                       </div>
                     </div>
-                    <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                      <div style={{ color: 'var(--text-secondary)', fontWeight: 600, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>EMMRC | Gujarat University</div>
-                      <h4 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '1.5rem' }}>{item.title}</h4>
-                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', alignSelf: 'flex-start', marginTop: 'auto' }}>
-                        <Play size={14} /> Watch Video
-                      </a>
+                    <div style={{ flexGrow: 1 }}>
+                      <div style={{ color: 'var(--text-secondary)', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.25rem' }}>EMMRC | Gujarat University</div>
+                      <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0' }}>{item.title}</h4>
                     </div>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <Play size={14} /> Watch Video
+                    </a>
                   </div>
                 ))}
               </div>
