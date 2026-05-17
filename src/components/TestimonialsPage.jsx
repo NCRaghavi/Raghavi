@@ -62,8 +62,8 @@ export default function TestimonialsPage() {
             {currentTestimonials.map((testimonial) => (
               <div key={testimonial.id} className="testimonial-card" style={{ 
                 background: 'var(--bg-card)', 
-                padding: '2rem 1.5rem', 
-                borderRadius: '24px', 
+                padding: '1.5rem 1.25rem', 
+                borderRadius: '20px', 
                 border: '1px solid var(--border-color)', 
                 display: 'flex', 
                 flexDirection: 'column',
@@ -71,8 +71,7 @@ export default function TestimonialsPage() {
                 textAlign: 'center',
                 boxShadow: 'var(--shadow-bento)',
                 transition: 'transform 0.3s ease',
-                position: 'relative',
-                minHeight: '450px'
+                position: 'relative'
               }}>
                 {testimonial.institution && (
                   <div style={{ 
@@ -98,15 +97,15 @@ export default function TestimonialsPage() {
                 
                 {/* Portrait */}
                 <div className="testimonial-portrait" style={{ 
-                  width: '120px', 
-                  height: '120px', 
+                  width: '80px', 
+                  height: '80px', 
                   borderRadius: '50%', 
-                  border: '3px solid #D4AF37', 
+                  border: '2px solid #D4AF37', 
                   overflow: 'hidden', 
                   marginTop: testimonial.institution ? '1.5rem' : '0',
-                  marginBottom: '1.25rem',
+                  marginBottom: '1rem',
                   background: 'var(--bg-secondary)',
-                  boxShadow: '0 10px 25px rgba(212, 175, 55, 0.2)'
+                  boxShadow: '0 5px 15px rgba(212, 175, 55, 0.2)'
                 }}>
                   {testimonial.image ? (
                     <img 
@@ -136,29 +135,34 @@ export default function TestimonialsPage() {
                 {/* Text */}
                 <p style={{ 
                   color: 'var(--text-quote)', 
-                  fontSize: '0.95rem', 
-                  lineHeight: 1.6, 
-                  marginBottom: '1.5rem', 
+                  fontSize: '0.85rem', 
+                  lineHeight: 1.5, 
+                  marginBottom: '1.25rem', 
                   fontStyle: 'italic', 
                   fontFamily: 'Georgia, serif',
                   maxWidth: '100%',
-                  flexGrow: 1
+                  flexGrow: 1,
+                  display: '-webkit-box',
+                  WebkitLineClamp: 5,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis'
                 }}>
                   "{testimonial.text}"
                 </p>
 
                 {/* Signature */}
-                <div style={{ width: '100%', paddingTop: '1.25rem', borderTop: '1px solid var(--border-color)' }}>
+                <div style={{ width: '100%', paddingTop: '1rem', borderTop: '1px solid var(--border-color)' }}>
                   <h4 style={{ 
                     fontWeight: 800, 
                     color: '#D4AF37', 
-                    fontSize: '1.2rem', 
-                    marginBottom: '0.4rem',
+                    fontSize: '1rem', 
+                    marginBottom: '0.2rem',
                     letterSpacing: '-0.3px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    gap: '0.5rem'
+                    gap: '0.4rem'
                   }}>
                     {testimonial.name}
                     {testimonial.linkedin && (
