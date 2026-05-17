@@ -50,6 +50,20 @@ export const testimonialsData = {
       priority: 9
     },
     {
+      id: 9,
+      name: "Shubham Kumar",
+      topic: "Business Analyst - Consulting",
+      college: "Deloitte",
+      location: "Ahmedabad, Gujarat",
+      institution: "St. Xavier's College (Autonomous), Ahmedabad",
+      image: "/images/testimonials/shubham.jpeg",
+      linkedin: "https://www.linkedin.com/in/shubham-kumar-710326189",
+      text: "Dr. Raghavi Mam's sessions on Economics were a turning point in my academic journey both personally and professionally. Her ability to simplify complex structures gave me the technical confidence to pursue global certifications which helped me achieve World Record and excel in the fast-paced world of consulting. I am forever grateful for the mentorship, guidance and support.",
+      stars: 5,
+      category: "student",
+      priority: 8
+    },
+    {
       id: 4,
       name: "Dr. Vishakha Modi",
       topic: "Assistant Professor",
@@ -60,6 +74,33 @@ export const testimonialsData = {
       linkedin: "https://www.linkedin.com/in/dr-vishakha-modi-a902031a4/",
       photoStyle: { transform: 'scale(1.35)', objectPosition: 'center 20%' },
       text: "I still recall our sessions at the School of Commerce, Gujarat University with great respect and gratitude. Dr. Raghavi's teaching played a significant role in building my conceptual clarity and confidence in the field of Commerce. She not only taught us the subject but also encouraged us to think critically and apply concepts to real-life situations. The practical insights and engaging classroom discussions truly helped shape my professional approach. I am grateful for the strong foundation she provided during my academic journey.",
+      stars: 5,
+      category: "student",
+      priority: 8
+    },
+    {
+      id: 13,
+      name: "Dr. Pooja Parekh",
+      topic: "Assistant Professor",
+      college: "National College of Commerce",
+      location: "Ahmedabad, Gujarat",
+      institution: "School of Commerce, Gujarat University",
+      image: "/images/testimonials/pooja.jpeg",
+      text: "Dr. Raghavi's, immense knowledge, inspiring personality, and exceptional teaching abilities have left a lasting impact on me. Her dedication towards education and her passion for guiding students make her truly remarkable. Dr. Raghavi possesses not only extraordinary academic expertise but also the rare ability to motivate and inspire students to achieve excellence. Her teaching style is engaging, insightful, and deeply encouraging, which creates a positive learning environment for everyone around her. She has always encouraged us to think critically, work sincerely, and believe in our potential. I deeply appreciate and value the quality of guidance and mentorship provided by her. Her professionalism, humility, and commitment towards education are truly commendable. She is not only an excellent educator but also a wonderful human being whose inspirational personality continues to influence and motivate many students and professionals alike. I feel fortunate to have learned from such a distinguished mentor.",
+      stars: 5,
+      category: "student",
+      priority: 8
+    },
+    {
+      id: 12,
+      name: "Rohan Maheshwari",
+      topic: "MBA from IIM Shillong",
+      college: "Formerly at Bank of America",
+      location: "Shillong, Meghalaya",
+      institution: "St. Xavier's College (Autonomous), Ahmedabad",
+      image: "/images/testimonials/rohan.jpeg",
+      linkedin: "https://www.linkedin.com/in/rohan-maheshwari-2536a81b1",
+      text: "Studying under Raghavi Ma’am was truly a privilege. Whether it was Marketing, Economics, or Entrepreneurship, she made every concept crystal clear through practical explanations and real-life examples. The classroom discussions and projects were intellectually stimulating and helped me develop a much deeper understanding of business concepts, which continues to help me in my professional journey.",
       stars: 5,
       category: "student",
       priority: 8
@@ -77,6 +118,48 @@ export const testimonialsData = {
       stars: 5,
       category: "student",
       priority: 7
+    },
+    {
+      id: 11,
+      name: "Krishna Dhankani",
+      topic: "Ecommerce - Growth team",
+      college: "Honasa Consumer Pvt. Ltd.",
+      location: "Gurugram, Haryana",
+      institution: "St. Xavier's College (Autonomous), Ahmedabad",
+      image: "/images/testimonials/krishna.jpeg",
+      linkedin: "https://www.linkedin.com/in/krishna-dhankani-gurugram",
+      text: "Dr. Raghavi never taught Commerce subjects as mere academic concepts — she taught them as practical life skills. Whether it was Economics, Capital Markets, Financial Systems, or Insurance, her classes always connected theory with real-world applications and helped us understand how industries, markets, and consumer behavior truly work. Today, as a marketer, her teachings continue to influence the way I understand consumers, human psychology, and the economic forces that shape decision-making. Her approach to learning has played a significant role in shaping both my professional journey and my perspective towards the world.",
+      stars: 5,
+      category: "student",
+      priority: 7
+    },
+    {
+      id: 10,
+      name: "Jhalak Singhi",
+      topic: "Ex Sales and Marketing Associate",
+      college: "Culture X (IIMA Ventures)",
+      location: "Ahmedabad, Gujarat",
+      institution: "St. Xavier's College (Autonomous), Ahmedabad",
+      image: "/images/testimonials/jhalak.png",
+      linkedin: "https://www.linkedin.com/in/jhalak-singhi-631894224",
+      text: "Dr. Raghavi's classes were amazing! Even though I love marketing, I never knew that subjects like the Indian Financial System and Insurance could be so interesting. What I learned in her sessions actually helped me in real life to start my own investment portfolio and buy my first insurance policy.",
+      stars: 5,
+      category: "student",
+      priority: 6
+    },
+    {
+      id: 14,
+      name: "Shreya Ranpuria",
+      topic: "CFA Level 2 Candidate",
+      college: "Finance & Accounting",
+      location: "Ahmedabad, Gujarat",
+      institution: "St. Xavier's College (Autonomous), Ahmedabad",
+      image: "/images/testimonials/shreyaranpuria.jpeg",
+      linkedin: "https://www.linkedin.com/in/shreya-ranpuria",
+      text: "Dr. Raghavi ma'am's sessions were always engaging, insightful, and practically oriented. Her guidance helped me develop conceptual clarity and confidence in commerce and finance, which continues to benefit me in my CFA preparation and professional growth.",
+      stars: 5,
+      category: "student",
+      priority: 6
     },
     {
       id: 5,
