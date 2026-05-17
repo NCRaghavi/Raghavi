@@ -141,12 +141,7 @@ export default function TestimonialsPage() {
                   fontStyle: 'italic', 
                   fontFamily: 'Georgia, serif',
                   maxWidth: '100%',
-                  flexGrow: 1,
-                  display: '-webkit-box',
-                  WebkitLineClamp: 5,
-                  WebkitBoxOrient: 'vertical',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis'
+                  flexGrow: 1
                 }}>
                   "{testimonial.text}"
                 </p>
