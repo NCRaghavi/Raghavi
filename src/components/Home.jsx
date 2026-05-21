@@ -341,6 +341,84 @@ export default function Home() {
 
 
 
+      {/* About the Founder Section */}
+      <section className="founder-section bento-item" style={{ padding: '4rem 3rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          
+          {/* Top Profile Area */}
+          <div style={{ display: 'flex', gap: '4rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div className="founder-image" style={{ flex: '1 1 300px', minWidth: '300px' }}>
+            <div style={{ width: '100%', aspectRatio: '1/1', borderRadius: '24px', overflow: 'hidden', position: 'relative', boxShadow: 'var(--shadow-md)' }}>
+              <img src="/Photo-Raghavi.png" alt="Dr. NC Raghavi Chakravarthy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', filter: 'contrast(1.08) saturate(1.05)', WebkitFontSmoothing: 'antialiased', imageRendering: 'high-quality' }} />
+            </div>
+          </div>
+          <div className="founder-content" style={{ flex: '2 1 500px' }}>
+            <span className="badge" style={{ marginBottom: '1.5rem' }}>Meet Your Mentor</span>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '0.5rem', letterSpacing: '-0.5px' }}>Dr. NC Raghavi Chakravarthy</h2>
+            <h3 style={{ fontSize: '1.25rem', color: 'var(--accent-color)', fontWeight: 600, marginBottom: '1.5rem' }}>Ph.D. (Accountancy), UGC-NET (JRF), Ex GPSC Class -II Officer (Gujarat Education Services)</h3>
+            
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: 1.8 }}>
+              Why settle for ordinary when you can be mentored by an academic powerhouse? With over <strong>14 years of elite experience</strong> across Government, Autonomous, and global EdTech sectors, Dr. Raghavi bridges the gap between traditional commerce pedagogy and digital innovation.
+            </p>
+            
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '0' }}>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                <div style={{ color: 'var(--accent-color)', marginTop: '2px', fontSize: '1.2rem' }}>✦</div>
+                <span style={{ fontSize: '1.05rem' }}><strong>Top-Tier Credentials:</strong> Ph.D. in Accountancy from Gujarat University, cleared UGC-NET with Junior Research Fellowship (JRF), and cracked the highly competitive GPSC Assistant Professor exam.</span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                <div style={{ color: 'var(--accent-color)', marginTop: '2px', fontSize: '1.2rem' }}>✦</div>
+                <span style={{ fontSize: '1.05rem' }}><strong>Global EdTech & Academic Leader:</strong> Subject Matter Expert for JoVE (USA), NPTEL (IIT/IISc) Subject Matter Translator, and EMMRC (Gujarat University) Academic Content Creator. Former Professor at St. Xavier's College (Autonomous).</span>
+              </li>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                <div style={{ color: 'var(--accent-color)', marginTop: '2px', fontSize: '1.2rem' }}>✦</div>
+                <span style={{ fontSize: '1.05rem' }}><strong>Ecosystem Builder:</strong> Ph.D. Thesis archived on Shodhganga, authored a bestselling Economics dictionary, and published high-impact research globally.</span>
+              </li>
+            </ul>
+          </div>
+          </div>
+  
+          {/* Premier Institutions Track Record */}
+          <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '3rem', paddingBottom: '1rem' }}>
+            <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '2.5rem', color: 'var(--text-primary)', textAlign: 'center' }}>
+              A Proven Track Record Across Premier Institutions
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '1.25rem', maxWidth: '1550px', margin: '0 auto' }}>
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>School of Commerce</h4>
+                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University, Ahmedabad</div>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+                  "Shaping the next generation of Commerce Professors and Class-I/II Officers."
+                </p>
+              </div>
+              
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>St. Xavier’s College (Autonomous)</h4>
+                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Ahmedabad</div>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+                  "Developing foundational excellence in undergraduate and postgraduate scholars."
+                </p>
+              </div>
+
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Govt. Commerce & Science College</h4>
+                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Dahej</div>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+                  "Specialized academic leadership for government commerce and science education."
+                </p>
+              </div>
+            </div>
+          </div>
+      </section>
+
       {/* Book Recommendations Snippet */}
       <section className="resource-hub-section bento-item">
         <div className="hub-header">
