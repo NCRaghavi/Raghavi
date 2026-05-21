@@ -33,21 +33,7 @@ export const testimonialsData = {
       text: "Studying under the guidance of Dr. Raghavi ma’am has been an incredible experience. She has not only been an excellent teacher but also a remarkable mentor. From simplifying complex economic theories to helping me develop a deeper understanding of capital markets, she constantly encouraged me to push my limits and grow both academically and personally. At every step, Raghavi ma’am has played a significant role in shaping me into a better individual. Without her guidance and support, I would not have been able to publish my research paper, nor would I have discovered my passion for capital markets and chosen to pursue a career in this field.",
       stars: 5,
       category: "student",
-      priority: 90
-    },
-    {
-      id: 1,
-      name: "Dr. Pankaj Sharma",
-      topic: "Assistant Professor (Commerce)",
-      college: "Shri K K Shastri Government Commerce College",
-      location: "Ahmedabad, Gujarat",
-      institution: "School of Commerce, Gujarat University",
-      image: "/images/testimonials/pankaj.png",
-      linkedin: "https://www.linkedin.com/in/pankaj-sharma-734527113/",
-      text: "Dr. Raghavi's classes gave me more than just conceptual clarity. They shaped how I think, learn, and carry myself professionally. Her disciplined approach, professionalism, and engaging teaching style left a deep and lasting impact on me. Beyond the classroom, her guidance in research helped me take my very first meaningful steps into the academic world and understand what true inquiry means. Even today, those learnings continue to guide me in my journey as a teacher and researcher.",
-      stars: 5,
-      category: "student",
-      priority: 99
+      priority: 87
     },
     {
       id: 9,
@@ -61,7 +47,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi Mam's sessions on Economics were a turning point in my academic journey both personally and professionally. Her ability to simplify complex structures gave me the technical confidence to pursue global certifications which helped me achieve World Record and excel in the fast-paced world of consulting. I am forever grateful for the mentorship, guidance and support.",
       stars: 5,
       category: "student",
-      priority: 88
+      priority: 83
     },
     {
       id: 4,
@@ -90,7 +76,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's immense knowledge, inspiring personality, and exceptional teaching abilities have left a lasting impact on me. She possesses not only extraordinary academic expertise but the rare ability to motivate students to achieve excellence. Her engaging and insightful teaching style encouraged us to think critically and believe in our potential. I feel incredibly fortunate to have learned from such a distinguished mentor.",
       stars: 5,
       category: "student",
-      priority: 91
+      priority: 90
     },
     {
       id: 12,
@@ -104,7 +90,7 @@ export const testimonialsData = {
       text: "Studying under Raghavi Ma’am was truly a privilege. Whether it was Marketing, Economics, or Entrepreneurship, she made every concept crystal clear through practical explanations and real-life examples. The classroom discussions and projects were intellectually stimulating and helped me develop a much deeper understanding of business concepts, which continues to help me in my professional journey.",
       stars: 5,
       category: "student",
-      priority: 91
+      priority: 88
     },
     {
       id: 8,
@@ -160,7 +146,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi ma'am's sessions were always engaging, insightful, and practically oriented. Her guidance helped me develop conceptual clarity and confidence in commerce and finance, which continues to benefit me in my CFA preparation and professional growth.",
       stars: 5,
       category: "student",
-      priority: 89
+      priority: 85
     },
     {
       id: 5,
@@ -217,7 +203,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's classroom sessions always made learning very engaging and practical for me. The practical assignments and real-world exposure she gave us helped me develop a new perspective towards subjects and understand their application beyond textbooks. Her teaching style also helped build my confidence and strengthened my interest in commerce and marketing.",
       stars: 5,
       category: "student",
-      priority: 88
+      priority: 86
     },
     {
       id: 16,
@@ -272,7 +258,7 @@ export const testimonialsData = {
       text: "My experience with Dr. Raghavi was truly amazing. Thanks to her teaching style, Financial Markets and Systems became my absolute favorite subject. The way she explained concepts made it possible for me to understand and retain everything instantly. It was for this very reason that I was able to score well in my exams. I wanted to continue learning from her, so I specifically chose International Business and Banking just to have the opportunity to study under her guidance once again. I am deeply grateful and happy to have had the opportunity to learn from such an inspiring teacher like her. From her, I gained not only subject-specific knowledge but also self-confidence. Thank you so much, Ma'am, for always guiding and motivating me. I will never forget your support and your unique teaching style. After studying under your guidance (following my M.Com), I worked at a tax consulting firm.",
       stars: 5,
       category: "student",
-      priority: 86
+      priority: 81
     },
     {
       id: 20,
@@ -300,7 +286,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's practical teaching style, real-life examples, and emphasis on holistic development through projects, presentations, and student participation played a significant role in shaping my academic journey and confidence. Her appreciation of my business model presentation and continued guidance even after graduation inspired my research direction and professional growth. I remain deeply grateful for her constant support and mentorship.",
       stars: 5,
       category: "student",
-      priority: 83
+      priority: 84
     },
     {
       id: 22,
@@ -328,7 +314,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's teachings have a remarkable ability to make even the most complex concepts easy to understand while maintaining academic depth and clarity. I had the privilege of learning from her and later working alongside her, where I observed her disciplined approach, strong research depth, and sincere dedication toward excellence. She were always approachable and readily guided and mentored students in the right direction. Her passion, perfection, and expertise across various areas of commerce made learning meaningful and memorable, and her guidance played an important role in shaping my confidence and professional growth.",
       stars: 5,
       category: "student",
-      priority: 90
+      priority: 89
     },
     {
       id: 24,
@@ -342,7 +328,7 @@ export const testimonialsData = {
       text: "I’ll admit, I bunked a few lectures during college but never Raghavi Ma’am’s. Yes, she was strict about attendance, but more than that, her classes always pushed me to think beyond the obvious. Back then, it felt demanding; today, working in the corporate world and helping manage my family business, I truly understand the value of those lessons.\nRaghavi Ma’am never just taught subjects, she shaped my mindsets. She taught me accountability, critical thinking, transparency, and the importance of always bringing our A-game.\nLooking back, I can confidently say she played a major role in shaping my attitude towards work, learning, and growth.",
       stars: 5,
       category: "student",
-      priority: 87
+      priority: 82
     },
     {
       id: 25,
@@ -397,7 +383,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi does than just teaching; she genuinely cares about your students' growth. Her patience and ability to explain difficult concepts have completely transformed my understanding of the subject. Thank you for making every single class an absolute joy to attend.",
       stars: 5,
       category: "student",
-      priority: 82
+      priority: 91
     },
     {
       id: 29,
