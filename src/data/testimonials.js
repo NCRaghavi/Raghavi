@@ -19,7 +19,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's calm presence and measured guidance have always stood out, yet it was during our most overwhelming moments that she truly saved us. Her quiet strength and unwavering support meant more than she knows. Thank you for being our anchor when we needed it the most.",
       stars: 5,
       category: "student",
-      priority: 10
+      priority: 100
     },
     {
       id: 7,
@@ -47,7 +47,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's classes gave me more than just conceptual clarity. They shaped how I think, learn, and carry myself professionally. Her disciplined approach, professionalism, and engaging teaching style left a deep and lasting impact on me. Beyond the classroom, her guidance in research helped me take my very first meaningful steps into the academic world and understand what true inquiry means. Even today, those learnings continue to guide me in my journey as a teacher and researcher.",
       stars: 5,
       category: "student",
-      priority: 9
+      priority: 95
     },
     {
       id: 9,
@@ -174,7 +174,7 @@ export const testimonialsData = {
       text: "I’m deeply grateful to Raghavi mam for playing a pivotal role in shaping my career. Her ability to simplify complex concepts and build a strong foundational understanding has given me lasting confidence in my field. The clarity and discipline I developed under her guidance will always continue to influence my professional growth.",
       stars: 5,
       category: "student",
-      priority: 7
+      priority: 99
     },
     {
       id: 2,
@@ -272,7 +272,7 @@ export const testimonialsData = {
       text: "My experience with Dr. Raghavi was truly amazing. Thanks to her teaching style, Financial Markets and Systems became my absolute favorite subject. The way she explained concepts made it possible for me to understand and retain everything instantly. It was for this very reason that I was able to score well in my exams. I wanted to continue learning from her, so I specifically chose International Business and Banking just to have the opportunity to study under her guidance once again. I am deeply grateful and happy to have had the opportunity to learn from such an inspiring teacher like her. From her, I gained not only subject-specific knowledge but also self-confidence. Thank you so much, Ma'am, for always guiding and motivating me. I will never forget your support and your unique teaching style. After studying under your guidance (following my M.Com), I worked at a tax consulting firm.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 92
     },
     {
       id: 20,
@@ -286,7 +286,7 @@ export const testimonialsData = {
       text: "Learning under the guidance Dr. Raghavi Chakravarthy at Gujarat University was a defining chapter in my academic and professional journey. Her insightful classroom sessions not only built a strong foundational understanding of finance but also instilled a drive for academic excellence that continues to guide my career today.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 99
     },
     {
       id: 21,
@@ -300,7 +300,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's practical teaching style, real-life examples, and emphasis on holistic development through projects, presentations, and student participation played a significant role in shaping my academic journey and confidence. Her appreciation of my business model presentation and continued guidance even after graduation inspired my research direction and professional growth. I remain deeply grateful for her constant support and mentorship.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 91
     },
     {
       id: 22,
@@ -314,7 +314,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's finance and research lectures greatly contributed to my academic and professional development. As a PhD scholar at the University of Latvia and working as an Assistant Professor, I found her sessions highly insightful, practical, and intellectually motivating. Her teaching enhanced my understanding of financial concepts, research methodologies, and their real-world academic applications.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 98
     },
     {
       id: 23,
@@ -328,7 +328,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's teachings have a remarkable ability to make even the most complex concepts easy to understand while maintaining academic depth and clarity. I had the privilege of learning from her and later working alongside her, where I observed her disciplined approach, strong research depth, and sincere dedication toward excellence. She were always approachable and readily guided and mentored students in the right direction. Her passion, perfection, and expertise across various areas of commerce made learning meaningful and memorable, and her guidance played an important role in shaping my confidence and professional growth.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 97
     },
     {
       id: 24,
@@ -342,7 +342,7 @@ export const testimonialsData = {
       text: "I’ll admit, I bunked a few lectures during college but never Raghavi Ma’am’s. Yes, she was strict about attendance, but more than that, her classes always pushed me to think beyond the obvious. Back then, it felt demanding; today, working in the corporate world and helping manage my family business, I truly understand the value of those lessons.\nRaghavi Ma’am never just taught subjects, she shaped my mindsets. She taught me accountability, critical thinking, transparency, and the importance of always bringing our A-game.\nLooking back, I can confidently say she played a major role in shaping my attitude towards work, learning, and growth.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 93
     },
     {
       id: 25,
@@ -355,7 +355,7 @@ export const testimonialsData = {
       text: "I was part of the only batch that saw the phase of online as well as offline teaching of Dr. Raghavi, and in both the cases it was an absolute privilege to learn from her. In her online classes, she went out and beyond from the available resources to make the class and learning process interactive. I can't imagine any better and offline classes were like a privilege. I don't think i would have learnt about marketing from anyone better. It is this learning that is helping me even right now at my job. Always grateful to Raghavi ma'am and look forward to her constant support for my further endeavors as well.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 90
     },
     {
       id: 26,
@@ -369,7 +369,7 @@ export const testimonialsData = {
       text: "Raghavi Ma'am has a remarkable way of making subjects like International Business, Banking, Financial Markets, Economics genuinely engaging and relatable. Her classes were always interactive, insightful and filled with real-world perspectives that made learning enjoyable. She was incredibly patient in solving doubts and ensuring every student understood concepts clearly. The guidance, knowledge and confidence gained through her teaching have played a significant role in shaping my academic growth and career development.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 94
     },
     {
       id: 27,
@@ -383,7 +383,7 @@ export const testimonialsData = {
       text: "I have very fond memories of Dr. Raghavi's lectures and guidance during my time at School of Commerce, Gujarat University. Her teaching style, clarity of concepts, and encouragement played an important role in shaping my confidence and professional journey. The discipline and knowledge I gained through her sessions continue to help me in both academics and my career today.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 89
     },
     {
       id: 28,
@@ -397,7 +397,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi does than just teaching; she genuinely cares about your students' growth. Her patience and ability to explain difficult concepts have completely transformed my understanding of the subject. Thank you for making every single class an absolute joy to attend.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 96
     },
     {
       id: 29,
@@ -441,7 +441,7 @@ export const testimonialsData = {
       text: "I acknowledge and appreciate the valuable assistance of Dr. Raghavi during my PhD programme. She noteworthily contributed to the progress of my doctoral work in terms of consistent academic and research support. She demonstrated professionalism, analytical competence, and a sincere commitment to research helping me to achieve the milestone. Her timely assistance and constructive inputs were appreciable and supported the successful completion of my PhD.",
       stars: 5,
       category: "scholar",
-      priority: 10
+      priority: 100
     },
     {
       id: 104,
@@ -483,7 +483,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's classes gave me more than just conceptual clarity. They shaped how I think, learn, and carry myself professionally. Her disciplined approach, professionalism, and engaging teaching style left a deep and lasting impact on me. Beyond the classroom, her guidance in research helped me take my very first meaningful steps into the academic world and understand what true inquiry means. Even today, those learnings continue to guide me in my journey as a teacher and researcher.",
       stars: 5,
       category: "scholar",
-      priority: 7
+      priority: 95
     },
     {
       id: 106,
