@@ -36,6 +36,20 @@ export const testimonialsData = {
       priority: 87
     },
     {
+      id: 1,
+      name: "Dr. Pankaj Sharma",
+      topic: "Assistant Professor (Commerce)",
+      college: "Shri K K Shastri Government Commerce College",
+      location: "Ahmedabad, Gujarat",
+      institution: "School of Commerce, Gujarat University",
+      image: "/images/testimonials/pankaj.png",
+      linkedin: "https://www.linkedin.com/in/pankaj-sharma-734527113/",
+      text: "Dr. Raghavi's classes gave me more than just conceptual clarity. They shaped how I think, learn, and carry myself professionally. Her disciplined approach, professionalism, and engaging teaching style left a deep and lasting impact on me. Beyond the classroom, her guidance in research helped me take my very first meaningful steps into the academic world and understand what true inquiry means. Even today, those learnings continue to guide me in my journey as a teacher and researcher.",
+      stars: 5,
+      category: "student",
+      priority: 99
+    },
+    {
       id: 9,
       name: "Shubham Kumar",
       topic: "Business Analyst - Consulting",
@@ -76,7 +90,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's immense knowledge, inspiring personality, and exceptional teaching abilities have left a lasting impact on me. She possesses not only extraordinary academic expertise but the rare ability to motivate students to achieve excellence. Her engaging and insightful teaching style encouraged us to think critically and believe in our potential. I feel incredibly fortunate to have learned from such a distinguished mentor.",
       stars: 5,
       category: "student",
-      priority: 90
+      priority: 91
     },
     {
       id: 12,
@@ -314,7 +328,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's teachings have a remarkable ability to make even the most complex concepts easy to understand while maintaining academic depth and clarity. I had the privilege of learning from her and later working alongside her, where I observed her disciplined approach, strong research depth, and sincere dedication toward excellence. She were always approachable and readily guided and mentored students in the right direction. Her passion, perfection, and expertise across various areas of commerce made learning meaningful and memorable, and her guidance played an important role in shaping my confidence and professional growth.",
       stars: 5,
       category: "student",
-      priority: 89
+      priority: 90
     },
     {
       id: 24,
@@ -383,7 +397,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi does than just teaching; she genuinely cares about your students' growth. Her patience and ability to explain difficult concepts have completely transformed my understanding of the subject. Thank you for making every single class an absolute joy to attend.",
       stars: 5,
       category: "student",
-      priority: 91
+      priority: 89
     },
     {
       id: 29,
