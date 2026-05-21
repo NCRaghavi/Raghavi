@@ -36,13 +36,13 @@ const TestimonialSlider = () => {
 
   return (
     <section className="testimonials-featured bento-item" style={{ 
-      padding: '6rem 5%', 
+      padding: '3rem 5%', 
       background: 'var(--bg-primary)', 
       position: 'relative', 
       zIndex: 10,
       marginTop: '2rem'
     }}>
-      <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <span className="badge" style={{ marginBottom: '1rem' }}>Success Stories</span>
         <h2 style={{ fontSize: '2.8rem', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-1px' }}>Ph.D. Led Mentorship in Action</h2>
       </div>
@@ -58,7 +58,7 @@ const TestimonialSlider = () => {
         {displayItems.map((testimonial, idx) => (
           <div key={`${testimonial.id}-${idx}`} className="testimonial-card" style={{ 
             background: 'var(--bg-card)', 
-            padding: '2.5rem 1.5rem', 
+            padding: '1.5rem 1.25rem', 
             borderRadius: '32px', 
             border: '1px solid var(--border-color)', 
             display: 'flex', 
@@ -92,12 +92,12 @@ const TestimonialSlider = () => {
             )}
             {/* 1. Photo */}
             <div className="testimonial-portrait" style={{ 
-              width: '140px', 
-              height: '140px', 
+              width: '90px', 
+              height: '90px', 
               borderRadius: '50%', 
               border: '4px solid #D4AF37', 
               overflow: 'hidden', 
-              marginTop: testimonial.institution ? '1.25rem' : '0',
+              marginTop: testimonial.institution ? '1rem' : '0',
               marginBottom: '1rem',
               background: 'var(--bg-secondary)',
               boxShadow: '0 12px 30px rgba(212, 175, 55, 0.2)'
@@ -345,7 +345,7 @@ export default function Home() {
       <section className="founder-section bento-item" style={{ padding: '4rem 3rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           
           {/* Top Profile Area */}
-          <div style={{ display: 'flex', gap: '4rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '4rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
           <div className="founder-image" style={{ flex: '1 1 300px', minWidth: '300px' }}>
             <div style={{ width: '100%', aspectRatio: '1/1', borderRadius: '24px', overflow: 'hidden', position: 'relative', boxShadow: 'var(--shadow-md)' }}>
               <img src="/Photo-Raghavi.png" alt="Dr. NC Raghavi Chakravarthy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', filter: 'contrast(1.08) saturate(1.05)', WebkitFontSmoothing: 'antialiased', imageRendering: 'high-quality' }} />
@@ -354,9 +354,9 @@ export default function Home() {
           <div className="founder-content" style={{ flex: '2 1 500px' }}>
             <span className="badge" style={{ marginBottom: '1.5rem' }}>Meet Your Mentor</span>
             <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '0.5rem', letterSpacing: '-0.5px' }}>Dr. NC Raghavi Chakravarthy</h2>
-            <h3 style={{ fontSize: '1.25rem', color: 'var(--accent-color)', fontWeight: 600, marginBottom: '1.5rem' }}>Ph.D. (Accountancy), UGC-NET (JRF), Ex GPSC Class -II Officer (Gujarat Education Services)</h3>
+            <h3 style={{ fontSize: '1.25rem', color: 'var(--accent-color)', fontWeight: 600, marginBottom: '1.5rem', textAlign: 'left' }}>Ph.D. (Accountancy), UGC-NET (JRF), Ex GPSC Class -II Officer (Gujarat Education Services)</h3>
             
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: 1.8 }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: 1.8, textAlign: 'justify' }}>
               Why settle for ordinary when you can be mentored by an academic powerhouse? With over <strong>14 years of elite experience</strong> across Government, Autonomous, and global EdTech sectors, Dr. Raghavi bridges the gap between traditional commerce pedagogy and digital innovation.
             </p>
             
@@ -380,74 +380,88 @@ export default function Home() {
           {/* Premier Institutions Track Record */}
           <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '3rem', paddingBottom: '1rem' }}>
             <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '2.5rem', color: 'var(--text-primary)', textAlign: 'center' }}>
-              A Proven Track Record Across Premier Institutions
+              Academic Leadership Across Institutions & National Initiatives
             </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '1.25rem', maxWidth: '1550px', margin: '0 auto' }}>
-              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
-                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1rem', maxWidth: '1550px', margin: '0 auto' }}>
+              
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
+                <div style={{ width: '44px', height: '44px', flexShrink: 0, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Landmark size={22} style={{ color: 'var(--accent-color)' }} />
                 </div>
-                <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>School of Commerce</h4>
-                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University, Ahmedabad</div>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
-                  "Shaping the next generation of Commerce Professors and Class-I/II Officers."
-                </p>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>School of Commerce</h4>
+                  <div style={{ color: 'var(--accent-color)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.75rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University, Ahmedabad</div>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5 }}>
+                    Shaping the next generation of Commerce Professors and Class-I/II Officers.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
+                <div style={{ width: '44px', height: '44px', flexShrink: 0, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Landmark size={22} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>St. Xavier’s College</h4>
+                  <div style={{ color: 'var(--accent-color)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.75rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Autonomous, Ahmedabad</div>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5 }}>
+                    Developing foundational excellence in undergraduate and postgraduate scholars.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
+                <div style={{ width: '44px', height: '44px', flexShrink: 0, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Landmark size={22} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>Govt. Commerce College</h4>
+                  <div style={{ color: 'var(--accent-color)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.75rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Dahej</div>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5 }}>
+                    Specialized academic leadership for government commerce and science education.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
+                <div style={{ width: '44px', height: '44px', flexShrink: 0, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Globe size={22} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>JoVE (USA)</h4>
+                  <div style={{ color: 'var(--accent-color)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.75rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Subject Matter Expert</div>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5 }}>
+                    Translating complex concepts into engaging global visual experiments.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
+                <div style={{ width: '44px', height: '44px', flexShrink: 0, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Globe size={22} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>NPTEL (IIT / IISc)</h4>
+                  <div style={{ color: 'var(--accent-color)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.75rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Subject Matter Translator</div>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5 }}>
+                    Enhancing accessibility of premier technological education across India.
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
+                <div style={{ width: '44px', height: '44px', flexShrink: 0, borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Play size={22} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.25rem' }}>EMMRC</h4>
+                  <div style={{ color: 'var(--accent-color)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.75rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University</div>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5 }}>
+                    Designing high-quality academic content for national e-learning initiatives.
+                  </p>
+                </div>
               </div>
               
-              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
-                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
-                </div>
-                <h4 style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>St. Xavier’s College (Autonomous)</h4>
-                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Ahmedabad</div>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
-                  "Developing foundational excellence in undergraduate and postgraduate scholars."
-                </p>
-              </div>
-
-              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
-                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Landmark size={24} style={{ color: 'var(--accent-color)' }} />
-                </div>
-                <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Govt. Commerce & Science College</h4>
-                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Dahej</div>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
-                  "Specialized academic leadership for government commerce and science education."
-                </p>
-              </div>
-
-              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
-                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Globe size={24} style={{ color: 'var(--accent-color)' }} />
-                </div>
-                <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>JoVE (USA)</h4>
-                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Subject Matter Expert</div>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
-                  "Translating complex concepts into engaging global visual experiments."
-                </p>
-              </div>
-
-              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
-                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Globe size={24} style={{ color: 'var(--accent-color)' }} />
-                </div>
-                <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>NPTEL (IIT / IISc)</h4>
-                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Subject Matter Translator</div>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
-                  "Enhancing accessibility of premier technological education across India."
-                </p>
-              </div>
-
-              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
-                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Play size={24} style={{ color: 'var(--accent-color)' }} />
-                </div>
-                <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>EMMRC</h4>
-                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University</div>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
-                  "Designing high-quality academic content for national e-learning initiatives."
-                </p>
-              </div>
             </div>
           </div>
       </section>
