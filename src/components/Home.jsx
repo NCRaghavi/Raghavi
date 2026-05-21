@@ -12,7 +12,7 @@ const TestimonialSlider = () => {
     if (allTestimonials.length <= 3) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % allTestimonials.length);
-    }, 6000);
+    }, 15000);
     return () => clearInterval(timer);
   }, [allTestimonials.length]);
 
@@ -413,6 +413,39 @@ export default function Home() {
                 <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Dahej</div>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
                   "Specialized academic leadership for government commerce and science education."
+                </p>
+              </div>
+
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Globe size={24} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>JoVE (USA)</h4>
+                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Subject Matter Expert</div>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+                  "Translating complex concepts into engaging global visual experiments."
+                </p>
+              </div>
+
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Globe size={24} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>NPTEL (IIT / IISc)</h4>
+                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Subject Matter Translator</div>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+                  "Enhancing accessibility of premier technological education across India."
+                </p>
+              </div>
+
+              <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: '2.5rem 1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)', textAlign: 'center' }}>
+                <div style={{ width: '48px', height: '48px', margin: '0 auto 1.5rem', borderRadius: '50%', background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Play size={24} style={{ color: 'var(--accent-color)' }} />
+                </div>
+                <h4 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>EMMRC</h4>
+                <div style={{ color: 'var(--accent-color)', fontSize: '0.9rem', fontWeight: 600, marginBottom: '1.25rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Gujarat University</div>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+                  "Designing high-quality academic content for national e-learning initiatives."
                 </p>
               </div>
             </div>
