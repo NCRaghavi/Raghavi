@@ -384,6 +384,48 @@ export const testimonialsData = {
       stars: 5,
       category: "student",
       priority: 5
+    },
+    {
+      id: 28,
+      name: "Dr. Meera Savani",
+      topic: "Ex. Assistant Professor",
+      college: "Silver Oak University, Ahmedabad",
+      location: "Ahmedabad, Gujarat",
+      institution: "School of Commerce, Gujarat University",
+      image: "",
+      linkedin: "https://www.linkedin.com/in/meera-savani-355780238/",
+      text: "Dr. Raghavi does than just teaching; she genuinely cares about your students' growth. Her patience and ability to explain difficult concepts have completely transformed my understanding of the subject. Thank you for making every single class an absolute joy to attend.",
+      stars: 5,
+      category: "student",
+      priority: 5
+    },
+    {
+      id: 29,
+      name: "Aayush Gandhi",
+      topic: "Business Development Associate",
+      college: "Genesis Overseas, Ahmedabad",
+      location: "Ahmedabad, Gujarat",
+      institution: "St. Xavier's College (Autonomous), Ahmedabad",
+      image: "/images/testimonials/aayussh.jfif",
+      linkedin: "https://www.linkedin.com/in/aayushgandhi1/",
+      text: "The dedication I saw in Raghvi Maam for her profession was really inspiring. She was always ready with her materials and also gave us extra information if required. This type of attitude is very difficult to find and hard to maintain. I would definitely like to reach this level of work in my profession.",
+      stars: 5,
+      category: "student",
+      priority: 5
+    },
+    {
+      id: 30,
+      name: "Devarsh Thakkar",
+      topic: "Real Estate Business Entrepreneur",
+      college: "Ahmedabad, Gujarat",
+      location: "Ahmedabad, Gujarat",
+      institution: "St. Xavier's College (Autonomous), Ahmedabad",
+      image: "/images/testimonials/devarsh.jfif",
+      linkedin: "https://www.linkedin.com/in/thakkar-devarsh-200558183/",
+      text: "Dr. Raghavi's teaching style always made commerce concepts practical, engaging, and easy to understand. The confidence and analytical thinking I developed during her sessions have continued to help me in my academic and professional journey. I truly appreciate the guidance and encouragement she provided throughout my learning experience.",
+      stars: 5,
+      category: "student",
+      priority: 5
     }
   ],
   scholars: [
