@@ -66,7 +66,7 @@ export const testimonialsData = {
     {
       id: 4,
       name: "Dr. Vishakha Modi",
-      topic: "Assistant Professor",
+      topic: "Assistant Professor (Commerce)",
       college: "Govt. Arts, Commerce & Science College, Kachhal",
       location: "Surat, Gujarat",
       institution: "School of Commerce, Gujarat University",
@@ -160,7 +160,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi ma'am's sessions were always engaging, insightful, and practically oriented. Her guidance helped me develop conceptual clarity and confidence in commerce and finance, which continues to benefit me in my CFA preparation and professional growth.",
       stars: 5,
       category: "student",
-      priority: 6
+      priority: 89
     },
     {
       id: 5,
@@ -217,7 +217,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's classroom sessions always made learning very engaging and practical for me. The practical assignments and real-world exposure she gave us helped me develop a new perspective towards subjects and understand their application beyond textbooks. Her teaching style also helped build my confidence and strengthened my interest in commerce and marketing.",
       stars: 5,
       category: "student",
-      priority: 6
+      priority: 88
     },
     {
       id: 16,
@@ -245,7 +245,7 @@ export const testimonialsData = {
       text: "I am truly grateful for the guidance and support I received during my time at St. Xavier’s College. Dr. Raghavi's teaching approach and interactive classroom sessions helped me build a strong understanding of commerce concepts and boosted my confidence in applying them professionally. The practical insights and mentorship continue to help me in my career journey.",
       stars: 5,
       category: "student",
-      priority: 6
+      priority: 0
     },
     {
       id: 18,
@@ -355,7 +355,7 @@ export const testimonialsData = {
       text: "I was part of the only batch that saw the phase of online as well as offline teaching of Dr. Raghavi, and in both the cases it was an absolute privilege to learn from her. In her online classes, she went out and beyond from the available resources to make the class and learning process interactive. I can't imagine any better and offline classes were like a privilege. I don't think i would have learnt about marketing from anyone better. It is this learning that is helping me even right now at my job. Always grateful to Raghavi ma'am and look forward to her constant support for my further endeavors as well.",
       stars: 5,
       category: "student",
-      priority: 97
+      priority: 1
     },
     {
       id: 26,
@@ -411,7 +411,7 @@ export const testimonialsData = {
       text: "The dedication I saw in Raghvi Maam for her profession was really inspiring. She was always ready with her materials and also gave us extra information if required. This type of attitude is very difficult to find and hard to maintain. I would definitely like to reach this level of work in my profession.",
       stars: 5,
       category: "student",
-      priority: 5
+      priority: 2
     },
     {
       id: 30,
