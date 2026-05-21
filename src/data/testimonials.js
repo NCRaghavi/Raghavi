@@ -90,7 +90,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi's immense knowledge, inspiring personality, and exceptional teaching abilities have left a lasting impact on me. She possesses not only extraordinary academic expertise but the rare ability to motivate students to achieve excellence. Her engaging and insightful teaching style encouraged us to think critically and believe in our potential. I feel incredibly fortunate to have learned from such a distinguished mentor.",
       stars: 5,
       category: "student",
-      priority: 3
+      priority: 93
     },
     {
       id: 12,
@@ -174,7 +174,7 @@ export const testimonialsData = {
       text: "I’m deeply grateful to Raghavi mam for playing a pivotal role in shaping my career. Her ability to simplify complex concepts and build a strong foundational understanding has given me lasting confidence in my field. The clarity and discipline I developed under her guidance will always continue to influence my professional growth.",
       stars: 5,
       category: "student",
-      priority: 85
+      priority: 94
     },
     {
       id: 2,
@@ -203,7 +203,7 @@ export const testimonialsData = {
       text: "Dr. Raghavi’s sessions at Sheth Damodardas School of Commerce, Gujarat University gave me a strong foundation in Commerce that shaped how I think about running a business today. Her emphasis on practical application over rote learning pushed me to approach problems with clarity and confidence. That mindset has been central to building The Batter Bae, my gluten-free baking brand, from the ground up.",
       stars: 5,
       category: "student",
-      priority: 93
+      priority: 95
     },
     {
       id: 15,
@@ -369,7 +369,7 @@ export const testimonialsData = {
       text: "Raghavi Ma'am has a remarkable way of making subjects like International Business, Banking, Financial Markets, Economics genuinely engaging and relatable. Her classes were always interactive, insightful and filled with real-world perspectives that made learning enjoyable. She was incredibly patient in solving doubts and ensuring every student understood concepts clearly. The guidance, knowledge and confidence gained through her teaching have played a significant role in shaping my academic growth and career development.",
       stars: 5,
       category: "student",
-      priority: 94
+      priority: 96
     },
     {
       id: 27,
