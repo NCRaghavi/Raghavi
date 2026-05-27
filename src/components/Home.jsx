@@ -115,8 +115,8 @@ const TestimonialSlider = () => {
                   }} 
                 />
               ) : (
-                <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37' }}>
-                  <Users size={50} />
+                <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37', fontSize: '2.2rem', fontWeight: 800, fontFamily: 'Georgia, serif', background: 'rgba(212, 175, 55, 0.1)' }}>
+                  {testimonial.name.replace('Dr. ', '').split(' ').map(n => n[0]).slice(0, 2).join('')}
                 </div>
               )}
             </div>
@@ -145,7 +145,7 @@ const TestimonialSlider = () => {
             </p>
 
             {/* 4. Signature - FIXED COLORS */}
-            <div style={{ width: '100%', paddingTop: '1.25rem', borderTop: '1px solid var(--border-color)' }}>
+            <div style={{ width: '100%', paddingTop: '1.25rem', borderTop: '1px solid var(--border-color)', marginTop: 'auto' }}>
               <h4 style={{ 
                 fontWeight: 800, 
                 color: '#D4AF37', 
