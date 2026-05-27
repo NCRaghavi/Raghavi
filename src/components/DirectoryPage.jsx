@@ -26,13 +26,13 @@ export default function DirectoryPage({ title }) {
       case "University Level":
         return ["Syllabus-Compliant Reference Notes", "Simplified Economics Modules", "Financial Management Frameworks", "Exam Writing & Presentation Strategies"];
       case "ACCA Global":
-        return ["IFRS & Global Accounting Frameworks", "Portfolio Management Masterclasses", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
+        return ["IFRS & Global Accounting Frameworks", "Curated Study Materials & PDFs", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
       case "CFA Program":
-        return ["Portfolio Management Masterclasses", "IFRS & Global Accounting Frameworks", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
+        return ["Portfolio Management Masterclasses", "Curated Study Materials & PDFs", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
       case "CMA Certification":
-        return ["Strategic Management Accounting Guides", "IFRS & Global Accounting Frameworks", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
+        return ["Strategic Management Accounting Guides", "Curated Study Materials & PDFs", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
       case "Company Secretary (CS)":
-        return ["Corporate Governance Frameworks", "IFRS & Global Accounting Frameworks", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
+        return ["Corporate Governance Frameworks", "Curated Study Materials & PDFs", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
       default:
         return [
           "Comprehensive Concept Roadmaps",
