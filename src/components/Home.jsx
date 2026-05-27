@@ -354,7 +354,7 @@ export default function Home() {
           <div className="founder-content" style={{ flex: '2 1 500px' }}>
             <span className="badge" style={{ marginBottom: '1.5rem' }}>Meet Your Mentor</span>
             <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '0.5rem', letterSpacing: '-0.5px' }}>Dr. NC Raghavi Chakravarthy</h2>
-            <h3 style={{ fontSize: '1.25rem', color: 'var(--accent-color)', fontWeight: 600, marginBottom: '1.5rem', textAlign: 'left' }}>Ph.D. (Accountancy), UGC-NET (JRF), Ex GPSC Class -II Officer (Gujarat Education Services)</h3>
+            <h3 style={{ fontSize: '1.25rem', color: '#ffffff', fontWeight: 700, marginBottom: '1.5rem', textAlign: 'left' }}><span style={{ color: 'var(--accent-color)' }}>Ph.D.</span> (Accountancy), <span style={{ color: 'var(--accent-color)' }}>UGC-NET (JRF)</span>, Ex <span style={{ color: 'var(--accent-color)' }}>GPSC Class-II Officer</span> (Gujarat Education Services)</h3>
             
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: 1.8, textAlign: 'justify' }}>
               Why settle for ordinary when you can be mentored by an academic powerhouse? With over <strong>14 years of elite experience</strong> across Government, Autonomous, and global EdTech sectors, Dr. Raghavi bridges the gap between traditional commerce pedagogy and digital innovation.
