@@ -5,6 +5,7 @@ import { testimonialsData } from '../data/testimonials';
 
 const TestimonialSlider = () => {
   const allTestimonials = [...testimonialsData.scholars, ...testimonialsData.students]
+    .filter((v, i, a) => a.findIndex(t => (t.name === v.name)) === i)
     .sort((a, b) => (b.priority || 0) - (a.priority || 0));
   const [currentIndex, setCurrentIndex] = useState(0);
 
