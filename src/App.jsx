@@ -23,7 +23,7 @@ function App() {
             <Route path="/cma" element={<DirectoryPage title="CMA Certification" />} />
             <Route path="/cfa" element={<DirectoryPage title="CFA Program" />} />
             <Route path="/cs" element={<DirectoryPage title="Company Secretary (CS)" />} />
-            <Route path="/university" element={<DirectoryPage title="University Level" />} />
+            <Route path="/university" element={<DirectoryPage title="University Programs" />} />
             <Route path="/net" element={<DirectoryPage title="UGC-NET Commerce & Management" />} />
             <Route path="/resources" element={<BookRecommendationsPage />} />
             <Route path="/contact" element={<ContactPage />} />
