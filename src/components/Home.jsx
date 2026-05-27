@@ -128,14 +128,17 @@ const TestimonialSlider = () => {
             </div>
 
             {/* 3. Text */}
-            <p style={{ 
+            <p className="testimonial-text" style={{ 
               fontSize: '0.9rem', 
               fontStyle: 'italic', 
               color: 'var(--text-quote)', 
               lineHeight: 1.6, 
               marginBottom: '1.5rem',
               fontFamily: 'Georgia, serif',
-              flexGrow: 1
+              flexGrow: 1,
+              maxHeight: '140px',
+              overflowY: 'auto',
+              paddingRight: '8px'
             }}>
               "{testimonial.text}"
             </p>
