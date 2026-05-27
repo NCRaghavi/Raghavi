@@ -67,7 +67,7 @@ export default function BookRecommendationsPage() {
                 A comprehensive economics dictionary authored by Dr. Raghavi. An essential, high-impact reference guide meticulously designed to decode complex economic terminologies for commerce students, researchers, and professionals alike.
               </p>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="https://www.amazon.in/Z-Economics-Encyclopedic-Dictionary-ebook/dp/B0F1KTB658" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <a href="https://www.amazon.in/Z-Economics-Encyclopedic-Dictionary-ebook/dp/B0F1KTB658" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '1.25rem 2.5rem', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <ShoppingBag size={20} /> Buy on Amazon
                 </a>
               </div>
@@ -159,7 +159,7 @@ export default function BookRecommendationsPage() {
                   <div style={{ width: '120px', height: '80px', flexShrink: 0, background: 'rgba(212, 175, 55, 0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-color)' }}>
                     <Landmark size={32} />
                   </div>
-                  <div style={{ flexGrow: 1 }}>
+                  <div style={{ flexGrow: 1, marginLeft: '16px' }}>
                     <div style={{ color: 'var(--accent-color)', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.25rem' }}>Ph.D. Thesis Repository</div>
                     <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.25rem' }}>Full Ph.D. Thesis in Accountancy</h4>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '0' }}>Gujarat University. Officially archived on Shodhganga (INFLIBNET Center).</p>
@@ -174,7 +174,7 @@ export default function BookRecommendationsPage() {
                   <div style={{ width: '120px', height: '80px', flexShrink: 0, background: 'linear-gradient(135deg, rgba(255, 153, 51, 0.1), transparent)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FF9933' }}>
                     <FileText size={32} />
                   </div>
-                  <div style={{ flexGrow: 1 }}>
+                  <div style={{ flexGrow: 1, marginLeft: '16px' }}>
                     <div style={{ color: '#FF9933', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.25rem' }}>NPTEL | IIT Roorkee</div>
                     <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.25rem' }}>MCDM Techniques Using R</h4>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '0' }}>National Programme on Technology Enhanced Learning.</p>
@@ -208,7 +208,7 @@ export default function BookRecommendationsPage() {
                     </div>
                     <div style={{ flexGrow: 1 }}>
                       <div style={{ color: 'var(--text-secondary)', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.25rem' }}>EMMRC | Gujarat University</div>
-                      <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '0' }}>{item.title}</h4>
+                      <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#ffffff', marginBottom: '0' }}>{item.title}</h4>
                     </div>
                     <a href={item.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                       <Play size={14} /> Watch Video
