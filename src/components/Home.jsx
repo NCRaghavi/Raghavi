@@ -8,6 +8,7 @@ const TestimonialSlider = () => {
     .filter((v, i, a) => a.findIndex(t => (t.name === v.name)) === i)
     .sort((a, b) => (b.priority || 0) - (a.priority || 0));
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [lastInteraction, setLastInteraction] = useState(Date.now());
 
   useEffect(() => {
     if (allTestimonials.length <= 3) return;
@@ -15,7 +16,17 @@ const TestimonialSlider = () => {
       setCurrentIndex((prev) => (prev + 1) % allTestimonials.length);
     }, 15000);
     return () => clearInterval(timer);
-  }, [allTestimonials.length]);
+  }, [allTestimonials.length, lastInteraction]);
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % allTestimonials.length);
+    setLastInteraction(Date.now());
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + allTestimonials.length) % allTestimonials.length);
+    setLastInteraction(Date.now());
+  };
 
   if (allTestimonials.length === 0) return null;
 
@@ -216,6 +227,27 @@ const TestimonialSlider = () => {
           </div>
         ))}
       </div>
+
+      {allTestimonials.length > 3 && (
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginTop: '3rem' }}>
+          <button 
+            onClick={handlePrev}
+            style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'var(--bg-secondary)', border: '1px solid var(--accent-color)', color: 'var(--accent-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s ease', boxShadow: 'var(--shadow-sm)' }}
+            onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-color)'; e.currentTarget.style.color = 'white'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'var(--bg-secondary)'; e.currentTarget.style.color = 'var(--accent-color)'; }}
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button 
+            onClick={handleNext}
+            style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'var(--bg-secondary)', border: '1px solid var(--accent-color)', color: 'var(--accent-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s ease', boxShadow: 'var(--shadow-sm)' }}
+            onMouseOver={(e) => { e.currentTarget.style.background = 'var(--accent-color)'; e.currentTarget.style.color = 'white'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'var(--bg-secondary)'; e.currentTarget.style.color = 'var(--accent-color)'; }}
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+      )}
     </section>
   );
 };
