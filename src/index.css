@@ -127,7 +127,9 @@ a {
 }
 
 .dropdown-content {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
   position: absolute;
   background-color: var(--bg-secondary);
   min-width: 160px;
@@ -139,6 +141,7 @@ a {
   left: -20px;
   padding: 0.5rem 0;
   margin-top: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 /* Invisible bridge to maintain hover state across the gap */
@@ -166,7 +169,9 @@ a {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .nav-actions {
