@@ -16,13 +16,35 @@ export default function DirectoryPage({ title }) {
   const tagline = taglines[title] || "Empowering your academic journey with expert mentorship.";
   const currentMaterials = materialsData[title] || [];
 
-  const upcomingResources = [
-    "Comprehensive Concept Roadmaps",
-    "Curated Study Materials & PDFs",
-    "Previous Year Paper Analysis",
-    "Expert Masterclass Video Series",
-    "Live Doubt Clearing Sessions"
-  ];
+  const getUpcomingResources = (title) => {
+    switch(title) {
+      case "CA Foundation & Intermediate":
+        return ["Curated ICAI-Aligned Study Materials", "Masterclass Videos on Taxation & Accounting", "Step-by-Step Practical Problem Solving", "Past 10 Years Paper & RTP Analysis"];
+      case "UGC-NET Commerce & Management":
+        return ["JRF-Targeted Concept Roadmaps (Paper 1 & 2)", "In-Depth Core Commerce Unit Analysis", "High-Yield MCQ Deconstruction Series", "PYQ Trend Analysis"];
+      case "University Programs":
+      case "University Level":
+        return ["Syllabus-Compliant Reference Notes", "Simplified Economics Modules", "Financial Management Frameworks", "Exam Writing & Presentation Strategies"];
+      case "ACCA Global":
+        return ["IFRS & Global Accounting Frameworks", "Portfolio Management Masterclasses", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
+      case "CFA Program":
+        return ["Portfolio Management Masterclasses", "IFRS & Global Accounting Frameworks", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
+      case "CMA Certification":
+        return ["Strategic Management Accounting Guides", "IFRS & Global Accounting Frameworks", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
+      case "Company Secretary (CS)":
+        return ["Corporate Governance Frameworks", "IFRS & Global Accounting Frameworks", "Previous Year Paper Analysis", "Expert Masterclass Video Series", "Live Doubt Clearing Sessions"];
+      default:
+        return [
+          "Comprehensive Concept Roadmaps",
+          "Curated Study Materials & PDFs",
+          "Previous Year Paper Analysis",
+          "Expert Masterclass Video Series",
+          "Live Doubt Clearing Sessions"
+        ];
+    }
+  };
+
+  const upcomingResources = getUpcomingResources(title);
 
   return (
     <div className="directory-page" style={{ padding: '4rem 5%', minHeight: '80vh' }}>
