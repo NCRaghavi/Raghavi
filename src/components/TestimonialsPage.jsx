@@ -71,7 +71,8 @@ export default function TestimonialsPage() {
                 textAlign: 'center',
                 boxShadow: 'var(--shadow-bento)',
                 transition: 'transform 0.3s ease',
-                position: 'relative'
+                position: 'relative',
+                height: '100%'
               }}>
                 {testimonial.institution && (
                   <div style={{ 
@@ -119,8 +120,8 @@ export default function TestimonialsPage() {
                       }} 
                     />
                   ) : (
-                    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37' }}>
-                      <Users size={50} />
+                    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D4AF37', fontSize: '1.8rem', fontWeight: 800, fontFamily: 'Georgia, serif', background: 'rgba(212, 175, 55, 0.1)' }}>
+                      {testimonial.name.replace('Dr. ', '').split(' ').map(n => n[0]).slice(0, 2).join('')}
                     </div>
                   )}
                 </div>
@@ -133,7 +134,7 @@ export default function TestimonialsPage() {
                 </div>
 
                 {/* Text */}
-                <p style={{ 
+                <p className="testimonial-text" style={{ 
                   color: 'var(--text-quote)', 
                   fontSize: '0.85rem', 
                   lineHeight: 1.5, 
@@ -141,13 +142,15 @@ export default function TestimonialsPage() {
                   fontStyle: 'italic', 
                   fontFamily: 'Georgia, serif',
                   maxWidth: '100%',
-                  flexGrow: 1
+                  maxHeight: '110px',
+                  overflowY: 'auto',
+                  paddingRight: '6px'
                 }}>
                   "{testimonial.text}"
                 </p>
 
                 {/* Signature */}
-                <div style={{ width: '100%', paddingTop: '1rem', borderTop: '1px solid var(--border-color)' }}>
+                <div style={{ width: '100%', paddingTop: '1rem', borderTop: '1px solid var(--border-color)', marginTop: 'auto' }}>
                   <h4 style={{ 
                     fontWeight: 800, 
                     color: '#D4AF37', 
