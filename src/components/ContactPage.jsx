@@ -12,7 +12,7 @@ export default function ContactPage() {
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-            <div style={{ padding: '1rem', backgroundColor: 'rgba(37, 99, 235, 0.1)', color: 'var(--accent-color)', borderRadius: '16px' }}>
+            <div style={{ padding: '1rem', backgroundColor: 'var(--accent-soft)', color: 'var(--accent-color)', borderRadius: '16px' }}>
               <Phone size={32} />
             </div>
             <div>
@@ -22,7 +22,7 @@ export default function ContactPage() {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-            <div style={{ padding: '1rem', backgroundColor: 'rgba(37, 99, 235, 0.1)', color: 'var(--accent-color)', borderRadius: '16px' }}>
+            <div style={{ padding: '1rem', backgroundColor: 'var(--accent-soft)', color: 'var(--accent-color)', borderRadius: '16px' }}>
               <Mail size={32} />
             </div>
             <div>

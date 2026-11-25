@@ -16,14 +16,13 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="nav-brand" style={{ marginRight: '3rem' }}>
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <img src="/logo.png" alt="Raghavi Academy Logo" style={{ height: '36px', width: '36px', borderRadius: '8px', objectFit: 'cover' }} />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span>Raghavi Academy</span>
-            <span style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--text-secondary)', letterSpacing: '0.5px', marginTop: '-2px', textTransform: 'uppercase' }}>
-              Building Foundations. Achieving Excellence
-            </span>
+      <div className="nav-brand" style={{ marginRight: '2.5rem' }}>
+        <Link to="/" className="brand-lockup" aria-label="Raghavi Academy home">
+          <img src="/ra-emblem.svg" alt="" className="brand-emblem on-dark" />
+          <img src="/ra-emblem-navy.svg" alt="" className="brand-emblem on-light" />
+          <div className="brand-text">
+            <span className="brand-name">RAGHAVI</span>
+            <span className="brand-sub">Academy</span>
           </div>
         </Link>
       </div>
@@ -45,6 +44,7 @@ export default function Navbar() {
         <Link to="/university" onClick={() => setMobileMenuOpen(false)}>University</Link>
         <Link to="/testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</Link>
         <Link to="/resources" onClick={() => setMobileMenuOpen(false)}>Research & Resources</Link>
+        <Link to="/contact" className="nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
       <div className="nav-actions">
         <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)} aria-label="Toggle Theme">

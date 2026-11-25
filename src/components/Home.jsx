@@ -49,14 +49,14 @@ const TestimonialSlider = () => {
   return (
     <section className="testimonials-featured bento-item" style={{ 
       padding: '3rem 5%', 
-      background: 'var(--bg-primary)', 
+      background: 'var(--bg-bento)', 
       position: 'relative', 
       zIndex: 10,
-      marginTop: '2rem'
+      marginTop: '0'
     }}>
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
         <span className="badge" style={{ marginBottom: '1rem' }}>Success Stories</span>
-        <h2 style={{ fontSize: '2.8rem', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-1px' }}>Ph.D. Led Mentorship in Action</h2>
+        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>Ph.D.-Led Mentorship in Action</h2>
       </div>
       
       <div className="testimonial-grid" style={{ 
@@ -195,7 +195,7 @@ const TestimonialSlider = () => {
                 )}
               </h4>
               <p style={{ 
-                color: '#4dabf7', 
+                color: 'var(--accent-color)', 
                 fontSize: '0.75rem', 
                 fontWeight: 700, 
                 textTransform: 'uppercase', 
@@ -259,7 +259,7 @@ export default function Home() {
       <section className="hero-section bento-item">
         <div className="hero-content">
           <span className="badge">Ph.D. Led Education</span>
-          <h1>Raghavi Academy: Master Commerce with India’s Premier Ph.D. Faculty</h1>
+          <h1>Master Commerce with <span className="accent-italic">India’s Premier Ph.D. Faculty</span></h1>
           <h2 className="hero-tagline">Building Foundations. Achieving Excellence</h2>
           <p>
             Elevate your academic journey with a professional, video-first digital campus 
@@ -288,6 +288,26 @@ export default function Home() {
               }}
             ></iframe>
           </div>
+        </div>
+      </section>
+
+      {/* Credential Strip */}
+      <section className="credential-strip" aria-label="Credentials">
+        <div className="credential-item">
+          <div className="credential-value">12+ Years</div>
+          <div className="credential-label">Teaching, research &amp; content</div>
+        </div>
+        <div className="credential-item">
+          <div className="credential-value">2,000+</div>
+          <div className="credential-label">B.Com &amp; M.Com students taught</div>
+        </div>
+        <div className="credential-item">
+          <div className="credential-value">60+</div>
+          <div className="credential-label">Research scholars supported</div>
+        </div>
+        <div className="credential-item">
+          <div className="credential-value">Ph.D. · JRF</div>
+          <div className="credential-label">Accountancy · UGC-NET JRF</div>
         </div>
       </section>
 
@@ -390,10 +410,10 @@ export default function Home() {
           <div className="founder-content" style={{ flex: '2 1 500px' }}>
             <span className="badge" style={{ marginBottom: '1.5rem' }}>Meet Your Mentor</span>
             <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '0.5rem', letterSpacing: '-0.5px' }}>Dr. NC Raghavi Chakravarthy</h2>
-            <h3 style={{ fontSize: '1.25rem', color: '#ffffff', fontWeight: 700, marginBottom: '1.5rem', textAlign: 'left' }}><span style={{ color: 'var(--accent-color)' }}>Ph.D.</span> (Accountancy), <span style={{ color: 'var(--accent-color)' }}>UGC-NET (JRF)</span>, Ex <span style={{ color: 'var(--accent-color)' }}>GPSC Class-II Officer</span> (Gujarat Education Services)</h3>
+            <h3 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', fontFamily: 'Inter, sans-serif', fontWeight: 600, lineHeight: 1.6, marginBottom: '1.5rem', textAlign: 'left' }}><span style={{ color: 'var(--accent-color)' }}>Ph.D.</span> (Accountancy), <span style={{ color: 'var(--accent-color)' }}>UGC-NET (JRF)</span>, Ex <span style={{ color: 'var(--accent-color)' }}>GPSC Class-II Officer</span> (Gujarat Education Services)</h3>
             
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: 1.8, textAlign: 'justify' }}>
-              Why settle for ordinary when you can be mentored by an academic powerhouse? With over <strong>14 years of elite experience</strong> across Government, Autonomous, and global EdTech sectors, Dr. Raghavi bridges the gap between traditional commerce pedagogy and digital innovation.
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem', lineHeight: 1.8, textAlign: 'left' }}>
+              Why settle for ordinary when you can be mentored by an academic powerhouse? With over <strong>12 years of experience</strong> across Government, Autonomous, and global EdTech sectors, having taught 2,000+ B.Com and M.Com students and supported 60+ research scholars, Dr. Raghavi bridges the gap between traditional commerce pedagogy and digital innovation.
             </p>
             
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '0' }}>
@@ -403,11 +423,11 @@ export default function Home() {
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
                 <div style={{ color: 'var(--accent-color)', marginTop: '2px', fontSize: '1.2rem' }}>✦</div>
-                <span style={{ fontSize: '1.05rem' }}><strong>Global EdTech & Academic Leader:</strong> Subject Matter Expert for JoVE (USA), NPTEL (IIT/IISc) Subject Matter Translator, and EMMRC (Gujarat University) Academic Content Creator. Former Professor at St. Xavier's College (Autonomous).</span>
+                <span style={{ fontSize: '1.05rem' }}><strong>Global EdTech & Academic Leader:</strong> Subject Matter Expert for JoVE (USA), NPTEL (IIT/IISc) Subject Matter Translator, and EMMRC (Gujarat University) Academic Content Creator. Former Assistant Professor at St. Xavier's College (Autonomous), Ahmedabad and Government Commerce &amp; Science College, Dahej.</span>
               </li>
               <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
                 <div style={{ color: 'var(--accent-color)', marginTop: '2px', fontSize: '1.2rem' }}>✦</div>
-                <span style={{ fontSize: '1.05rem' }}><strong>Ecosystem Builder:</strong> Ph.D. Thesis archived on Shodhganga, authored a bestselling Economics dictionary, and published high-impact research globally.</span>
+                <span style={{ fontSize: '1.05rem' }}><strong>Ecosystem Builder:</strong> Ph.D. thesis archived on Shodhganga, author of <em>A to Z of Economics: An Encyclopedic Dictionary</em>, co-author of the BAOU Human Resource Management course book, and research published in indexed journals.</span>
               </li>
             </ul>
           </div>
@@ -533,7 +553,7 @@ export default function Home() {
                   borderRadius: '9999px',
                   border: '1px solid var(--border-color)',
                   backgroundColor: idx === 0 ? 'var(--accent-color)' : 'transparent',
-                  color: idx === 0 ? 'white' : 'var(--text-primary)',
+                  color: idx === 0 ? '#0B1120' : 'var(--text-primary)',
                   cursor: 'pointer',
                   fontWeight: 500,
                   fontSize: '0.875rem'
@@ -591,7 +611,7 @@ export default function Home() {
 
 
       {/* Testimonials Slider Section - FORCED VISIBILITY */}
-      <div id="home-testimonial-section" style={{ background: '#0a192f', borderTop: '1px solid rgba(255,255,255,0.05)', paddingBottom: '5rem' }}>
+      <div id="home-testimonial-section">
         <TestimonialSlider />
       </div>
     </div>

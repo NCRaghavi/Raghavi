@@ -208,7 +208,7 @@ export default function BookRecommendationsPage() {
                     </div>
                     <div style={{ flexGrow: 1 }}>
                       <div style={{ color: 'var(--text-secondary)', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.25rem' }}>EMMRC | Gujarat University</div>
-                      <h4 style={{ fontSize: '1rem', fontWeight: 700, color: '#ffffff', marginBottom: '0' }}>{item.title}</h4>
+                      <h4 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0' }}>{item.title}</h4>
                     </div>
                     <a href={item.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm" style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                       <Play size={14} /> Watch Video

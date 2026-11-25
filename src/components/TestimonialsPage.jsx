@@ -36,11 +36,11 @@ export default function TestimonialsPage() {
                 border: '1px solid',
                 borderColor: activeTab === cat.id ? 'var(--accent-color)' : 'var(--border-color)',
                 background: activeTab === cat.id ? 'var(--accent-color)' : 'transparent',
-                color: activeTab === cat.id ? 'white' : 'var(--text-primary)',
+                color: activeTab === cat.id ? '#0B1120' : 'var(--text-primary)',
                 fontWeight: 700,
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
-                boxShadow: activeTab === cat.id ? '0 10px 20px rgba(37, 99, 235, 0.2)' : 'none'
+                boxShadow: activeTab === cat.id ? '0 10px 20px rgba(217, 169, 58, 0.25)' : 'none'
               }}
             >
               {cat.icon}
@@ -191,7 +191,7 @@ export default function TestimonialsPage() {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
                     <p style={{ 
                       fontSize: '0.8rem', 
-                      color: '#4dabf7', 
+                      color: 'var(--accent-color)', 
                       fontWeight: 800, 
                       textTransform: 'uppercase',
                       letterSpacing: '1px'
